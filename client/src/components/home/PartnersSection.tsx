@@ -4,15 +4,19 @@ import TestimonialCard from "@/components/common/TestimonialCard";
 
 const PartnersSection = () => {
   const clients = [
-    { id: 1, name: "Client 1" },
-    { id: 2, name: "Client 2" },
-    { id: 3, name: "Client 3" },
-    { id: 4, name: "Client 4" },
-    { id: 5, name: "Client 5" },
-    { id: 6, name: "Client 6" },
-    { id: 7, name: "Client 7" },
-    { id: 8, name: "Client 8" }
+    { id: 1, name: "Indian Navy" },
+    { id: 2, name: "Indian Air Force" },
+    { id: 3, name: "Ekal Sansthan" },
+    { id: 4, name: "Ek Kadam Air" },
+    { id: 5, name: "Saksham" },
+    { id: 6, name: "Saktek" },
+    { id: 7, name: "Tabschool" },
+    { id: 8, name: "CHMES" },
+    { id: 9, name: "NCAHT" },
+    { id: 10, name: "IKALL" }
   ];
+
+
 
   const testimonials = [
     {
