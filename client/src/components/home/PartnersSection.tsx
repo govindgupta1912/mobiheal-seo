@@ -1,19 +1,39 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
+import slide1  from "../../assets/ic_air.png";
+import slide2  from "../../assets/ic_chems.png";
+import slide3  from "../../assets/ic_frux.png";
+import slide4  from "../../assets/ic_invia.png";
+import slide5  from "../../assets/ic_iti.png";
+import slide6  from "../../assets/ic_navitus.png";
+import slide7  from "../../assets/ic_sakham.png";
+import slide8 from "../../assets/ic_adriod.png";
+import slide9 from "../../assets/ic_sapours.png";
+import slide10 from "../../assets/ic_tabschool.png";
+import slide11 from "../../assets/ic_tcil.png"
+import slide12 from "../../assets/ic_teceze.png";
+import slide13 from "../../assets/ic_wesee.png";
+import slide14 from "../../assets/mrotek.png";
+import slide15 from "../../assets/ncat.png"
 
 const PartnersSection = () => {
   const clients = [
-    { id: 1, name: "Indian Navy" },
-    { id: 2, name: "Indian Air Force" },
-    { id: 3, name: "Ekal Sansthan" },
-    { id: 4, name: "Ek Kadam Air" },
-    { id: 5, name: "Saksham" },
-    { id: 6, name: "Saktek" },
-    { id: 7, name: "Tabschool" },
-    { id: 8, name: "CHMES" },
-    { id: 9, name: "NCAHT" },
-    { id: 10, name: "IKALL" }
+    { id: 1, name: "Air India", logo: slide1 },
+    { id: 2, name: "Chemtronics", logo: slide2 },
+    { id: 3, name: "Frux", logo: slide3 },
+    { id: 4, name: "Invia", logo: slide4 },
+    { id: 5, name: "ITI", logo: slide5 },
+    { id: 6, name: "Navitus", logo: slide6 },
+    { id: 7, name: "Sakham", logo: slide7 },
+    { id: 8, name: "Adriod", logo: slide8 },
+    { id: 9, name: "Sapours", logo: slide9 },
+    { id: 10, name: "TabSchool", logo: slide10 },
+    { id: 11, name: "TCIL", logo: slide11 },
+    { id: 12, name: "Teceze", logo: slide12 },
+    { id: 13, name: "WeSee", logo: slide13 },
+    { id: 14, name: "Mrotek", logo: slide14 },
+    { id: 15, name: "NCAT", logo: slide15 }
   ];
 
 
@@ -52,27 +72,17 @@ const PartnersSection = () => {
         {/* Client Logos Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16">
           {clients.map((client) => (
-            <div key={client.id} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="160"
-                height="80"
-                viewBox="0 0 160 80"
-                fill="none"
-                className="max-h-12"
-              >
-                <rect width="160" height="80" rx="4" fill="#E5E7EB" />
-                <text
-                  x="80"
-                  y="44"
-                  fontFamily="Arial"
-                  fontSize="14"
-                  fill="#6B7280"
-                  textAnchor="middle"
-                >
-                  {client.name}
-                </text>
-              </svg>
+            <div key={client.id} className="flex items-center justify-center p-4 ">
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-12 object-contain border border-none"
+                />
+              ) : (
+                <span className="text-neutral-500">{client.name}</span>
+              )}
+            
             </div>
           ))}
         </div>

@@ -5,6 +5,8 @@
 @layer base {
   :root {
     /* Custom Variables */
+    --primary: 199 98% 50%;
+  --primary-foreground: 0 0% 100%;
     --primary-color: #03a9fc;
     --secondary-color: #0285c7;
     --primary-gradinet: linear-gradient(
