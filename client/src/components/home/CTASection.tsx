@@ -10,10 +10,10 @@ const CTASection = () => {
             Start protecting your corporate data and managing your devices more efficiently today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-primary hover:bg-neutral-100">
+            <Button size="lg" className="bg-white text-primary hover:bg-neutral-100 hover:scale-95 transition-transform duration-200">
               Start Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 hover:scale-95 transition-transform duration-200">
               Request Demo
             </Button>
           </div>

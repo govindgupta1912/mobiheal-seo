@@ -7,75 +7,148 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { sub } from "date-fns";
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "annually">("monthly");
 
+  // const pricingPlans = [
+  //   {
+  //     title: "Basic",
+  //     description: "For small teams and startups",
+  //     monthlyPrice: "$4",
+  //     annualPrice: "$3.50",
+  //     ctaText: "Get Started",
+  //     ctaLink: "/contact",
+  //     popular: false,
+  //     features: [
+  //       { name: "Up to 100 devices", included: true },
+  //       { name: "Basic app management", included: true, tooltip: "Deploy, update, and remove company approved apps" },
+  //       { name: "Remote lock & wipe", included: true },
+  //       { name: "Email support", included: true },
+  //       { name: "Basic security policies", included: true },
+  //       { name: "Kiosk mode", included: false },
+  //       { name: "Advanced security controls", included: false },
+  //       { name: "24/7 priority support", included: false },
+  //       { name: "API access", included: false },
+  //       { name: "Custom integrations", included: false }
+  //     ]
+  //   },
+  //   {
+  //     title: "Essential",
+  //     description: "For growing businesses",
+  //     monthlyPrice: "$8",
+  //     annualPrice: "$7",
+  //     ctaText: "Get Started",
+  //     ctaLink: "/contact",
+  //     popular: true,
+  //     features: [
+  //       { name: "Up to 500 devices", included: true },
+  //       { name: "Advanced app management", included: true, tooltip: "App whitelist/blacklist, selective permissions, version control" },
+  //       { name: "Remote lock & wipe", included: true },
+  //       { name: "Email & phone support", included: true },
+  //       { name: "Enhanced security policies", included: true },
+  //       { name: "Kiosk mode", included: true },
+  //       { name: "Basic security controls", included: true },
+  //       { name: "Extended business hours support", included: true },
+  //       { name: "Basic API access", included: true },
+  //       { name: "Custom integrations", included: false }
+  //     ]
+  //   },
+  //   {
+  //     title: "Professional",
+  //     description: "For enterprises & large teams",
+  //     monthlyPrice: "$12",
+  //     annualPrice: "$10",
+  //     ctaText: "Contact Sales",
+  //     ctaLink: "/contact",
+  //     popular: false,
+  //     features: [
+  //       { name: "Unlimited devices", included: true },
+  //       { name: "Complete app management", included: true, tooltip: "Advanced app configuration, enterprise app store, automated deployment" },
+  //       { name: "Advanced remote control", included: true, tooltip: "Remote view, assist, and troubleshoot devices in real-time" },
+  //       { name: "24/7 priority support", included: true },
+  //       { name: "Custom security policies", included: true },
+  //       { name: "Custom kiosk configurations", included: true },
+  //       { name: "Advanced security controls", included: true },
+  //       { name: "Dedicated account manager", included: true },
+  //       { name: "Full API access", included: true },
+  //       { name: "Custom integrations", included: true }
+  //     ]
+  //   }
+  // ];
+
   const pricingPlans = [
-    {
-      title: "Basic",
-      description: "For small teams and startups",
-      monthlyPrice: "$4",
-      annualPrice: "$3.50",
-      ctaText: "Get Started",
-      ctaLink: "/contact",
-      popular: false,
-      features: [
-        { name: "Up to 100 devices", included: true },
-        { name: "Basic app management", included: true, tooltip: "Deploy, update, and remove company approved apps" },
-        { name: "Remote lock & wipe", included: true },
-        { name: "Email support", included: true },
-        { name: "Basic security policies", included: true },
-        { name: "Kiosk mode", included: false },
-        { name: "Advanced security controls", included: false },
-        { name: "24/7 priority support", included: false },
-        { name: "API access", included: false },
-        { name: "Custom integrations", included: false }
-      ]
-    },
-    {
-      title: "Essential",
-      description: "For growing businesses",
-      monthlyPrice: "$8",
-      annualPrice: "$7",
-      ctaText: "Get Started",
-      ctaLink: "/contact",
-      popular: true,
-      features: [
-        { name: "Up to 500 devices", included: true },
-        { name: "Advanced app management", included: true, tooltip: "App whitelist/blacklist, selective permissions, version control" },
-        { name: "Remote lock & wipe", included: true },
-        { name: "Email & phone support", included: true },
-        { name: "Enhanced security policies", included: true },
-        { name: "Kiosk mode", included: true },
-        { name: "Basic security controls", included: true },
-        { name: "Extended business hours support", included: true },
-        { name: "Basic API access", included: true },
-        { name: "Custom integrations", included: false }
-      ]
-    },
-    {
-      title: "Professional",
-      description: "For enterprises & large teams",
-      monthlyPrice: "$12",
-      annualPrice: "$10",
-      ctaText: "Contact Sales",
-      ctaLink: "/contact",
-      popular: false,
-      features: [
-        { name: "Unlimited devices", included: true },
-        { name: "Complete app management", included: true, tooltip: "Advanced app configuration, enterprise app store, automated deployment" },
-        { name: "Advanced remote control", included: true, tooltip: "Remote view, assist, and troubleshoot devices in real-time" },
-        { name: "24/7 priority support", included: true },
-        { name: "Custom security policies", included: true },
-        { name: "Custom kiosk configurations", included: true },
-        { name: "Advanced security controls", included: true },
-        { name: "Dedicated account manager", included: true },
-        { name: "Full API access", included: true },
-        { name: "Custom integrations", included: true }
-      ]
-    }
-  ];
+  {
+    title: "Basic",
+    description: "(MDM & MAM)",
+    subDescription: "All MDM features for two devices",
+    monthlyPrice: "Free",
+    annualPrice: "Free",
+    ctaText: "Get Started",
+    ctaLink: "/contact",
+    popular: false,
+    trial: "For 14 days",
+    features: [
+      { name: "Android Enterprise", included: true },
+      { name: "Application Management", included: true },
+      { name: "Permission Management", included: true },
+      { name: "Managed Configuration", included: true },
+      { name: "Kiosk Mode", included: true },
+      { name: "Bring Your Own Device (BYOD)", included: true },
+      { name: "Remote Lock & Wipe", included: true },
+      { name: "Audit Logs", included: true },
+      { name: "Two Devices", included: true }
+    ]
+  },
+  {
+    title: "Essential",
+    description: "(MDM & MAM)",
+    subDescription: "All MDM features for unlimited devices",
+    monthlyPrice: "₹99 ",
+    annualPrice: "Billed Annually + 18% GST",
+    ctaText: "Get Started",
+    ctaLink: "/contact",
+    popular: true,
+    features: [
+      { name: "Android Enterprise", included: true },
+      { name: "Application Management", included: true },
+      { name: "Permission Management", included: true },
+      { name: "Managed Configuration", included: true },
+      { name: "Kiosk Mode", included: true },
+      { name: "Bring Your Own Device (BYOD)", included: true },
+      { name: "Remote Lock & Wipe", included: true },
+      { name: "Audit Logs", included: true },
+      { name: "Unlimited Devices", included: true }
+    ]
+  },
+  {
+    title: "Professional",
+    description: "(MDM & MAM)",
+    subDescription: "Essential Plan + advanced controls",
+    monthlyPrice: "₹149 ",
+    annualPrice: "Billed Annually + 18% GST",
+    ctaText: "Contact Sales",
+    ctaLink: "/contact",
+    popular: false,
+    features: [
+      { name: "Android Enterprise", included: true },
+      { name: "Application Management", included: true },
+      { name: "Permission Management", included: true },
+      { name: "Managed Configuration", included: true },
+      { name: "Kiosk Mode", included: true },
+      { name: "Bring Your Own Device (BYOD)", included: true },
+      { name: "Remote Lock & Wipe", included: true },
+      { name: "Audit Logs", included: true },
+      { name: "Notifications", included: true },
+      { name: "Geo Location", included: true },
+      { name: "Geo Fencing", included: true },
+      { name: "Unlimited Devices", included: true },
+      { name: "Customer Support", included: true }
+    ]
+  }
+];
+
 
   const faqItems = [
     {
@@ -102,7 +175,7 @@ const Pricing = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 md:py-20">
+      <section className="bg-gradient text-white py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -138,7 +211,9 @@ const Pricing = () => {
           <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className="lg:w-1/3 relative">
-                <div className={`h-full bg-white border ${plan.popular ? 'border-primary' : 'border-neutral-200'} rounded-xl ${plan.popular ? 'shadow-md hover:shadow-lg' : 'shadow-sm hover:shadow-md'} transition-shadow`}>
+                {/* <div className={`h-full bg-white border ${plan.popular ? 'border-primary' : 'border-neutral-200'} rounded-xl ${plan.popular ? 'shadow-md hover:shadow-lg' : 'shadow-sm hover:shadow-md'} transition-shadow`}> */}
+                 <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md'}`}>
+
                   {plan.popular && (
                     <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
                       <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium inline-block">
@@ -149,15 +224,18 @@ const Pricing = () => {
                   <div className="p-6 border-b border-neutral-100">
                     <h3 className="text-xl font-bold text-neutral-800 mb-2">{plan.title}</h3>
                     <p className="text-neutral-600 mb-4">{plan.description}</p>
+                    {plan.subDescription && (
+                      <p className="text-sm text-neutral-500 mb-4">{plan.subDescription}</p>
+                    )}
                     <div className="flex items-baseline mb-4">
                       <span className="text-3xl font-bold text-neutral-800">
                         {billingCycle === "monthly" ? plan.monthlyPrice : plan.annualPrice}
                       </span>
-                      <span className="text-neutral-500 ml-1">/ device / month</span>
+                      <span className="text-neutral-500 ml-1">{plan.title==='Basic'?'  for 14 days':" / device / month"}</span>
                     </div>
                     <Button 
                       variant={plan.popular ? "default" : "outline"} 
-                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary-dark text-white' : 'text-primary hover:bg-primary-light/10'}`}
+                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary-dark text-white' : 'text-primary hover:bg-primary hover:text-white'}  hover:scale-95 transition-transform duration-300 ease-in-out`}
                     >
                       <a href={plan.ctaLink}>{plan.ctaText}</a>
                     </Button>
@@ -198,7 +276,7 @@ const Pricing = () => {
 
           <div className="text-center mt-16">
             <p className="text-neutral-600 mb-4">Need a custom plan for your organization?</p>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white hover:scale-95 transition-transform duration-300 ease-in-out">
               <a href="/contact">Contact our Sales Team</a>
             </Button>
           </div>
@@ -220,7 +298,9 @@ const Pricing = () => {
 
           <div className="mt-12 text-center">
             <p className="text-neutral-600 mb-4">Have more questions about our pricing?</p>
-            <Button asChild>
+            <Button asChild
+            className="hover:scale-95 transition-transform duration-300 ease-in-out"
+            >
               <a href="/contact">Contact Our Sales Team</a>
             </Button>
           </div>

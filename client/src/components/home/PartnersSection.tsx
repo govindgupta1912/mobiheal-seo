@@ -40,21 +40,21 @@ const PartnersSection = () => {
 
   const testimonials = [
     {
-      quote: "SecureMDM has revolutionized how we manage our corporate devices. The implementation was seamless, and the security features have given us peace of mind.",
-      author: "Sarah Johnson",
-      position: "CIO, Global Financial Services",
+      quote: " We can now fully utilize eLearning potential by issuing mobile tabs to our students permanently, without any worry or hesitation of misuse. Kudos to MobiHEAL MDM for allowing us total control and visibility into students' tabs!         ",
+      author: "Secretary CHMES",
+      position: "CHMES",
       rating: 5
     },
     {
-      quote: "The kiosk mode functionality has been a game-changer for our retail locations. We've been able to deploy hundreds of customer-facing tablets with minimal IT overhead.",
-      author: "Mark Thompson",
-      position: "IT Director, National Retail Chain",
+      quote: " MobiHEAL MDM has been instrumental in safely implementing our assistive technology initiative for use of mobile devices by visually challenged people.Heartfelt thanks to Mobisec for providing tech help for achieving our vision.",
+      author: "General Manager",
+      position: "Saksham NGO",
       rating: 5
     },
     {
-      quote: "Our BYOD program has seen increased adoption thanks to SecureMDM's work profile container. Employees appreciate the privacy protection, and we maintain strong security controls.",
-      author: "Jennifer Lee",
-      position: "CISO, Healthcare Provider",
+      quote: "MobiHEAL MDM has been instrumental in managing & monitoring mobile devices for disability rehabilitation. Thanks to Mobisec, we can safely extend mobile device-based assistive tech to our beneficiaries, overcoming challenges effectively.",
+      author: "NCAHT",
+      position: "An AIIMS Initiative",
       rating: 4.5
     }
   ];
@@ -102,7 +102,7 @@ const PartnersSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary/5 hover:scale-95 transition-transform duration-200" asChild>
             <Link href="/testimonials">View all Testimonials</Link>
           </Button>
         </div>

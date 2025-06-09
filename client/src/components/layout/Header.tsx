@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu, ChevronDown } from "lucide-react";
+import mobihealLogo from "../../assets/mobiheal_logo.svg"
 
 const Header = () => {
   const [location] = useLocation();
@@ -24,7 +25,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -40,8 +41,13 @@ const Header = () => {
                 <circle cx="12" cy="9" r="3" />
                 <path d="M12 12v6" />
                 <path d="M9.5 9a2.5 2.5 0 0 1 5 0" />
-              </svg>
-              <span className="text-xl font-semibold text-neutral-800">SecureMDM</span>
+              </svg> */}
+              {/* <span className="text-xl font-semibold text-neutral-800">SecureMDM</span> */}
+              <img
+                src={mobihealLogo}
+                alt="MobiHeal Logo"
+                className="ml-2 h-8 w-auto"
+              />
             </Link>
           </div>
 

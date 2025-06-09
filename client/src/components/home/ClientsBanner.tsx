@@ -116,47 +116,68 @@ const ClientsBanner = () => {
   //   </section>
   // );
  return (
+    // <section className="py-8 bg-neutral-50 border-y border-neutral-100">
+    //   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    //     <p className="text-center text-neutral-500 mb-6 text-sm font-medium">
+    //       TRUSTED BY LEADING COMPANIES
+    //     </p>
+
+    //     <div>
+    //       <Carousel
+    //         opts={{
+    //           loop: true,
+    //           align: "start",
+    //           slidesToScroll: 1,
+    //         }}
+    //         plugins={[
+    //           Autoplay({
+    //             delay: 2000, // <-- slide every 2 seconds
+    //             stopOnInteraction: false, // keep sliding even on hover/click
+    //           }),
+    //         ]}
+    //         className="w-full  "
+    //       >
+    //         <CarouselContent>
+    //           {images.map((src, index) => (
+    //             <CarouselItem
+    //               key={index}
+    //               className="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/6"
+    //             >
+    //               <img
+    //                 src={src}
+    //                 alt={`Client ${index + 1}`}
+    //                 className="w-full h-28 object-contain p-4 opacity-70"
+    //               />
+    //             </CarouselItem>
+    //           ))}
+    //         </CarouselContent>
+
+    //         {/* No Previous/Next buttons */}
+    //       </Carousel>
+    //     </div>
+    //   </div>
+    // </section>
     <section className="py-8 bg-neutral-50 border-y border-neutral-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-neutral-500 mb-6 text-sm font-medium">
-          TRUSTED BY LEADING COMPANIES
-        </p>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <p className="text-center text-neutral-500 mb-6 text-sm font-medium">
+      TRUSTED BY LEADING COMPANIES
+    </p>
 
-        <div>
-          <Carousel
-            opts={{
-              loop: true,
-              align: "start",
-              slidesToScroll: 1,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 2000, // <-- slide every 2 seconds
-                stopOnInteraction: false, // keep sliding even on hover/click
-              }),
-            ]}
-            className="w-full  "
-          >
-            <CarouselContent>
-              {images.map((src, index) => (
-                <CarouselItem
-                  key={index}
-                  className="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/6"
-                >
-                  <img
-                    src={src}
-                    alt={`Client ${index + 1}`}
-                    className="w-full h-28 object-contain p-4 opacity-70"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-
-            {/* No Previous/Next buttons */}
-          </Carousel>
-        </div>
+    <div className="overflow-hidden relative">
+      <div className="flex animate-scroll whitespace-nowrap gap-8">
+        {[...images, ...images].map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Client ${i + 1}`}
+            className="h-28 w-auto object-contain opacity-70"
+          />
+        ))}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 };
 
