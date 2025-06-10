@@ -203,116 +203,250 @@ export const owaspRisks = [
   }
 ];
 
-// FAQs data
+// // FAQs data
+// export const faqs = [
+//   // General FAQs
+//   {
+//     category: "general",
+//     question: " What is MobiHeal MDM?",
+//     answer: "MDM is a type of security software that enables IT administrators to control, secure, and enforce policies on employee smartphones, tablets, and other devices. It allows organizations to ensure that corporate data is protected, regardless of where the device is located."
+//   },
+//   {
+//     category: "general",
+//     question: "How does SecureMDM protect corporate data?",
+//     answer: "SecureMDM protects corporate data through multiple layers of security, including device encryption, application management, secure containers, data loss prevention policies, and remote wipe capabilities. These features ensure sensitive information remains protected, even if a device is lost or stolen."
+//   },
+//   {
+//     category: "general",
+//     question: "Can I manage both iOS and Android devices?",
+//     answer: "Yes, SecureMDM provides comprehensive support for both iOS and Android devices, allowing you to manage your entire fleet from a single console regardless of operating system. Our platform also supports Windows and macOS devices for complete endpoint management."
+//   },
+  
+//   // Features FAQs
+//   {
+//     category: "features",
+//     question: "What is the difference between BYOD and corporate-owned device management?",
+//     answer: "BYOD (Bring Your Own Device) management focuses on separating work and personal data on employee-owned devices through containerization, ensuring corporate security without compromising user privacy. Corporate-owned device management provides more comprehensive control over company-owned devices, with full management of device settings, applications, and security policies."
+//   },
+//   {
+//     category: "features",
+//     question: "What is Kiosk Mode and how does it work?",
+//     answer: "Kiosk Mode allows you to lock down a device to run only specific applications, preventing users from accessing other features or settings. This is ideal for customer-facing deployments, such as in retail, hospitality, or healthcare settings. You can configure devices to run in single-app or multi-app mode with customized branding and settings."
+//   },
+//   {
+//     category: "features",
+//     question: "How does Remote Lock & Wipe work?",
+//     answer: "Remote Lock allows administrators to instantly lock a lost or stolen device to prevent unauthorized access. Remote Wipe goes further by completely erasing all data from the device or selectively wiping only corporate data. These actions can be triggered from the admin console as soon as a device is reported lost or stolen."
+//   },
+  
+//   // Security FAQs
+//   {
+//     category: "security",
+//     question: "How does SecureMDM handle data encryption?",
+//     answer: "SecureMDM enforces strong encryption policies for both data at rest and data in transit. We support industry-standard encryption protocols and can enforce device-level encryption, app-level encryption, and secure communication channels. For BYOD scenarios, we use containerization to encrypt only corporate data without affecting personal information."
+//   },
+//   {
+//     category: "security",
+//     question: "Is SecureMDM compliant with industry regulations?",
+//     answer: "Yes, SecureMDM is designed to help organizations maintain compliance with major regulations including GDPR, HIPAA, PCI DSS, SOX, and CCPA. We provide detailed audit logs, compliance reports, and security controls that align with industry standards and best practices.",
+//     link: {
+//       text: "View our compliance certifications",
+//       url: "/compliance"
+//     }
+//   },
+//   {
+//     category: "security",
+//     question: "How does SecureMDM prevent data leakage?",
+//     answer: "SecureMDM implements comprehensive data loss prevention (DLP) measures including app blacklisting/whitelisting, clipboard controls, file sharing restrictions, screenshot prevention, watermarking, and containerization of corporate data. These controls prevent sensitive information from being shared outside approved channels."
+//   },
+  
+//   // Pricing FAQs
+//   {
+//     category: "pricing",
+//     question: "How is SecureMDM priced?",
+//     answer: "SecureMDM is priced per device per month, with different tiers based on the features you need. Our Basic plan starts at $4/device/month, Essential at $8/device/month, and Professional at $12/device/month. We offer discounts for annual billing and volume licensing.",
+//     link: {
+//       text: "View detailed pricing",
+//       url: "/pricing"
+//     }
+//   },
+//   {
+//     category: "pricing",
+//     question: "Is there a free trial available?",
+//     answer: "Yes, we offer a 14-day free trial that includes full access to all features. You can manage up to 25 devices during the trial period with no credit card required. Our team provides support throughout the trial to help you evaluate the solution properly."
+//   },
+//   {
+//     category: "pricing",
+//     question: "Can I change plans as my needs evolve?",
+//     answer: "Absolutely. You can upgrade your plan at any time, and the new pricing will be prorated for the remainder of your billing cycle. Downgrades will take effect at the start of your next billing cycle. Our flexible licensing ensures you only pay for what you need."
+//   },
+  
+//   // Implementation FAQs
+//   {
+//     category: "implementation",
+//     question: "How do I deploy SecureMDM to my organization?",
+//     answer: "Deployment is simple with multiple enrollment options including QR code scanning, email invitations, or zero-touch enrollment for corporate devices. Our team provides comprehensive onboarding support to ensure a smooth implementation, including configuration assistance, policy setup, and user training."
+//   },
+//   {
+//     category: "implementation",
+//     question: "How long does implementation typically take?",
+//     answer: "For most organizations, basic implementation can be completed in 1-2 days. More complex deployments with custom integrations and policies may take 1-2 weeks. Our implementation team works with you to create a realistic timeline based on your specific requirements."
+//   },
+//   {
+//     category: "implementation",
+//     question: "Can SecureMDM integrate with our existing systems?",
+//     answer: "Yes, SecureMDM offers robust integration capabilities with popular identity providers (Azure AD, Okta, Google Workspace), enterprise systems (Microsoft 365, Google Workspace, Slack), and security tools (SIEM solutions, IAM systems). We also provide API access for custom integrations with your internal systems."
+//   },
+  
+//   // Support FAQs
+//   {
+//     category: "support",
+//     question: "What support options are available?",
+//     answer: "Support options vary by plan. Basic plans include email support during business hours. Essential plans add phone support during extended business hours. Professional plans include 24/7 priority support with dedicated account management. All customers have access to our knowledge base, community forums, and regular webinars."
+//   },
+//   {
+//     category: "support",
+//     question: "Do you offer training for administrators?",
+//     answer: "Yes, we provide comprehensive admin training through multiple channels. Essential and Professional plans include live admin training sessions. All customers have access to on-demand training videos, documentation, and regular webinars covering both basic and advanced topics."
+//   },
+//   {
+//     category: "support",
+//     question: "What is your uptime guarantee?",
+//     answer: "SecureMDM guarantees 99.9% uptime for our cloud services, with transparent status monitoring available at status.securemdm.com. For organizations with stringent uptime requirements, our Professional plan includes enhanced SLAs with up to 99.99% guaranteed uptime."
+//   }
+// ];
 export const faqs = [
   // General FAQs
   {
     category: "general",
-    question: "What is Mobile Device Management (MDM)?",
-    answer: "MDM is a type of security software that enables IT administrators to control, secure, and enforce policies on employee smartphones, tablets, and other devices. It allows organizations to ensure that corporate data is protected, regardless of where the device is located."
+    question: "What is MobiHeal MDM?",
+    answer:
+      "MobiHeal MDM is our enterprise-grade Mobile Device Management solution that enables IT teams to centrally enroll, configure, monitor and secure corporate and BYOD Android and iOS devices."
   },
   {
     category: "general",
-    question: "How does SecureMDM protect corporate data?",
-    answer: "SecureMDM protects corporate data through multiple layers of security, including device encryption, application management, secure containers, data loss prevention policies, and remote wipe capabilities. These features ensure sensitive information remains protected, even if a device is lost or stolen."
+    question: "Which platforms and device types are supported?",
+    answer:
+      "MobiHeal MDM supports Android 9.0 and above (Android Enterprise-compliant devices) and iOS 12.0 and above."
   },
   {
     category: "general",
-    question: "Can I manage both iOS and Android devices?",
-    answer: "Yes, SecureMDM provides comprehensive support for both iOS and Android devices, allowing you to manage your entire fleet from a single console regardless of operating system. Our platform also supports Windows and macOS devices for complete endpoint management."
+    question: "How do I enroll devices?",
+    answer:
+      "MobiHeal MDM supports multiple enrollment options including Zero-touch enrollment, QR-code provisioning, BYOD/profile owner mode, and manual token-based enrollment. Admins can generate enrollment profiles in the console and distribute them via email or QR code."
   },
-  
+
   // Features FAQs
   {
     category: "features",
-    question: "What is the difference between BYOD and corporate-owned device management?",
-    answer: "BYOD (Bring Your Own Device) management focuses on separating work and personal data on employee-owned devices through containerization, ensuring corporate security without compromising user privacy. Corporate-owned device management provides more comprehensive control over company-owned devices, with full management of device settings, applications, and security policies."
+    question: "What enrollment modes are available?",
+    answer:
+      "MobiHeal supports Corporate-Owned Single-Use (Kiosk), Fully Managed, COPE (Corporate-Owned, Personally Enabled), and Work-Profile (BYOD) modes."
   },
   {
     category: "features",
-    question: "What is Kiosk Mode and how does it work?",
-    answer: "Kiosk Mode allows you to lock down a device to run only specific applications, preventing users from accessing other features or settings. This is ideal for customer-facing deployments, such as in retail, hospitality, or healthcare settings. You can configure devices to run in single-app or multi-app mode with customized branding and settings."
+    question: "How are applications managed and distributed?",
+    answer:
+      "Apps can be deployed via public stores or a private enterprise store. MobiHeal supports silent push, app blacklisting/whitelisting, runtime permission configuration, and managed app configurations."
   },
   {
     category: "features",
-    question: "How does Remote Lock & Wipe work?",
-    answer: "Remote Lock allows administrators to instantly lock a lost or stolen device to prevent unauthorized access. Remote Wipe goes further by completely erasing all data from the device or selectively wiping only corporate data. These actions can be triggered from the admin console as soon as a device is reported lost or stolen."
+    question: "Can users still install personal apps?",
+    answer:
+      "Yes, in BYOD mode, users can install personal apps freely. Corporate data and apps remain encrypted and containerized under IT control."
   },
-  
+   {
+    category: "features",
+    question: "What reporting and analytics are available?",
+    answer:
+      "    • Real-time device health dashboard (compliance, connectivity, OS version), Usage reports (app usage durations), Security audit logs (policy violations, remote actions), Custom alerts: Email/SMS triggers on critical events"
+  },
+
   // Security FAQs
+ 
   {
     category: "security",
-    question: "How does SecureMDM handle data encryption?",
-    answer: "SecureMDM enforces strong encryption policies for both data at rest and data in transit. We support industry-standard encryption protocols and can enforce device-level encryption, app-level encryption, and secure communication channels. For BYOD scenarios, we use containerization to encrypt only corporate data without affecting personal information."
+    question: "How does MobiHeal MDM ensure data security?",
+    answer:
+      "MobiHeal enforces AES-256 encryption, compliance policies, and DLP features like blocking copy-paste, screenshots, and USB transfers."
   },
   {
     category: "security",
-    question: "Is SecureMDM compliant with industry regulations?",
-    answer: "Yes, SecureMDM is designed to help organizations maintain compliance with major regulations including GDPR, HIPAA, PCI DSS, SOX, and CCPA. We provide detailed audit logs, compliance reports, and security controls that align with industry standards and best practices.",
-    link: {
-      text: "View our compliance certifications",
-      url: "/compliance"
-    }
+    question: "What happens if a device is lost or stolen?",
+    answer:
+      "MobiHeal allows remote lock, selective wipe of corporate data, or full factory reset depending on ownership and severity."
   },
   {
     category: "security",
-    question: "How does SecureMDM prevent data leakage?",
-    answer: "SecureMDM implements comprehensive data loss prevention (DLP) measures including app blacklisting/whitelisting, clipboard controls, file sharing restrictions, screenshot prevention, watermarking, and containerization of corporate data. These controls prevent sensitive information from being shared outside approved channels."
+    question: "How do I configure network settings (Wi-Fi, VPN etc.)?",
+    answer:
+      "Network settings like Wi-Fi SSIDs and VPNs can be pushed via Policy Templates, scoped by groups, departments, or tags."
   },
-  
+
   // Pricing FAQs
   {
     category: "pricing",
-    question: "How is SecureMDM priced?",
-    answer: "SecureMDM is priced per device per month, with different tiers based on the features you need. Our Basic plan starts at $4/device/month, Essential at $8/device/month, and Professional at $12/device/month. We offer discounts for annual billing and volume licensing.",
-    link: {
-      text: "View detailed pricing",
-      url: "/pricing"
-    }
+    question: "How is MobiHeal MDM priced?",
+    answer:
+      "MobiHeal is priced per device per month. Volume and long-term contract discounts apply. Add-ons like advanced analytics and SOC integration are available separately."
+  },
+  {
+    category: "pricing",
+    question: "How is licensing and pricing structured?",
+    answer:
+      "   Per-device, per-month subscription (billed annually), Volume discounts starting at 101 devices onwards ,Enterprise term discounts for 24- and 36-month commitment, Add-on modules (Managed SOC integration, advanced analytics) available as separate SKUs"
   },
   {
     category: "pricing",
     question: "Is there a free trial available?",
-    answer: "Yes, we offer a 14-day free trial that includes full access to all features. You can manage up to 25 devices during the trial period with no credit card required. Our team provides support throughout the trial to help you evaluate the solution properly."
+    answer:
+      "Yes, a 14-day free trial is available with full access for up to 25 devices and no credit card required."
   },
   {
     category: "pricing",
     question: "Can I change plans as my needs evolve?",
-    answer: "Absolutely. You can upgrade your plan at any time, and the new pricing will be prorated for the remainder of your billing cycle. Downgrades will take effect at the start of your next billing cycle. Our flexible licensing ensures you only pay for what you need."
+    answer:
+      "Plans can be upgraded or downgraded at any time. Pricing changes are prorated or applied at the next cycle as appropriate."
   },
-  
+
   // Implementation FAQs
   {
     category: "implementation",
-    question: "How do I deploy SecureMDM to my organization?",
-    answer: "Deployment is simple with multiple enrollment options including QR code scanning, email invitations, or zero-touch enrollment for corporate devices. Our team provides comprehensive onboarding support to ensure a smooth implementation, including configuration assistance, policy setup, and user training."
+    question: "How do I deploy MobiHeal MDM to my organization?",
+    answer:
+      "Deployment involves creating an enrollment profile and using methods like QR codes or email links. Our team offers onboarding assistance."
   },
   {
     category: "implementation",
-    question: "How long does implementation typically take?",
-    answer: "For most organizations, basic implementation can be completed in 1-2 days. More complex deployments with custom integrations and policies may take 1-2 weeks. Our implementation team works with you to create a realistic timeline based on your specific requirements."
+    question: "How do I troubleshoot common enrollment issues?",
+    answer:
+      "Check connectivity, date/time sync, and profile validity. Ensure the MobiHeal Buddy App is installed and configured properly."
   },
   {
     category: "implementation",
-    question: "Can SecureMDM integrate with our existing systems?",
-    answer: "Yes, SecureMDM offers robust integration capabilities with popular identity providers (Azure AD, Okta, Google Workspace), enterprise systems (Microsoft 365, Google Workspace, Slack), and security tools (SIEM solutions, IAM systems). We also provide API access for custom integrations with your internal systems."
+    question: "Can MobiHeal integrate with our existing systems?",
+    answer:
+      "Yes, MobiHeal supports integration with identity providers (Azure AD, Okta), productivity suites, and security tools. API access is also available."
   },
-  
+
   // Support FAQs
   {
     category: "support",
-    question: "What support options are available?",
-    answer: "Support options vary by plan. Basic plans include email support during business hours. Essential plans add phone support during extended business hours. Professional plans include 24/7 priority support with dedicated account management. All customers have access to our knowledge base, community forums, and regular webinars."
+    question: "What support channels and escalation process do you offer?",
+    answer:
+      "Support includes email and call options with a 4-hour initial response. Enterprise users get a dedicated account manager and priority SLAs."
   },
   {
     category: "support",
     question: "Do you offer training for administrators?",
-    answer: "Yes, we provide comprehensive admin training through multiple channels. Essential and Professional plans include live admin training sessions. All customers have access to on-demand training videos, documentation, and regular webinars covering both basic and advanced topics."
+    answer:
+      "Yes, we provide on-demand videos, documentation, live sessions for advanced users, and onboarding training."
   },
   {
     category: "support",
-    question: "What is your uptime guarantee?",
-    answer: "SecureMDM guarantees 99.9% uptime for our cloud services, with transparent status monitoring available at status.securemdm.com. For organizations with stringent uptime requirements, our Professional plan includes enhanced SLAs with up to 99.99% guaranteed uptime."
+    question: "How do I request new features or submit feedback?",
+    answer:
+      "Contact support or your account manager. Feature requests are reviewed quarterly and prioritized based on demand and impact."
   }
 ];
 
