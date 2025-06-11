@@ -6,7 +6,7 @@ export const blogPosts = [
     date: "May 15, 2023",
     imageSrc: "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
     imageAlt: "Mobile Security Threats",
-    href: "/blog/mobile-security-threats-2025",
+    href: "/blog-deatails",
     category: "mobile-security"
   },
   {
