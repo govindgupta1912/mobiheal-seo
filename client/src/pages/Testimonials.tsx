@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
 import { testimonials } from "@/lib/data";
+import { Tabs } from "@radix-ui/react-tabs";
+import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Testimonials = () => {
   // Group testimonials by industry
@@ -10,14 +12,15 @@ const Testimonials = () => {
     "Finance",
     "Healthcare",
     "Retail",
-    "Manufacturing",
+    "defense",
     "Technology",
-    "Education"
+    "Education",
+    "government"
   ];
 
   return (
     <>
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 md:py-20">
+      <section className="bg-gradient text-white py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -32,33 +35,61 @@ const Testimonials = () => {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 overflow-x-auto">
-            <div className="flex space-x-2 min-w-max pb-2">
-              {industries.map((industry) => (
-                <Link key={industry} href={industry === "All" ? "/testimonials" : `/testimonials?industry=${industry.toLowerCase()}`}>
-                  <a className={`px-4 py-2 rounded-full ${
-                    industry === "All" 
-                      ? "bg-primary text-white" 
-                      : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-                  }`}>
-                    {industry}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
+          {/* <div className="mb-12 overflow-x-auto">
+            <div className="flex space-x-2 min-w-max pb-2"> */}
+              <Tabs defaultValue="all">
+                <TabsList className="flex space-x-2">
+                  {industries.map((industry) => (
+                    <TabsTrigger
+                      key={industry} 
+                      value={industry.toLowerCase()} 
+                      id={industry.toLowerCase()}
+                      // className={`px-4 py-2 rounded-full ${
+                      //   industry === "All" 
+                      //     ? "bg-primary text-white" 
+                      //     : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                      // }`}
+                      
+                      
+                      className="px-4 py-2 rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+                    >
+                      {industry}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+                <TabsContent value="all">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {testimonials.map((testimonial, index) => (
+                      <TestimonialCard
+                        key={index}
+                        quote={testimonial.quote}
+                        author={testimonial.author}
+                        position={testimonial.position}
+                        rating={testimonial.rating}
+                      />
+                    ))}
+                  </div>
+                </TabsContent>
+                {industries.slice(1).map((industry) => (
+                  <TabsContent key={industry.toLowerCase()} value={industry.toLowerCase()}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {testimonials
+                        .filter((testimonial) => testimonial.industry === industry.toLowerCase())
+                        .map((testimonial, index) => (
+                          <TestimonialCard
+                            key={index}
+                            quote={testimonial.quote}
+                            author={testimonial.author}
+                            position={testimonial.position}
+                            rating={testimonial.rating}
+                          />
+                        ))}
+                    </div>
+                  </TabsContent>
+                ))}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                position={testimonial.position}
-                rating={testimonial.rating}
-              />
-            ))}
-          </div>
+              </Tabs>
+             
         </div>
       </section>
 
@@ -111,7 +142,7 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-16 bg-gradient text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to join our success stories?</h2>
@@ -122,7 +153,7 @@ const Testimonials = () => {
               <Button size="lg" className="bg-white text-primary hover:bg-neutral-100" asChild>
                 <Link href="/contact">Get Started</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10" asChild>
                 <Link href="/pricing">View Pricing</Link>
               </Button>
             </div>

@@ -29,9 +29,6 @@ export interface Blog {
       url: string;
       description: string;
     }[];
-    imageOptimization: {
-      example: string;
-      recommendations: string[];
-    };
+   
   };
 }

@@ -6,7 +6,18 @@ import LatestBlogCarousel from "../components/blog/LatestBlogCarousel";
 import NewsletterCTA from "../components/blog/NewsletterCTA";
 
 const BlogDetailPage = () => {
-  const blog = blogs[0]; // dynamic via slug later
+  const blog = blogs[1]; // dynamic via slug later
+  // For now, we are using the second blog as an example
+  // In a real application, you would fetch the blog data based on the slug from the URL
+  if (!blog) {
+    return <div className="text-center p-8">Blog not found</div>;
+  }
+  // Assuming blogs is an array of blog objects
+  // and we are displaying the second blog as an example
+  // In a real application, you would fetch the blog data based on the slug from the URL
+  if (!blogs || blogs.length === 0) {
+    return <div className="text-center p-8">No blogs available</div>;
+  }
 
   return (
     <div className="bg-white text-gray-800 font-sans">

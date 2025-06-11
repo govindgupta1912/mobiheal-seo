@@ -12,7 +12,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   rating,
 }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm">
+    <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-neutral-200">
       <div className="flex items-center mb-4">
         <div className="text-amber-500">
           {[...Array(5)].map((_, i) => (
@@ -34,7 +34,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           ))}
         </div>
       </div>
-      <blockquote className="mb-4">
+      <blockquote className="mb-10">
         <p className="text-neutral-600 italic h-32">
           "{quote}"
         </p>

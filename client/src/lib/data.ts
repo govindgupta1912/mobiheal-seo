@@ -451,69 +451,128 @@ export const faqs = [
 ];
 
 // Testimonial data
+// export const testimonials = [
+//   {
+//     quote: "SecureMDM has revolutionized how we manage our corporate devices. The implementation was seamless, and the security features have given us peace of mind.",
+//     author: "Sarah Johnson",
+//     position: "CIO, Global Financial Services",
+//     rating: 5,
+//     industry: "finance"
+//   },
+//   {
+//     quote: "The kiosk mode functionality has been a game-changer for our retail locations. We've been able to deploy hundreds of customer-facing tablets with minimal IT overhead.",
+//     author: "Mark Thompson",
+//     position: "IT Director, National Retail Chain",
+//     rating: 5,
+//     industry: "retail"
+//   },
+//   {
+//     quote: "Our BYOD program has seen increased adoption thanks to SecureMDM's work profile container. Employees appreciate the privacy protection, and we maintain strong security controls.",
+//     author: "Jennifer Lee",
+//     position: "CISO, Healthcare Provider",
+//     rating: 4.5,
+//     industry: "healthcare"
+//   },
+//   {
+//     quote: "We deployed SecureMDM to manage 5,000 devices across our manufacturing facilities. The ability to remotely troubleshoot and update devices has reduced our IT travel costs by 60%.",
+//     author: "Robert Chen",
+//     position: "VP of IT Infrastructure, Global Manufacturing",
+//     rating: 5,
+//     industry: "manufacturing"
+//   },
+//   {
+//     quote: "The compliance reporting features have made our regulatory audits much simpler. We can quickly demonstrate that all devices meet our security requirements.",
+//     author: "Michael Rodriguez",
+//     position: "Compliance Director, Regional Bank",
+//     rating: 4.5,
+//     industry: "finance"
+//   },
+//   {
+//     quote: "SecureMDM's app management capabilities have streamlined our software distribution. We can deploy critical updates to thousands of devices in minutes.",
+//     author: "Emily Wilson",
+//     position: "Mobile Technology Lead, Technology Solutions",
+//     rating: 5,
+//     industry: "technology"
+//   },
+//   {
+//     quote: "As an educational institution, we needed a flexible solution to manage both staff and student devices. SecureMDM provides the right balance of control and autonomy.",
+//     author: "David Miller",
+//     position: "Director of Technology, University System",
+//     rating: 4,
+//     industry: "education"
+//   },
+//   {
+//     quote: "The customer support team has been exceptional. They've helped us optimize our policies and quickly resolved any issues we encountered during deployment.",
+//     author: "Amanda Taylor",
+//     position: "IT Operations Manager, Healthcare Network",
+//     rating: 5,
+//     industry: "healthcare"
+//   },
+//   {
+//     quote: "We've seen a 75% reduction in mobile-related security incidents since implementing SecureMDM across our organization.",
+//     author: "Thomas Wright",
+//     position: "Information Security Manager, Insurance Provider",
+//     rating: 4.5,
+//     industry: "finance"
+//   }
+// ];
+
 export const testimonials = [
   {
-    quote: "SecureMDM has revolutionized how we manage our corporate devices. The implementation was seamless, and the security features have given us peace of mind.",
-    author: "Sarah Johnson",
-    position: "CIO, Global Financial Services",
+    quote:
+      "Managing and security for our fully-managed Android fleet in an intranet-only shipyard environment was a constant challenge. MobiHeal’s robust offline policy enforcement and real-time compliance monitoring ensure uninterrupted operations and airtight device security—even without internet connectivity.",
+    author: "Naval Shipyard",
+    position: "",
     rating: 5,
-    industry: "finance"
+    industry: "defense"
   },
   {
-    quote: "The kiosk mode functionality has been a game-changer for our retail locations. We've been able to deploy hundreds of customer-facing tablets with minimal IT overhead.",
-    author: "Mark Thompson",
-    position: "IT Director, National Retail Chain",
+    quote:
+      "In our Android security evaluation lab, we rely on MobiHeal’s baseline analytics to measure the impact of firmware patches and surface Indicators of Compromise with precision. Its automated comparison workflows and continuous monitoring have streamlined our vulnerability assessments and accelerated lab turn-around times.",
+    author: "Government Research Lab",
+    position: "",
     rating: 5,
-    industry: "retail"
+    industry: "government"
   },
   {
-    quote: "Our BYOD program has seen increased adoption thanks to SecureMDM's work profile container. Employees appreciate the privacy protection, and we maintain strong security controls.",
-    author: "Jennifer Lee",
-    position: "CISO, Healthcare Provider",
+    quote:
+      "We needed airtight control over student Android tablets for our LMS—limiting access to approved apps and monitoring usage in real time. MobiHeal’s policy-driven controls and live device insights have transformed our digital classrooms, ensuring focus and security without constant manual oversight.",
+    author: "CHMES",
+    position: "",
     rating: 4.5,
-    industry: "healthcare"
-  },
-  {
-    quote: "We deployed SecureMDM to manage 5,000 devices across our manufacturing facilities. The ability to remotely troubleshoot and update devices has reduced our IT travel costs by 60%.",
-    author: "Robert Chen",
-    position: "VP of IT Infrastructure, Global Manufacturing",
-    rating: 5,
-    industry: "manufacturing"
-  },
-  {
-    quote: "The compliance reporting features have made our regulatory audits much simpler. We can quickly demonstrate that all devices meet our security requirements.",
-    author: "Michael Rodriguez",
-    position: "Compliance Director, Regional Bank",
-    rating: 4.5,
-    industry: "finance"
-  },
-  {
-    quote: "SecureMDM's app management capabilities have streamlined our software distribution. We can deploy critical updates to thousands of devices in minutes.",
-    author: "Emily Wilson",
-    position: "Mobile Technology Lead, Technology Solutions",
-    rating: 5,
-    industry: "technology"
-  },
-  {
-    quote: "As an educational institution, we needed a flexible solution to manage both staff and student devices. SecureMDM provides the right balance of control and autonomy.",
-    author: "David Miller",
-    position: "Director of Technology, University System",
-    rating: 4,
     industry: "education"
   },
   {
-    quote: "The customer support team has been exceptional. They've helped us optimize our policies and quickly resolved any issues we encountered during deployment.",
-    author: "Amanda Taylor",
-    position: "IT Operations Manager, Healthcare Network",
+    quote:
+      "Distributing large educational packages to our field educators across remote locations used to be a logistical nightmare. MobiHeal’s bulk file push and usage analytics let us seamlessly deliver content and track engagement patterns—empowering our Acharyas with timely resources and central admins with actionable insights.",
+    author: "Ekal Sansthan",
+    position: "",
+    rating: 5,
+    industry: "non-profit"
+  },
+  {
+    quote:
+      "Managing our pre-loaded educational tablets to restrict them to approved LMS content was a constant administrative burden—especially after students discovered workarounds in our previous MDM. MobiHeal’s strict lockdown and app whitelisting sealed up this critical gap, while its usage analytics give us real-time visibility into student engagement.",
+    author: "Tabschool",
+    position: "",
+    rating: 5,
+    industry: "education"
+  },
+  {
+    quote:
+      "Our medical reps carry highly sensitive drug formulation content on their company‐issued Android devices, so we needed rock‐solid security and oversight. MobiHeal’s device security, real‐time location tracking, and remote lock/wipe capabilities give us end‐to‐end control—ensuring confidential materials never fall into the wrong hands.",
+    author: "Bioleen Pharma",
+    position: "",
     rating: 5,
     industry: "healthcare"
   },
   {
-    quote: "We've seen a 75% reduction in mobile-related security incidents since implementing SecureMDM across our organization.",
-    author: "Thomas Wright",
-    position: "Information Security Manager, Insurance Provider",
-    rating: 4.5,
-    industry: "finance"
+    quote:
+      "Controlling leakage of our sensitive design and commercial data across corporate and employee devices was mission-critical. MobiHeal’s USB data transfer blocking, screenshot restrictions, secure work-profile containerization, and remote lock/wipe capabilities delivered airtight data sanctity—giving us complete peace of mind over our intellectual property.",
+    author: "ADI Insulations",
+    position: "",
+    rating: 5,
+    industry: "manufacturing"
   }
 ];
 
