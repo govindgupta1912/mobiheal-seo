@@ -35,9 +35,9 @@ function Router() {
       <Route path="/partners" component={Partners} />
       <Route path="/testimonials" component={Testimonials} />
       <Route path="/contact" component={Contact} />
-      <Route path="/blog-deatails" component={BlogDetailPage}/>
+      {/* <Route path="/blog-deatails" component={BlogDetailPage}/> */}
       <Route path="/blog/:slug" component={BlogDetailPage} />
-
+      
 
       <Route component={NotFound} />
     </Switch>

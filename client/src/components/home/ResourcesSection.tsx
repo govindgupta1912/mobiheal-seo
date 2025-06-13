@@ -40,30 +40,34 @@ const ResourcesSection = () => {
   ];
 
   const blogPosts = [
+    
     {
-      title: "Top Mobile Security Threats in 2025",
-      excerpt: "Stay ahead of emerging mobile security threats with our expert analysis and prevention strategies.",
-      date: "May 15, 2023",
-      imageSrc: "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-      imageAlt: "Mobile Security Threats",
-      href: "/blog/mobile-security-threats-2025"
-    },
-    {
-      title: "Benefits of Geo-Fencing in Enterprise Security",
-      excerpt: "Learn how location-based security measures can protect your corporate data and enhance compliance.",
-      date: "April 28, 2023",
-      imageSrc: "https://images.unsplash.com/photo-1584771145729-0bd9fda6529b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-      imageAlt: "Geo-Fencing",
-      href: "/blog/geo-fencing-benefits"
-    },
-    {
-      title: "How QR Code Enrolment Simplifies Device Setup",
-      excerpt: "Discover how QR code-based enrollment streamlines device provisioning and improves adoption rates.",
-      date: "April 10, 2023",
-      imageSrc: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-      imageAlt: "QR Code Enrollment",
-      href: "/blog/qr-code-enrollment"
-    }
+    title: "AI-Driven Threat Detection: The Future of Mobile Security in Enterprises",
+    excerpt: "Discover how AI-driven threat detection is revolutionizing mobile security for enterprises. Learn about benefits, real-world applications, and best practices for future-ready protection.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 4.docx",
+    imageAlt: "AI-Driven Threat Detection",
+    href: "/blog/ai-driven-threat-detection",
+    category: "mobile-security"
+  },
+  {
+    title: "Securing IoT Devices in Healthcare: Challenges and MDM Solutions",
+    excerpt: "Discover how MDM solutions address IoT security challenges in healthcare. Learn strategies to protect patient data, ensure HIPAA compliance, and secure connected medical devices.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 5.docx",
+    imageAlt: "Securing IoT Devices in Healthcare",
+    href: "/blog/securing-iot-devices-healthcare",
+    category: "compliance"
+  },
+  {
+    title: "Enhancing Retail Customer Experience with Secure Mobile Kiosks",
+    excerpt: "Discover how secure mobile kiosks elevate retail customer experience. Learn strategies to safeguard POS systems, streamline engagement, and prevent cyber threats.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 6.docx",
+    imageAlt: "Secure Mobile Kiosks in Retail",
+    href: "/blog/enhancing-retail-customer-experience-secure-mobile-kiosks",
+    category: "mdm-solutions"
+  },
   ];
 
   return (

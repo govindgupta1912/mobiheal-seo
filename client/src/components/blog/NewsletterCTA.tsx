@@ -16,7 +16,7 @@ const NewsletterCTA = () => (
           />
         </div>
         <button 
-          className="w-full sm:w-auto px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          className=" w-full sm:w-auto px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 shadow-lg hover:shadow-xl"
         >
           Subscribe Now
         </button>

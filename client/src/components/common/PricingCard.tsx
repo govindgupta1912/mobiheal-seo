@@ -39,7 +39,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <p className="text-neutral-600 mb-4">{description}</p>
         <div className="flex items-baseline mb-4">
           <span className="text-3xl font-bold text-neutral-800">{price}</span>
-          <span className="text-neutral-500 ml-1">/ device / month</span>
+          {/* <span className="text-neutral-500 ml-1">/ device / month</span> */}
+            <span className="text-neutral-500 ml-1">{title==='Basic'?'  for 14 days':" / device / month"}</span>
         </div>
         <Button 
           variant={popular ? "default" : "outline"} 

@@ -1,57 +1,162 @@
+import partner1 from "../assets/partnerImages/Cybermantra Logo.png";
+import partner2 from "../assets/partnerImages/Cybernet.png"; 
+import partner3 from "../assets/partnerImages/IKall.jpg";
+import partner4 from "../assets/partnerImages/ITI_Limited_logo.svg.png";
+import partner5 from "../assets/partnerImages/Ira.jpg";
+import partner6 from "../assets/partnerImages/TCIL.png";
+import partner7 from "../assets/partnerImages/FruxLogo.png";
+import partner8 from "../assets/partnerImages/Logo_Invia.png";
+
+import client1 from "../assets/ClinetImages/Defence_Research_and_Development_Organisation.svg.png";
+import client2 from "../assets/ClinetImages/chims.jpeg";
+import client3 from "../assets/ClinetImages/ekal.png";
+import client4 from "../assets/ClinetImages/iaf.png";
+import client5 from "../assets/ClinetImages/adi.png";
+import client6 from "../assets/ClinetImages/in.png";
+import client7 from "../assets/ClinetImages/saktek.jpeg";
+import client8 from "../assets/ClinetImages/sd.png";
+import client9 from "../assets/ClinetImages/tabscl (1).webp";
+
+
+
 // Blog posts data
+// export const blogPosts = [
+//   {
+//     title: "Top Mobile Security Threats in 2025",
+//     excerpt: "Stay ahead of emerging mobile security threats with our expert analysis and prevention strategies.",
+//     date: "May 15, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "Mobile Security Threats",
+//     href: "/blog-deatails",
+//     category: "mobile-security"
+//   },
+//   {
+//     title: "Benefits of Geo-Fencing in Enterprise Security",
+//     excerpt: "Learn how location-based security measures can protect your corporate data and enhance compliance.",
+//     date: "April 28, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1584771145729-0bd9fda6529b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "Geo-Fencing",
+//     href: "/blog/geo-fencing-benefits",
+//     category: "mdm-best-practices"
+//   },
+//   {
+//     title: "How QR Code Enrolment Simplifies Device Setup",
+//     excerpt: "Discover how QR code-based enrollment streamlines device provisioning and improves adoption rates.",
+//     date: "April 10, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "QR Code Enrollment",
+//     href: "/blog/qr-code-enrollment",
+//     category: "mdm-best-practices"
+//   },
+//   {
+//     title: "Implementing Zero Trust Security for Mobile Devices",
+//     excerpt: "A comprehensive guide to implementing zero trust security principles for your mobile device fleet.",
+//     date: "March 22, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "Zero Trust Security",
+//     href: "/blog/zero-trust-mobile-security",
+//     category: "mobile-security"
+//   },
+//   {
+//     title: "BYOD Policy Development: A Step-by-Step Guide",
+//     excerpt: "Essential considerations and best practices for developing an effective BYOD policy for your organization.",
+//     date: "March 5, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1553434320-e9f5757e5801?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "BYOD Policy",
+//     href: "/blog/byod-policy-guide",
+//     category: "byod"
+//   },
+//   {
+//     title: "Mobile Security Compliance Requirements for Healthcare",
+//     excerpt: "Understanding HIPAA, HITECH, and other regulatory requirements for mobile devices in healthcare settings.",
+//     date: "February 17, 2023",
+//     imageSrc: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+//     imageAlt: "Healthcare Compliance",
+//     href: "/blog/healthcare-mobile-compliance",
+//     category: "compliance"
+//   }
+// ];
+
 export const blogPosts = [
   {
-    title: "Top Mobile Security Threats in 2025",
-    excerpt: "Stay ahead of emerging mobile security threats with our expert analysis and prevention strategies.",
-    date: "May 15, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-    imageAlt: "Mobile Security Threats",
-    href: "/blog-deatails",
-    category: "mobile-security"
+    title: "5 Essential Benefits of Mobile Device Management for Enterprises",
+    excerpt: "Discover the essential benefits of Mobile Device Management (MDM) for enterprises, including enhanced security, improved productivity, and simplified compliance with MobiHeal MDM.",
+    date: "June 10, 2025",
+    imageSrc: "blog1",
+    imageAlt: "Mobile Device Management Benefits",
+    href: "/blog/mdm-benefits",
+    category: "mdm-solutions"
   },
   {
-    title: "Benefits of Geo-Fencing in Enterprise Security",
-    excerpt: "Learn how location-based security measures can protect your corporate data and enhance compliance.",
-    date: "April 28, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1584771145729-0bd9fda6529b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-    imageAlt: "Geo-Fencing",
-    href: "/blog/geo-fencing-benefits",
+    title: "How Geo-Fencing Enhances Security and Productivity in BFSI Sector",
+    excerpt: "Explore how Geo-Fencing technology strengthens security and boosts productivity in the BFSI sector. Learn its key benefits and implementation strategies with MobiHeal MDM.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 2.docx",
+    imageAlt: "Geo-Fencing in BFSI",
+    href: "/blog/geo-fencing-bfsi",
     category: "mdm-best-practices"
   },
   {
-    title: "How QR Code Enrolment Simplifies Device Setup",
-    excerpt: "Discover how QR code-based enrollment streamlines device provisioning and improves adoption rates.",
-    date: "April 10, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
+    title: "How QR Code Enrollment Simplifies Device Setup",
+    excerpt: "Learn how QR Code Enrollment streamlines mobile device setup for enterprises. Discover key benefits, best practices, and implementation tips with MobiHeal MDM.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 3.docx",
     imageAlt: "QR Code Enrollment",
     href: "/blog/qr-code-enrollment",
     category: "mdm-best-practices"
   },
   {
-    title: "Implementing Zero Trust Security for Mobile Devices",
-    excerpt: "A comprehensive guide to implementing zero trust security principles for your mobile device fleet.",
-    date: "March 22, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-    imageAlt: "Zero Trust Security",
-    href: "/blog/zero-trust-mobile-security",
+    title: "AI-Driven Threat Detection: The Future of Mobile Security in Enterprises",
+    excerpt: "Discover how AI-driven threat detection is revolutionizing mobile security for enterprises. Learn about benefits, real-world applications, and best practices for future-ready protection.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 4.docx",
+    imageAlt: "AI-Driven Threat Detection",
+    href: "/blog/ai-driven-threat-detection",
     category: "mobile-security"
   },
   {
-    title: "BYOD Policy Development: A Step-by-Step Guide",
-    excerpt: "Essential considerations and best practices for developing an effective BYOD policy for your organization.",
-    date: "March 5, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1553434320-e9f5757e5801?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-    imageAlt: "BYOD Policy",
-    href: "/blog/byod-policy-guide",
-    category: "byod"
+    title: "Securing IoT Devices in Healthcare: Challenges and MDM Solutions",
+    excerpt: "Discover how MDM solutions address IoT security challenges in healthcare. Learn strategies to protect patient data, ensure HIPAA compliance, and secure connected medical devices.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 5.docx",
+    imageAlt: "Securing IoT Devices in Healthcare",
+    href: "/blog/securing-iot-devices-healthcare",
+    category: "compliance"
   },
   {
-    title: "Mobile Security Compliance Requirements for Healthcare",
-    excerpt: "Understanding HIPAA, HITECH, and other regulatory requirements for mobile devices in healthcare settings.",
-    date: "February 17, 2023",
-    imageSrc: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80",
-    imageAlt: "Healthcare Compliance",
-    href: "/blog/healthcare-mobile-compliance",
+    title: "Enhancing Retail Customer Experience with Secure Mobile Kiosks",
+    excerpt: "Discover how secure mobile kiosks elevate retail customer experience. Learn strategies to safeguard POS systems, streamline engagement, and prevent cyber threats.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 6.docx",
+    imageAlt: "Secure Mobile Kiosks in Retail",
+    href: "/blog/enhancing-retail-customer-experience-secure-mobile-kiosks",
+    category: "mdm-solutions"
+  },
+  {
+    title: "Endpoint Security for Distributed Workforces: Best Practices for Remote Device Management",
+    excerpt: "Discover how MobiHeal MDM secures distributed workforces with zero-touch enrollment, BYOD policies, and AI-driven threat detection. Ensure compliance and prevent breaches.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 7.docx",
+    imageAlt: "Endpoint Security for Remote Workforces",
+    href: "/blog/endpoint-security-distributed-workforces",
+    category: "mobile-security"
+  },
+  {
+    title: "Zero-Touch Enrollment for Android Enterprise: Streamline Device Setup at Scale",
+    excerpt: "Discover how Zero-Touch Enrollment simplifies Android Enterprise device setup. Learn best practices for bulk provisioning, security, and compliance with MobiHeal MDM.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 8.docx",
+    imageAlt: "Zero-Touch Enrollment Android Enterprise",
+    href: "/blog/zero-touch-enrollment-android-enterprise",
+    category: "mdm-best-practices"
+  },
+  {
+    title: "GDPR Compliance Made Simple: How MDM Solutions Protect Customer Data",
+    excerpt: "Learn how MobiHeal MDM simplifies GDPR compliance with secure data management, automated audit trails, and encrypted data erasure. Avoid fines and build trust.",
+    date: "June 11, 2025",
+    imageSrc: "Blog 9.docx",
+    imageAlt: "GDPR Compliance MDM Solutions",
+    href: "/blog/gdpr-compliance-mdm-solutions-data-protection",
     category: "compliance"
   }
 ];
@@ -524,7 +629,7 @@ export const testimonials = [
     author: "Naval Shipyard",
     position: "",
     rating: 5,
-    industry: "defense"
+    industry: "government"
   },
   {
     quote:
@@ -548,7 +653,7 @@ export const testimonials = [
     author: "Ekal Sansthan",
     position: "",
     rating: 5,
-    industry: "non-profit"
+    industry: "education"
   },
   {
     quote:
@@ -573,57 +678,203 @@ export const testimonials = [
     position: "",
     rating: 5,
     industry: "manufacturing"
+  },
+   {
+    quote:
+      "Enabling BYOD for our field sales team without compromising client confidentiality was non-negotiable. MobiHeal’s work-profile containerization, conditional access policies, and remote lock/wipe capabilities gave us ironclad data sanctity—allowing agents to use personal devices while fully adhering to RBI and DPDP mandates.",
+    author: "NBFC",
+    position: "",
+    rating: 5,
+    industry: "finance"
+  },
+  {
+    quote:
+      "Transitioning to employee-owned devices used to be a regulatory minefield. With MobiHeal’s conditional access control, secure work profiles, and instant remote lock/wipe, we now enforce real-time policy checks and ensure end-to-end client data protection—keeping us audit-ready at all times.",
+    author: "Banking Institution",
+    position: "",
+    rating: 4,
+    industry: "finance"
+  },
+  {
+    quote:
+      "Rolling out fully-managed Android tablets for our in-store POS and self-checkout kiosks was a game-changer. MobiHeal’s kiosk-mode lockdown ensures zero drift from approved workflows, while controlled updates and high-availability monitoring keep our registers live—even during peak hours. The result? Faster checkouts, fewer support tickets, and a modern retail experience that customers notice.",
+    author:  "Major Retail Chain",
+    position: "",
+    rating: 5,
+    industry: "retail"
+  },
+  {
+    quote:
+      "Our hotel lobby and guest rooms now feature interactive infotainment and self-service tablets secured end-to-end by MobiHeal. Kiosk-mode enforces brand-approved apps only, scheduled OS updates eliminate downtime, and real-time health checks guarantee 24×7 availability. The outcome is elevated guest satisfaction, streamlined operations, and zero after-hours support emergencies.",
+    author: "Global Hospitality Brand",
+    position: "",
+    rating: 5,
+    industry: "hospitality"  
   }
+
+
 ];
 
 // Partners data
-export const partners = [
-  {
-    name: "TechSphere Solutions",
-    description: "Global IT consulting and implementation partner specializing in enterprise mobility and security solutions.",
-    partnerType: "Implementation Partner",
-    since: "Partner since 2019"
-  },
-  {
-    name: "CloudGuard Security",
-    description: "Leading cybersecurity provider offering integrated solutions that complement our MDM capabilities.",
-    partnerType: "Technology Partner",
-    since: "Partner since 2020"
-  },
-  {
-    name: "MobiSoft Systems",
-    description: "Mobile application development partner that creates custom enterprise apps optimized for SecureMDM.",
-    partnerType: "Development Partner",
-    since: "Partner since 2018"
-  },
-  {
-    name: "Enterprise Solutions Group",
-    description: "Premier reseller partner with expertise in deploying SecureMDM in large enterprise environments.",
-    partnerType: "Reseller Partner",
-    since: "Partner since 2017"
-  },
-  {
-    name: "ConnectIT Networks",
-    description: "Networking and infrastructure partner providing end-to-end mobile security solutions.",
-    partnerType: "Technology Partner",
-    since: "Partner since 2021"
-  },
-  {
-    name: "SecureID Technologies",
-    description: "Identity and access management solutions that integrate seamlessly with SecureMDM.",
-    partnerType: "Technology Partner",
-    since: "Partner since 2020"
-  }
-];
+// export const partners = [
+//   {
+//     name: "TechSphere Solutions",
+//     description: "Global IT consulting and implementation partner specializing in enterprise mobility and security solutions.",
+//     partnerType: "Implementation Partner",
+//     since: "Partner since 2019"
+//   },
+//   {
+//     name: "CloudGuard Security",
+//     description: "Leading cybersecurity provider offering integrated solutions that complement our MDM capabilities.",
+//     partnerType: "Technology Partner",
+//     since: "Partner since 2020"
+//   },
+//   {
+//     name: "MobiSoft Systems",
+//     description: "Mobile application development partner that creates custom enterprise apps optimized for SecureMDM.",
+//     partnerType: "Development Partner",
+//     since: "Partner since 2018"
+//   },
+//   {
+//     name: "Enterprise Solutions Group",
+//     description: "Premier reseller partner with expertise in deploying SecureMDM in large enterprise environments.",
+//     partnerType: "Reseller Partner",
+//     since: "Partner since 2017"
+//   },
+//   {
+//     name: "ConnectIT Networks",
+//     description: "Networking and infrastructure partner providing end-to-end mobile security solutions.",
+//     partnerType: "Technology Partner",
+//     since: "Partner since 2021"
+//   },
+//   {
+//     name: "SecureID Technologies",
+//     description: "Identity and access management solutions that integrate seamlessly with SecureMDM.",
+//     partnerType: "Technology Partner",
+//     since: "Partner since 2020"
+//   }
+// ];
 
 // Clients data
-export const clients = [
-  { name: "Global Financial Corp" },
-  { name: "HealthNet Systems" },
-  { name: "RetailPro Stores" },
-  { name: "TechNova" },
-  { name: "EduSmart University" },
-  { name: "ManufacturePro" },
-  { name: "TransGlobal Logistics" },
-  { name: "InsureSafe" }
-];
+// export const clients = [
+//   { name: "Global Financial Corp" },
+//   { name: "HealthNet Systems" },
+//   { name: "RetailPro Stores" },
+//   { name: "TechNova" },
+//   { name: "EduSmart University" },
+//   { name: "ManufacturePro" },
+//   { name: "TransGlobal Logistics" },
+//   { name: "InsureSafe" }
+// ];
+
+
+ export const partners= [
+    {
+      "name": "I-KALL",
+      "description": "Hardware bundling and co-branding for end-user devices",
+      "partnerType": "OEM Partner",
+      "imageSrc": partner3
+    },
+    {
+      "name": "Ira-Wishtel",
+      "description": "Hardware bundling and co-branding for end-user devices",
+      "partnerType": "OEM Partner",
+      "imageSrc": partner5
+    },
+    {
+      "name": "Frux Technologies",
+      "description": "Pan‐India delivery through affiliated MSPs",
+      "partnerType": "Distributor",
+      "imageSrc": partner7
+    },
+    {
+      "name": "INVIA",
+      "description": "Implementation, managed services, custom integrations, and training",
+      "partnerType": "Value‐Added Reseller",
+      "imageSrc": partner8
+
+    },
+    {
+      "name": "Cybernet Security",
+      "description": "Implementation, managed services, custom integrations, and training",
+      "partnerType": "Value‐Added Reseller",
+      "imageSrc": partner1
+    },
+    {
+      "name": "Cybermantra",
+      "description": "Implementation, managed services, custom integrations, and training",
+      "partnerType": "Value‐Added Reseller",
+      "imageSrc": partner2
+    },
+    {
+      "name": "TCIL",
+      "description": "Govt. liaison, compliance clearances, and tender facilitation, Large‐scale enterprise rollouts",
+      "partnerType": "Consortium Partner",
+      "imageSrc": partner6
+
+    },
+    {
+      "name": "ITIL",
+      "description": "Govt. liaison, compliance clearances, and tender facilitation, Large‐scale enterprise rollouts",
+      "partnerType": "Consortium Partner",
+      "imageSrc": partner4
+
+    }
+  ];
+  export const clients=[
+    {
+      "name": "Indian Air Force (IAF)",
+      "sector": "Defence & Aerospace",
+      "imageSrc": client4
+    },
+    {
+      "name": "Indian Navy (IN)",
+      "sector": "Defence & Aerospace",
+      "imageSrc": client6
+    },
+    {
+      "name": "DRDO",
+      "sector": "Defence & Aerospace",
+      "imageSrc": client1
+    },
+    {
+      "name": "CHMES",
+      "sector": "NGOs & Social Impact",
+      "imageSrc": client2
+    },
+    {
+      "name": "NCAHT-AIIMS",
+      "sector": "NGOs & Social Impact",
+      "imageSrc": client3
+    },
+    {
+      "name": "Saksham Disability",
+      "sector": "NGOs & Social Impact",
+      "imageSrc": client8
+    },
+    {
+      "name": "Saktek Assistive Tech",
+      "sector": "NGOs & Social Impact",
+      "imageSrc": client7
+    },
+    {
+      "name": "Ekal Sansthan",
+      "sector": "NGOs & Social Impact",
+      "imageSrc": client3
+    },
+    {
+      "name": "TabSchool",
+      "sector": "Education/ Ed Tech",
+      "imageSrc": client9
+    },
+    // {
+    //   "name": "Bioleen Pharma",
+    //   "sector": "Healthcare & Pharma",
+    //   "imageSrc": client9
+    // },
+    {
+      "name": "ADI Insulations",
+      "sector": "Industrial",
+      "imageSrc": client5
+    }
+  ]

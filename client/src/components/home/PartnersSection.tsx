@@ -1,22 +1,23 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
-import slide1  from "../../assets/ic_air.png";
-import slide2  from "../../assets/ic_chems.png";
-import slide3  from "../../assets/ic_frux.png";
-import slide4  from "../../assets/ic_invia.png";
-import slide5  from "../../assets/ic_iti.png";
-import slide6  from "../../assets/ic_navitus.png";
-import slide7  from "../../assets/ic_sakham.png";
-import slide8 from "../../assets/ic_adriod.png";
-import slide9 from "../../assets/ic_sapours.png";
-import slide10 from "../../assets/ic_tabschool.png";
-import slide11 from "../../assets/ic_tcil.png"
-import slide12 from "../../assets/ic_teceze.png";
-import slide13 from "../../assets/ic_wesee.png";
-import slide14 from "../../assets/mrotek.png";
-import slide15 from "../../assets/ncat.png"
-
+import slide1  from "../../assets/ClinetImages/Defence_Research_and_Development_Organisation.svg.png";
+import slide2  from "../../assets/ClinetImages/adi.png";
+import slide3  from "../../assets/ClinetImages/chims.jpeg";
+import slide4  from "../../assets/ClinetImages/ekal.png";
+import slide5  from "../../assets/ClinetImages/iaf.png";
+import slide6  from "../../assets/ClinetImages/in.png";
+import slide7  from "../../assets/ClinetImages/saktek.jpeg";
+import slide8 from "../../assets/ClinetImages/sd.png";
+import slide9 from "../../assets/ClinetImages/tabscl (1).webp";
+import slide10 from "../../assets/partnerImages/Cybermantra Logo.png";
+import slide11 from "../../assets/partnerImages/Cybernet.png"
+import slide12 from "../../assets/partnerImages/FruxLogo.png";
+import slide13 from "../../assets/partnerImages/IKall.jpg";
+import slide14 from "../../assets/partnerImages/ITI_Limited_logo.svg.png";
+import slide15 from "../../assets/partnerImages/Ira.jpg"
+import slide16 from "../../assets/partnerImages/Logo_Invia.png"
+import slide17 from "../../assets/partnerImages/TCIL.png"
 const PartnersSection = () => {
   const clients = [
     { id: 1, name: "Air India", logo: slide1 },
@@ -25,7 +26,7 @@ const PartnersSection = () => {
     { id: 4, name: "Invia", logo: slide4 },
     { id: 5, name: "ITI", logo: slide5 },
     { id: 6, name: "Navitus", logo: slide6 },
-    { id: 7, name: "Sakham", logo: slide7 },
+    // { id: 7, name: "Sakham", logo: slide7 },
     { id: 8, name: "Adriod", logo: slide8 },
     { id: 9, name: "Sapours", logo: slide9 },
     { id: 10, name: "TabSchool", logo: slide10 },
@@ -33,7 +34,10 @@ const PartnersSection = () => {
     { id: 12, name: "Teceze", logo: slide12 },
     { id: 13, name: "WeSee", logo: slide13 },
     { id: 14, name: "Mrotek", logo: slide14 },
-    { id: 15, name: "NCAT", logo: slide15 }
+    { id: 15, name: "NCAT", logo: slide15 },
+    // { id: 16, name: "Ira", logo: slide16 },
+    { id: 16, name: "Cybermantra", logo: slide16 },
+    { id: 17, name: "Cybernet", logo: slide17 },
   ];
 
 

@@ -1,38 +1,28 @@
 import { Link } from "wouter";
+import  mobisecLogo from "../../assets/MOBISEC_logo-footer.png";
+import registerLogo from "../../assets/registered.png";
+
 
 const Footer = () => {
   return (
     <footer className="bg-neutral-800 text-neutral-300 pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 mb-12">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+         
+
+            
+
+             <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-3xl text-white mr-2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <circle cx="12" cy="9" r="3" />
-                <path d="M12 12v6" />
-                <path d="M9.5 9a2.5 2.5 0 0 1 5 0" />
-              </svg>
-              <span className="text-xl font-semibold text-white">
-                Mobiheal MDM
-              </span>
+              <img src={mobisecLogo} width="200" alt="mobisec" />
+              <img src={registerLogo} width="15" alt="mobisec" />
+              
             </div>
             <p className="mb-6">
-              Enterprise-grade mobile device management solutions for businesses
-              of all sizes. Secure your data, manage your devices, and enhance
-              productivity.
+             Mobisec Technologies Pvt. Ltd. is a mobile security company
+                offering products and services for securing mobile computing
+                devices such as smartphones and tablets to help enterprises.
             </p>
             <div className="flex space-x-4">
               <a
@@ -244,6 +234,29 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Products</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="https://mobiheal.in" className="hover:text-white">
+                  mobiHEAL
+                </Link>
+              </li>
+              <li>
+                <Link href="https://guard.mobisec.in" className="hover:text-white">
+                 mobiGUARD
+                </Link>
+              </li>
+              <li>
+                <Link href="https://scan.mobisec.in" className="hover:text-white">
+                  mobiSCAN
+                </Link>
+              </li>
+             
+            </ul>
+          </div>
         </div>
 
         <hr className="border-neutral-700 my-8" />
@@ -251,7 +264,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p>
-              &copy; {new Date().getFullYear()} SecureMDM, Inc. All rights
+              &copy; {new Date().getFullYear()}  Mobisec, Inc. All rights
               reserved.
             </p>
           </div>

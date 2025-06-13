@@ -1,13 +1,13 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
-import slide1  from "../../assets/ic_air.png";
-import slide2  from "../../assets/ic_chems.png";
-import slide3  from "../../assets/ic_frux.png";
-import slide4  from "../../assets/ic_invia.png";
-import slide5  from "../../assets/ic_iti.png";
-import slide6  from "../../assets/ic_navitus.png";
-import slide7  from "../../assets/ic_sakham.png";
-import slide8 from "../../assets/ic_adriod.png";
-import slide9 from "../../assets/ic_sapours.png";
+import slide1  from "../../assets/ClinetImages/Defence_Research_and_Development_Organisation.svg.png";
+import slide2  from "../../assets/ClinetImages/adi.png";
+import slide3  from "../../assets/ClinetImages/chims.jpeg";
+import slide4  from "../../assets/ClinetImages/ekal.png";
+import slide5  from "../../assets/ClinetImages/iaf.png";
+import slide6  from "../../assets/ClinetImages/in.png";
+import slide7  from "../../assets/ClinetImages/saktek.jpeg";
+import slide8 from "../../assets/ClinetImages/sd.png";
+import slide9 from "../../assets/ClinetImages/tabscl (1).webp";
 import slide10 from "../../assets/ic_tabschool.png";
 import slide11 from "../../assets/ic_tcil.png"
 import slide12 from "../../assets/ic_teceze.png";
@@ -29,12 +29,12 @@ const ClientsBanner = () => {
   slide7,
   slide8,
   slide9,
-  slide10,
-  slide11,
-  slide12,
-  slide13,
-  slide14,
-  slide15
+  // slide10,
+  // slide11,
+  // slide12,
+  // slide13,
+  // slide14,
+  // slide15
 ]
 
   
@@ -170,7 +170,7 @@ const ClientsBanner = () => {
             key={i}
             src={src}
             alt={`Client ${i + 1}`}
-            className="h-28 w-auto object-contain opacity-70"
+            className="h-28 w-auto object-contain "
           />
         ))}
       </div>

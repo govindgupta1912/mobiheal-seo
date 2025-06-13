@@ -485,8 +485,8 @@ const ContactForm = () => {
                 type="submit"
                 onMouseEnter={handleMouseEnter}
                 disabled={isSubmitting}
-                className="transition-all duration-300 absolute"
-                style={{ transform: `translateX(${offset}px)` }}
+                className="transition-all duration-300 absolute w-full"
+                // style={{ transform: `translateX(${offset}px)` }}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

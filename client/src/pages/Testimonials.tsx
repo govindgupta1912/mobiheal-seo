@@ -12,10 +12,10 @@ const Testimonials = () => {
     "Finance",
     "Healthcare",
     "Retail",
-    "defense",
-    "Technology",
+    "Manufacturing",
     "Education",
-    "government"
+    "government",
+    "hospitality"
   ];
 
   return (

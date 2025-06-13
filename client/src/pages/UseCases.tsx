@@ -60,14 +60,15 @@ const UseCases = () => {
         "Detailed inventory and asset tracking",
         "Remote support and diagnostics",
         "Software license management",
-        "Corporate data backup and recovery"
+        "Location-tracking and app usage monitoring"
       ],
       image: corporate,
       industries: [
         { name: "Enterprise Corporations", description: "Complete fleet management for all company devices" },
         { name: "Field Services", description: "Specialized tools for mobile workforce devices" },
         { name: "Government & Public Sector", description: "High-security configurations for sensitive data" },
-        { name: "Logistics & Transportation", description: "Tracking and management for delivery devices" }
+        { name: "Logistics & Transportation", description: "Tracking and management for delivery devices" },
+         { name: "Pharma", description: "Ensure complete data security of enterprise proprietary product data" }
       ]
     },
     byod: {
@@ -86,10 +87,10 @@ const UseCases = () => {
       ],
       image: byod,
       industries: [
-        { name: "Professional Services", description: "Secure client data on personal devices" },
+        { name: "BFSI", description: "Secure client data on personal devices" },
         { name: "Education", description: "Faculty and staff accessing school resources remotely" },
         { name: "Technology", description: "Developer-friendly policies with security controls" },
-        { name: "Consulting", description: "On-the-go access to company resources" }
+        { name: "Healthcare", description: "On-the-go access to company resources" }
       ]
     }
   };
@@ -221,7 +222,7 @@ const UseCases = () => {
             ))}
           </div>
 
-          <Button className="mt-4 hover:scale-95 transition-transform duration-300 " asChild>
+          <Button className="mt-4 hover:scale-95 transition-transform duration-300 ease-in-out" asChild>
             <Link href="/contact">Get Started with {useCase.title}</Link>
           </Button>
         </div>
@@ -241,16 +242,16 @@ const UseCases = () => {
             <h3 className="text-xl font-semibold mb-4 text-neutral-800">Success Story</h3>
             <blockquote className="border-l-4 border-primary pl-4 italic text-neutral-600 mb-4">
               {tab === "kiosk" &&
-                "We deployed 500 kiosk-mode tablets across 120 retail locations in just two weeks. Customer engagement increased by 27% and the self-service options reduced wait times significantly."}
+                "Distributing large educational packages to our field educators across remote locations used to be a logistical nightmare. MobiHeal’s bulk file push and usage analytics let us seamlessly deliver content and track engagement patterns—empowering our Acharyas with timely resources and central admins with actionable insights."}
               {tab === "corporate" &&
-                "After implementing corporate device management, we reduced security incidents by 78% and cut IT support tickets related to mobile devices by more than half."}
+                "Controlling leakage of our sensitive design and commercial data across corporate and employee devices was mission-critical. MobiHeal’s USB data transfer blocking, screenshot restrictions, secure work-profile containerization, and remote lock/wipe capabilities delivered airtight data sanctity—giving us complete peace of mind over our intellectual property."}
               {tab === "byod" &&
-                "Our BYOD program has seen a 94% employee satisfaction rate while maintaining complete security compliance. It's the perfect balance of flexibility and control."}
+                "Our medical reps carry highly sensitive drug formulation content on their company‐issued Android devices, so we needed rock‐solid security and oversight. MobiHeal’s device security, real‐time location tracking, and remote lock/wipe capabilities give us end‐to‐end control—ensuring confidential materials never fall into the wrong hands."}
             </blockquote>
             <div className="text-right text-sm text-neutral-500">
-              {tab === "kiosk" && "— National Retail Chain CIO"}
-              {tab === "corporate" && "— Fortune 500 CISO"}
-              {tab === "byod" && "— Healthcare System IT Director"}
+              {tab === "kiosk" && "— Ekal Sansthan"}
+              {tab === "corporate" && "— ADI Insulations"}
+              {tab === "byod" && "— Bioleen Pharma IT Director"}
             </div>
           </div>
         </div>

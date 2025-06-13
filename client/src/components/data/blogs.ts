@@ -10,7 +10,7 @@ export const blogs: Blog[] = [
     title: "5 Essential Benefits of Mobile Device Management for Enterprises",
     publishedAt: "June 10, 2025",
     readTime: "5 min read",
-    coverImage: "",      // Used in hero banner
+    coverImage: blog1,      // Used in hero banner
     featureImage: blog1,     // Used inside the article
     author: "Ariel van Houten",
     introduction: `In today's digital-first world, enterprises rely heavily on mobile devices to streamline operations, boost productivity, and enhance communication. However, managing a growing fleet of devices securely and efficiently can be challenging. This is where Mobile Device Management (MDM) solutions like MobiHeal MDM become indispensable.`,
@@ -1081,27 +1081,27 @@ export const blogs: Blog[] = [
     
   }
 },
-  // Optional: More blog entries to show in the "Latest Blog" carousel
-  {
-    id: "eco-home",
-    title: "Eco-Friendly Living: Sustainable Choices for a Greener Home",
-    publishedAt: "May 25, 2025",
-    readTime: "9 min read",
-    coverImage: blog1,
-    featureImage: "/images/eco-home-feature.jpg",
-    author: "Darrell Steward",
-    introduction: "Dive into the world of eco-friendly living. Explore sustainable products and lifestyle choices that make a positive impact on the planet.",
-    sections: []
-  },
-  {
-    id: "perfect-furniture",
-    title: "The Comfort Zone: Choosing the Perfect Furniture for Your Home",
-    publishedAt: "April 12, 2025",
-    readTime: "6 min read",
-    coverImage: blog1,
-    featureImage: "/images/comfort-zone-feature.jpg",
-    author: "Devon Lane",
-    introduction: "From cozy couches to stylish tables, find the furniture that turns your house into a home.",
-    sections: []
-  }
+  // // Optional: More blog entries to show in the "Latest Blog" carousel
+  // {
+  //   id: "eco-home",
+  //   title: "Eco-Friendly Living: Sustainable Choices for a Greener Home",
+  //   publishedAt: "May 25, 2025",
+  //   readTime: "9 min read",
+  //   coverImage: blog1,
+  //   featureImage: "/images/eco-home-feature.jpg",
+  //   author: "Darrell Steward",
+  //   introduction: "Dive into the world of eco-friendly living. Explore sustainable products and lifestyle choices that make a positive impact on the planet.",
+  //   sections: []
+  // },
+  // {
+  //   id: "perfect-furniture",
+  //   title: "The Comfort Zone: Choosing the Perfect Furniture for Your Home",
+  //   publishedAt: "April 12, 2025",
+  //   readTime: "6 min read",
+  //   coverImage: blog1,
+  //   featureImage: "/images/comfort-zone-feature.jpg",
+  //   author: "Devon Lane",
+  //   introduction: "From cozy couches to stylish tables, find the furniture that turns your house into a home.",
+  //   sections: []
+  // }
 ];
