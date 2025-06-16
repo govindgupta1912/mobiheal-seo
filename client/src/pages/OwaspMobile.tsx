@@ -6,7 +6,7 @@ import { owaspRisks } from "@/lib/data";
 const OwaspMobile = () => {
   return (
     <>
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 md:py-20">
+      <section className="bg-gradient text-white py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -25,8 +25,7 @@ const OwaspMobile = () => {
             <div className="bg-neutral-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
               <h2 className="text-xl font-bold mb-2 text-neutral-800">What is the OWASP Mobile Top 10?</h2>
               <p className="text-neutral-600">
-                The OWASP Mobile Top 10 is a list of the most critical security risks to mobile applications, created by the Open Web Application Security Project (OWASP). 
-                It serves as an awareness document for mobile application security and provides developers and security teams with a framework to assess and improve the security of mobile apps.
+               The OWASP Mobile Top 10 Risks is a globally recognized list of critical security vulnerabilities plaguing mobile applications. For enterprises leveraging mobile solutions like MobiHeal MDM, understanding these risks is essential to safeguarding sensitive data and ensuring compliance. This guide explores the 2025 OWASP Mobile Top 10 Risks, their impact, and actionable mitigation strategies.
               </p>
               <div className="mt-4">
                 <a 
@@ -78,8 +77,13 @@ const OwaspMobile = () => {
                         ))}
                       </ul>
                     </div>
+                    {/* <div className="mt-6">
+                      <h4 className=" flex items-center font-semibold text-neutral-800 mb-3 ">Example</h4>
+                      <p className="text-neutral-600">{risk.example}</p>
+
+                      </div> */}
                     
-                    {risk.relatedResource && (
+                    {/* {risk.relatedResource && (
                       <div className="mt-6 pt-6 border-t border-neutral-100">
                         <a 
                           href={risk.relatedResource.url} 
@@ -91,7 +95,7 @@ const OwaspMobile = () => {
                           <ExternalLinkIcon className="ml-1 h-4 w-4" />
                         </a>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 </div>
               ))}
@@ -99,7 +103,7 @@ const OwaspMobile = () => {
           </div>
 
           <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/20 rounded-xl p-8">
-            <h2 className="text-2xl font-bold mb-4 text-neutral-800">How SecureMDM Addresses OWASP Mobile Top 10</h2>
+            <h2 className="text-2xl font-bold mb-4 text-neutral-800">How Mobiheal Addresses OWASP Mobile Top 10</h2>
             <p className="text-neutral-600 mb-6">
               Our MDM solution includes comprehensive security features designed to help organizations address these critical mobile security risks:
             </p>
@@ -110,11 +114,11 @@ const OwaspMobile = () => {
               </li>
               <li className="flex items-start">
                 <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                <span>Secure containerization to separate work and personal data</span>
+                <span>Adopt Secure Development Lifecycles (SDLC)</span>
               </li>
               <li className="flex items-start">
                 <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                <span>App vetting and security analysis for enterprise applications</span>
+                <span>Integrate security testing into DevOps workflows.</span>
               </li>
               <li className="flex items-start">
                 <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
@@ -128,7 +132,22 @@ const OwaspMobile = () => {
                 <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
                 <span>Security policy enforcement across all managed devices</span>
               </li>
+              <li className="flex items-start">
+                <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
+                <span>Regular Penetration Testing</span>
+              </li>
+               <li className="flex items-start">
+                <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
+                <span>Simulate attacks using frameworks like MITRE ATT&CK.</span>
+              </li>
+
+                <li className="flex items-start">
+                <CheckIcon className="text-green-500 mt-1 mr-2 h-5 w-5 flex-shrink-0" />
+                <span>Regular Penetration Testing</span>
+              </li>
             </ul>
+
+          
             <div className="mt-8 text-center">
               <Button asChild>
                 <Link href="/features">
@@ -136,7 +155,30 @@ const OwaspMobile = () => {
                 </Link>
               </Button>
             </div>
+
+            
           </div>
+
+           <div className="max-w-4xl mx-auto mt-16 bg-primary/5 border border-primary/20 rounded-xl p-8">
+            <h2 className="text-2xl font-bold mb-4 text-neutral-800 text-center">Conclusion</h2>
+            <p className="text-neutral-600 mb-6 text-center">
+            The OWASP Mobile Top 10 Risks highlight critical areas where mobile apps are vulnerable. By leveraging MobiHeal MDM, enterprises can automate compliance, enforce encryption, and mitigate these risks effectively
+            </p>
+            
+
+          
+            {/* <div className="mt-8 text-center">
+              <Button asChild>
+                <Link href="/features">
+                 Request a demo
+                </Link>
+              </Button>
+            </div> */}
+
+            
+          </div>
+
+
         </div>
       </section>
 

@@ -242,72 +242,212 @@ export const whitepapers = [
 ];
 
 // OWASP Mobile Top 10 risks data
-export const owaspRisks = [
+// export const owaspRisks = [
+//   {
+//     id: "M1",
+//     title: "Improper Platform Usage",
+//     description: "This category covers the misuse of platform features or failure to use platform security controls. It might include Android intents, platform permissions, misuse of TouchID, the Keychain, or some other security control that is part of the mobile operating system.",
+//     implications: [
+//       "Exposure of sensitive data to unauthorized applications",
+//       "Insecure storage of authentication credentials",
+//       "Excessive permission grants leading to privacy violations",
+//       "Misuse of platform-specific security features"
+//     ],
+//     mitigations: [
+//       "Minimize platform API usage to only what is necessary",
+//       "Follow platform-specific best practices for security controls",
+//       "Regularly review platform security documentation and updates",
+//       "Implement proper permission handling and request only required permissions"
+//     ],
+//     relatedResource: {
+//       title: "OWASP Platform Usage Guide",
+//       url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m1-improper-platform-usage"
+//     }
+//   },
+//   {
+//     id: "M2",
+//     title: "Insecure Data Storage",
+//     description: "This category covers insecure data storage and unintended data leakage. This can occur when developers assume that users or malware will not have access to a mobile device's filesystem and subsequent sensitive information in data stores.",
+//     implications: [
+//       "Unauthorized access to sensitive business or personal data",
+//       "Exposure of authentication credentials",
+//       "Compliance violations for regulated data",
+//       "Identity theft and privacy breaches"
+//     ],
+//     mitigations: [
+//       "Implement proper encryption for all sensitive data at rest",
+//       "Use secure hardware-backed storage when available",
+//       "Avoid storing sensitive data when possible",
+//       "Implement proper key management practices"
+//     ],
+//     relatedResource: {
+//       title: "OWASP Insecure Data Storage Guide",
+//       url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m2-insecure-data-storage"
+//     }
+//   },
+//   {
+//     id: "M3",
+//     title: "Insecure Communication",
+//     description: "This category covers poor handshaking, incorrect SSL/TLS implementation, weak negotiation, cleartext communication of sensitive assets, and other network traffic vulnerabilities.",
+//     implications: [
+//       "Man-in-the-middle attacks leading to data exposure",
+//       "Session hijacking and credential theft",
+//       "Service impersonation and fraudulent activities",
+//       "Data manipulation during transmission"
+//     ],
+//     mitigations: [
+//       "Implement certificate pinning to prevent MITM attacks",
+//       "Use modern TLS protocols and cipher suites",
+//       "Validate server certificates properly",
+//       "Encrypt all sensitive communications, not just authentication"
+//     ],
+//     relatedResource: {
+//       title: "OWASP Insecure Communication Guide",
+//       url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m3-insecure-communication"
+//     }
+//   }
+// ];
+
+
+export const owaspRisks=[
   {
-    id: "M1",
-    title: "Improper Platform Usage",
-    description: "This category covers the misuse of platform features or failure to use platform security controls. It might include Android intents, platform permissions, misuse of TouchID, the Keychain, or some other security control that is part of the mobile operating system.",
-    implications: [
-      "Exposure of sensitive data to unauthorized applications",
-      "Insecure storage of authentication credentials",
-      "Excessive permission grants leading to privacy violations",
-      "Misuse of platform-specific security features"
-    ],
-    mitigations: [
-      "Minimize platform API usage to only what is necessary",
-      "Follow platform-specific best practices for security controls",
-      "Regularly review platform security documentation and updates",
-      "Implement proper permission handling and request only required permissions"
-    ],
-    relatedResource: {
-      title: "OWASP Platform Usage Guide",
-      url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m1-improper-platform-usage"
-    }
-  },
-  {
-    id: "M2",
-    title: "Insecure Data Storage",
-    description: "This category covers insecure data storage and unintended data leakage. This can occur when developers assume that users or malware will not have access to a mobile device's filesystem and subsequent sensitive information in data stores.",
-    implications: [
+    "id": "M1",
+    "title": "Insecure Data Storage",
+    "description": "Poorly secured databases, logs, or caches expose sensitive data like passwords, financial details, or PHI. ",
+    "implications": [
       "Unauthorized access to sensitive business or personal data",
       "Exposure of authentication credentials",
       "Compliance violations for regulated data",
       "Identity theft and privacy breaches"
     ],
-    mitigations: [
-      "Implement proper encryption for all sensitive data at rest",
-      "Use secure hardware-backed storage when available",
-      "Avoid storing sensitive data when possible",
-      "Implement proper key management practices"
+    "mitigations": [
+      "Enforce AES-256 encryption for all stored data. ",
+      "Automatically wipe cached data after session timeouts. "
     ],
-    relatedResource: {
-      title: "OWASP Insecure Data Storage Guide",
-      url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m2-insecure-data-storage"
-    }
+    "example": "A healthcare app storing unencrypted patient records in a local SQLite database. "
   },
   {
-    id: "M3",
-    title: "Insecure Communication",
-    description: "This category covers poor handshaking, incorrect SSL/TLS implementation, weak negotiation, cleartext communication of sensitive assets, and other network traffic vulnerabilities.",
-    implications: [
-      "Man-in-the-middle attacks leading to data exposure",
-      "Session hijacking and credential theft",
-      "Service impersonation and fraudulent activities",
-      "Data manipulation during transmission"
+    "id": "M2",
+    "title": "Weak Server-Side Controls",
+    "description": "Inadequate API security allows attackers to exploit backend systems. ",
+    "implications": [
+      "Unauthorized access to backend systems",
+      "Data breaches from compromised APIs",
+      "Service disruption and denial of service"
     ],
-    mitigations: [
-      "Implement certificate pinning to prevent MITM attacks",
-      "Use modern TLS protocols and cipher suites",
-      "Validate server certificates properly",
-      "Encrypt all sensitive communications, not just authentication"
+    "mitigations": [
+      "Implement MobiHeal’s API gateway with rate limiting and OAuth 2.0. "
     ],
-    relatedResource: {
-      title: "OWASP Insecure Communication Guide",
-      url: "https://owasp.org/www-project-mobile-top-10/2016-risks/m3-insecure-communication"
-    }
+    "example": "Unauthorized access to poorly secured REST APIs retrieving user data. "
+  },
+  {
+    "id": "M3",
+    "title": "Insufficient Cryptography",
+    "description": "Using outdated algorithms (e.g., MD5) or hard-coded keys compromises encryption. ",
+    "implications": [
+      "Compromised data confidentiality and integrity",
+      "Eavesdropping and data manipulation",
+      "Inability to trust communication channels"
+    ],
+    "mitigations": [
+      "Automate TLS 1.3 enforcement for data in transit. ",
+      "Use MobiHeal’s key management system for dynamic key rotation. "
+    ]
+  },
+  {
+    "id": "M4",
+    "title": "Insecure Authentication",
+    "description": "Weak login mechanisms (e.g., 4-digit PINs) enable brute-force attacks. ",
+    "implications": [
+      "Account takeover and unauthorized access",
+      "Brute-force attacks and credential stuffing",
+      "Bypassing security controls"
+    ],
+    "mitigations": [
+      "Enforce biometric authentication (fingerprint, facial recognition). ",
+      "Integrate MobiHeal MDM with identity providers like Okta. "
+    ]
+  },
+  {
+    "id": "M5",
+    "title": "Poor Code Quality",
+    "description": "Code vulnerabilities like buffer overflows or SQL injection flaws. ",
+    "implications": [
+      "Arbitrary code execution",
+      "Data injection and manipulation",
+      "Denial of service"
+    ],
+    "mitigations": [
+      "Conduct static/dynamic code analysis via MobiHeal’s CI/CD pipelines. "
+    ]
+  },
+  {
+    "id": "M6",
+    "title": "Code Tampering",
+    "description": "Reverse engineering or repackaging apps to inject malicious code. ",
+    "implications": [
+      "Malicious code injection",
+      "Circumvention of security controls",
+      "Intellectual property theft"
+    ],
+    "mitigations": [
+      "Use MobiHeal’s app shielding to detect tampering in real time. "
+    ]
+  },
+  {
+    "id": "M7",
+    "title": "Unintended Data Leakage",
+    "description": "Side-channel leaks via logs, clipboards, or third-party SDKs. ",
+    "implications": [
+      "Exposure of sensitive data through unintentional channels",
+      "Privacy violations",
+      "Compliance issues"
+    ],
+    "mitigations": [
+      "Disable clipboard access for corporate apps using MobiHeal’s policies. "
+    ],
+    "example": "A banking app leaking credentials through Android’s clipboard. "
+  },
+  {
+    "id": "M8",
+    "title": "Improper Session Handling",
+    "description": "Long-lived sessions or insecure token storage. ",
+    "implications": [
+      "Session hijacking",
+      "Unauthorized access to user accounts",
+      "Bypassing authentication"
+    ],
+    "mitigations": [
+      "Enforce session timeouts and token revocation via MobiHeal MDM. "
+    ]
+  },
+  {
+    "id": "M9",
+    "title": "Insecure Communications",
+    "description": "Unencrypted data transmission over public networks. ",
+    "implications": [
+      "Eavesdropping and data interception",
+      "Man-in-the-middle attacks",
+      "Exposure of sensitive data in transit"
+    ],
+    "mitigations": [
+      "Automate VPN configurations for remote app access. "
+    ]
+  },
+  {
+    "id": "M10",
+    "title": "Outdated Components",
+    "description": "Using deprecated libraries with known vulnerabilities. ",
+    "implications": [
+      "Exploitable vulnerabilities from unpatched libraries",
+      "Increased attack surface",
+      "Non-compliance with security standards"
+    ],
+    "mitigations": [
+      "MobiHeal’s automated patch management updates dependencies nightly. "
+    ]
   }
-];
-
+]
 // // FAQs data
 // export const faqs = [
 //   // General FAQs
@@ -554,6 +694,8 @@ export const faqs = [
       "Contact support or your account manager. Feature requests are reviewed quarterly and prioritized based on demand and impact."
   }
 ];
+
+
 
 // Testimonial data
 // export const testimonials = [
