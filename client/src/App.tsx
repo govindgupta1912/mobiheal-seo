@@ -11,6 +11,7 @@ import Pricing from "@/pages/Pricing";
 import Resources from "@/pages/Resources";
 import Blog from "@/pages/Blog";
 import CaseStudies from "@/pages/CaseStudies";
+import CaseStudyDetail from "@/pages/CaseStudyDetail";
 import Whitepapers from "@/pages/Whitepapers";
 import OwaspMobile from "@/pages/OwaspMobile";
 import FAQ from "@/pages/FAQ";
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/resources" component={Resources} />
       <Route path="/blog" component={Blog} />
       <Route path="/case-studies" component={CaseStudies} />
+      <Route path="/case-studies/:slug" component={CaseStudyDetail} />
       <Route path="/whitepapers" component={Whitepapers} />
       <Route path="/owasp-mobile" component={OwaspMobile} />
       <Route path="/faq" component={FAQ} />

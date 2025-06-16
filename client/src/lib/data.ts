@@ -161,43 +161,42 @@ export const blogPosts = [
   }
 ];
 
-// Case studies data
-export const caseStudies = [
+export interface CaseStudy {
+  title: string;
+  summary: string;
+  imageSrc: string;
+  tags: string[];
+  results: {
+    stat: string;
+    label: string;
+  }[];
+  slug: string;
+}
+
+export const caseStudies: CaseStudy[] = [
   {
-    title: "National Retail Chain Deploys 1,200 Kiosk Devices",
-    summary: "How a leading retail brand used SecureMDM to deploy and manage 1,200 customer-facing kiosk tablets across 300 store locations.",
-    imageSrc: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
-    tags: ["Retail", "Kiosk Mode", "Large Deployment"],
-    href: "/case-studies/retail-kiosk-deployment",
+    title: "Preventing Mobile Fraud in Banking: How MDM Reduced Unauthorized Transactions by 60%",
+    summary: "A multinational bank faced escalating mobile fraud incidents, including phishing scams, account takeovers, and unauthorized transactions. After deploying MobiHeal MDM, the bank reduced fraudulent activities by 60%, achieved 100% PCI-DSS compliance, and enhanced customer trust.",
+    imageSrc: "/images/case-studies/banking-fraud.jpg",
+    tags: ["Banking & Financial Services", "Security", "Fraud Prevention"],
     results: [
-      { stat: "27%", label: "Increase in customer engagement" },
-      { stat: "40%", label: "Reduction in wait times" },
-      { stat: "3 weeks", label: "Total deployment time" }
-    ]
+      { stat: "60%", label: "Reduction in monthly fraud incidents" },
+      { stat: "100%", label: "PCI-DSS compliance achieved" },
+      { stat: "95%", label: "Customer retention rate" }
+    ],
+    slug: "preventing-mobile-fraud-banking"
   },
   {
-    title: "Healthcare System Secures 5,000 Clinical Devices",
-    summary: "How a multi-hospital healthcare system implemented SecureMDM to protect patient data on 5,000 clinical mobile devices.",
-    imageSrc: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
-    tags: ["Healthcare", "HIPAA Compliance", "Data Protection"],
-    href: "/case-studies/healthcare-device-security",
+    title: "Securing Healthcare Data: How a Hospital Network Protected Patient Information",
+    summary: "A major hospital network implemented MobiHeal MDM to secure patient data across mobile devices, achieving HIPAA compliance and reducing data breach risks.",
+    imageSrc: "/images/case-studies/healthcare-security.jpg",
+    tags: ["Healthcare", "Data Protection", "HIPAA Compliance"],
     results: [
       { stat: "100%", label: "HIPAA compliance achieved" },
-      { stat: "78%", label: "Reduction in security incidents" },
-      { stat: "$1.2M", label: "Annual cost savings" }
-    ]
-  },
-  {
-    title: "Global Bank Enables BYOD for 8,000 Employees",
-    summary: "How a leading financial institution implemented a secure BYOD program with work profiles for 8,000 employees worldwide.",
-    imageSrc: "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
-    tags: ["Finance", "BYOD", "Work Profiles"],
-    href: "/case-studies/bank-byod-implementation",
-    results: [
-      { stat: "94%", label: "Employee satisfaction rate" },
-      { stat: "3hrs", label: "IT support time saved per device" },
-      { stat: "0", label: "Data breaches since implementation" }
-    ]
+      { stat: "75%", label: "Reduction in security incidents" },
+      { stat: "90%", label: "Staff adoption rate" }
+    ],
+    slug: "securing-healthcare-data"
   }
 ];
 
@@ -336,7 +335,7 @@ export const owaspRisks=[
       "Service disruption and denial of service"
     ],
     "mitigations": [
-      "Implement MobiHeal’s API gateway with rate limiting and OAuth 2.0. "
+      "Implement MobiHeal's API gateway with rate limiting and OAuth 2.0. "
     ],
     "example": "Unauthorized access to poorly secured REST APIs retrieving user data. "
   },
@@ -351,7 +350,7 @@ export const owaspRisks=[
     ],
     "mitigations": [
       "Automate TLS 1.3 enforcement for data in transit. ",
-      "Use MobiHeal’s key management system for dynamic key rotation. "
+      "Use MobiHeal's key management system for dynamic key rotation. "
     ]
   },
   {
@@ -378,7 +377,7 @@ export const owaspRisks=[
       "Denial of service"
     ],
     "mitigations": [
-      "Conduct static/dynamic code analysis via MobiHeal’s CI/CD pipelines. "
+      "Conduct static/dynamic code analysis via MobiHeal's CI/CD pipelines. "
     ]
   },
   {
@@ -391,7 +390,7 @@ export const owaspRisks=[
       "Intellectual property theft"
     ],
     "mitigations": [
-      "Use MobiHeal’s app shielding to detect tampering in real time. "
+      "Use MobiHeal's app shielding to detect tampering in real time. "
     ]
   },
   {
@@ -404,9 +403,9 @@ export const owaspRisks=[
       "Compliance issues"
     ],
     "mitigations": [
-      "Disable clipboard access for corporate apps using MobiHeal’s policies. "
+      "Disable clipboard access for corporate apps using MobiHeal's policies. "
     ],
-    "example": "A banking app leaking credentials through Android’s clipboard. "
+    "example": "A banking app leaking credentials through Android's clipboard. "
   },
   {
     "id": "M8",
@@ -444,7 +443,7 @@ export const owaspRisks=[
       "Non-compliance with security standards"
     ],
     "mitigations": [
-      "MobiHeal’s automated patch management updates dependencies nightly. "
+      "MobiHeal's automated patch management updates dependencies nightly. "
     ]
   }
 ]
@@ -767,7 +766,7 @@ export const faqs = [
 export const testimonials = [
   {
     quote:
-      "Managing and security for our fully-managed Android fleet in an intranet-only shipyard environment was a constant challenge. MobiHeal’s robust offline policy enforcement and real-time compliance monitoring ensure uninterrupted operations and airtight device security—even without internet connectivity.",
+      "Managing and security for our fully-managed Android fleet in an intranet-only shipyard environment was a constant challenge. MobiHeal's robust offline policy enforcement and real-time compliance monitoring ensure uninterrupted operations and airtight device security—even without internet connectivity.",
     author: "Naval Shipyard",
     position: "",
     rating: 5,
@@ -775,7 +774,7 @@ export const testimonials = [
   },
   {
     quote:
-      "In our Android security evaluation lab, we rely on MobiHeal’s baseline analytics to measure the impact of firmware patches and surface Indicators of Compromise with precision. Its automated comparison workflows and continuous monitoring have streamlined our vulnerability assessments and accelerated lab turn-around times.",
+      "In our Android security evaluation lab, we rely on MobiHeal's baseline analytics to measure the impact of firmware patches and surface Indicators of Compromise with precision. Its automated comparison workflows and continuous monitoring have streamlined our vulnerability assessments and accelerated lab turn-around times.",
     author: "Government Research Lab",
     position: "",
     rating: 5,
@@ -783,7 +782,7 @@ export const testimonials = [
   },
   {
     quote:
-      "We needed airtight control over student Android tablets for our LMS—limiting access to approved apps and monitoring usage in real time. MobiHeal’s policy-driven controls and live device insights have transformed our digital classrooms, ensuring focus and security without constant manual oversight.",
+      "We needed airtight control over student Android tablets for our LMS—limiting access to approved apps and monitoring usage in real time. MobiHeal's policy-driven controls and live device insights have transformed our digital classrooms, ensuring focus and security without constant manual oversight.",
     author: "CHMES",
     position: "",
     rating: 4.5,
@@ -791,7 +790,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Distributing large educational packages to our field educators across remote locations used to be a logistical nightmare. MobiHeal’s bulk file push and usage analytics let us seamlessly deliver content and track engagement patterns—empowering our Acharyas with timely resources and central admins with actionable insights.",
+      "Distributing large educational packages to our field educators across remote locations used to be a logistical nightmare. MobiHeal's bulk file push and usage analytics let us seamlessly deliver content and track engagement patterns—empowering our Acharyas with timely resources and central admins with actionable insights.",
     author: "Ekal Sansthan",
     position: "",
     rating: 5,
@@ -799,7 +798,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Managing our pre-loaded educational tablets to restrict them to approved LMS content was a constant administrative burden—especially after students discovered workarounds in our previous MDM. MobiHeal’s strict lockdown and app whitelisting sealed up this critical gap, while its usage analytics give us real-time visibility into student engagement.",
+      "Managing our pre-loaded educational tablets to restrict them to approved LMS content was a constant administrative burden—especially after students discovered workarounds in our previous MDM. MobiHeal's strict lockdown and app whitelisting sealed up this critical gap, while its usage analytics give us real-time visibility into student engagement.",
     author: "Tabschool",
     position: "",
     rating: 5,
@@ -807,7 +806,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Our medical reps carry highly sensitive drug formulation content on their company‐issued Android devices, so we needed rock‐solid security and oversight. MobiHeal’s device security, real‐time location tracking, and remote lock/wipe capabilities give us end‐to‐end control—ensuring confidential materials never fall into the wrong hands.",
+      "Our medical reps carry highly sensitive drug formulation content on their company‐issued Android devices, so we needed rock‐solid security and oversight. MobiHeal's device security, real‐time location tracking, and remote lock/wipe capabilities give us end‐to‐end control—ensuring confidential materials never fall into the wrong hands.",
     author: "Bioleen Pharma",
     position: "",
     rating: 5,
@@ -815,7 +814,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Controlling leakage of our sensitive design and commercial data across corporate and employee devices was mission-critical. MobiHeal’s USB data transfer blocking, screenshot restrictions, secure work-profile containerization, and remote lock/wipe capabilities delivered airtight data sanctity—giving us complete peace of mind over our intellectual property.",
+      "Controlling leakage of our sensitive design and commercial data across corporate and employee devices was mission-critical. MobiHeal's USB data transfer blocking, screenshot restrictions, secure work-profile containerization, and remote lock/wipe capabilities delivered airtight data sanctity—giving us complete peace of mind over our intellectual property.",
     author: "ADI Insulations",
     position: "",
     rating: 5,
@@ -823,7 +822,7 @@ export const testimonials = [
   },
    {
     quote:
-      "Enabling BYOD for our field sales team without compromising client confidentiality was non-negotiable. MobiHeal’s work-profile containerization, conditional access policies, and remote lock/wipe capabilities gave us ironclad data sanctity—allowing agents to use personal devices while fully adhering to RBI and DPDP mandates.",
+      "Enabling BYOD for our field sales team without compromising client confidentiality was non-negotiable. MobiHeal's work-profile containerization, conditional access policies, and remote lock/wipe capabilities gave us ironclad data sanctity—allowing agents to use personal devices while fully adhering to RBI and DPDP mandates.",
     author: "NBFC",
     position: "",
     rating: 5,
@@ -831,7 +830,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Transitioning to employee-owned devices used to be a regulatory minefield. With MobiHeal’s conditional access control, secure work profiles, and instant remote lock/wipe, we now enforce real-time policy checks and ensure end-to-end client data protection—keeping us audit-ready at all times.",
+      "Transitioning to employee-owned devices used to be a regulatory minefield. With MobiHeal's conditional access control, secure work profiles, and instant remote lock/wipe, we now enforce real-time policy checks and ensure end-to-end client data protection—keeping us audit-ready at all times.",
     author: "Banking Institution",
     position: "",
     rating: 4,
@@ -839,7 +838,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Rolling out fully-managed Android tablets for our in-store POS and self-checkout kiosks was a game-changer. MobiHeal’s kiosk-mode lockdown ensures zero drift from approved workflows, while controlled updates and high-availability monitoring keep our registers live—even during peak hours. The result? Faster checkouts, fewer support tickets, and a modern retail experience that customers notice.",
+      "Rolling out fully-managed Android tablets for our in-store POS and self-checkout kiosks was a game-changer. MobiHeal's kiosk-mode lockdown ensures zero drift from approved workflows, while controlled updates and high-availability monitoring keep our registers live—even during peak hours. The result? Faster checkouts, fewer support tickets, and a modern retail experience that customers notice.",
     author:  "Major Retail Chain",
     position: "",
     rating: 5,
