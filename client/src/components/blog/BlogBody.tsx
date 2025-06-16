@@ -45,12 +45,12 @@ const BlogBody = ({ blog }: { blog: Blog }) => (
           {blog.seoRecommendations && (
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 mb-8">
               <div className="flex items-center gap-3 mb-8">
-                <div className="bg-blue-50 p-2 rounded-lg">
+                {/* <div className="bg-blue-50 p-2 rounded-lg">
                   <FaLink className="text-blue-600 text-xl" />
-                </div>
+                </div> */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Recommended Internal Links</h3>
-                  <p className="text-sm text-gray-500 mt-1">Explore more related content</p>
+                  <h3 className="text-xl font-semibold text-gray-900">Explore more related content</h3>
+                  {/* <p className="text-sm text-gray-500 mt-1">Explore more related content</p> */}
                 </div>
               </div>
               <div className="grid md:grid-cols-3 gap-4">
