@@ -30,7 +30,7 @@ const Blog = () => {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 overflow-x-auto">
+          {/* <div className="mb-12 overflow-x-auto">
             <div className="flex space-x-2 min-w-max pb-2">
               {BlogCategories.map((category) => (
                 <Link key={category.slug} href={`/blog/category/${category.slug}`}>
@@ -44,7 +44,7 @@ const Blog = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-neutral-800">Featured Articles</h2>

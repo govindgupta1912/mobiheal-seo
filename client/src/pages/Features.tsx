@@ -22,7 +22,7 @@ const Features = () => {
       id: "data-encryption",
       icon: <LockKeyhole />,
       title: "Data Encryption",
-      description: "End-to-end encryption for all corporate data on employee devices, ensuring sensitive information remains protected."
+      description: "End-to-end encryption for all corporate employee devices, ensuring information remains protected."
     },
     {
       id: "work-profile",

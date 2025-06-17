@@ -27,7 +27,7 @@ const RelatedCaseStudies = ({ currentSlug, relatedSlugs }: RelatedCaseStudiesPro
   };
 
   const relatedStudies = caseStudies.filter(study => 
-    relatedSlugs.includes(study.slug) && study.slug !== currentSlug
+   study.slug !== currentSlug
   );
 
   if (relatedStudies.length === 0) return null;

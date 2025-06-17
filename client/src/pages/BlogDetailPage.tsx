@@ -1,60 +1,14 @@
-// import { blogs } from "../../src/components/data/blogs";
-// import BlogHero from "../components/blog/BlogHero";
-// import BlogBody from "../components/blog/BlogBody";
-// import BlogSocialMeta from "../components/blog/BlogSocialMeta";
-// import LatestBlogCarousel from "../components/blog/LatestBlogCarousel";
-// import NewsletterCTA from "../components/blog/NewsletterCTA";
-
-// const BlogDetailPage = () => {
-//   const blog = blogs[1]; // dynamic via slug later
-//   // For now, we are using the second blog as an example
-//   // In a real application, you would fetch the blog data based on the slug from the URL
-//   if (!blog) {
-//     return <div className="text-center p-8">Blog not found</div>;
-//   }
-//   // Assuming blogs is an array of blog objects
-//   // and we are displaying the second blog as an example
-//   // In a real application, you would fetch the blog data based on the slug from the URL
-//   if (!blogs || blogs.length === 0) {
-//     return <div className="text-center p-8">No blogs available</div>;
-//   }
-
-//   return (
-//     <div className="bg-white text-gray-800 font-sans">
-//       <BlogHero blog={blog} />
-//       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-4 gap-8 mt-8">
-//         <div className="lg:col-span-1 hidden lg:block">
-//           <BlogSocialMeta blog={blog} />
-//         </div>
-//         <div className="lg:col-span-3">
-//           <BlogBody blog={blog} />
-//         </div>
-//       </div>
-//       <LatestBlogCarousel blogs={blogs.slice(1)} />
-//       <NewsletterCTA />
-//     </div>
-//   );
-// };
-
-// export default BlogDetailPage;
-
-
-import { useParams } from "wouter"; // ← import this
+import { useParams } from "wouter";
 import { blogs } from "../../src/components/data/blogs";
 import BlogHero from "../components/blog/BlogHero";
 import BlogBody from "../components/blog/BlogBody";
-import BlogSocialMeta from "../components/blog/BlogSocialMeta";
 import LatestBlogCarousel from "../components/blog/LatestBlogCarousel";
 import NewsletterCTA from "../components/blog/NewsletterCTA";
-import { log } from "console";
+import SidebarBlogList from "../components/blog/SidebarBlogList"; // 👈 Import the new component
 
 const BlogDetailPage = () => {
-   const { slug } = useParams(); // ← get slug from URL
-
-   const blog = blogs.find((b) => b.id === slug); // ← find matching blog by ID
- // const blog = blogs[1]; // For now, we are using the second blog as an example
-  console.log("Blog Detail Page - Slug:", slug);
-
+  const { slug } = useParams();
+  const blog = blogs.find((b) => b.id === slug);
 
   if (!blogs || blogs.length === 0) {
     return <div className="text-center p-8">No blogs available</div>;
@@ -67,14 +21,18 @@ const BlogDetailPage = () => {
   return (
     <div className="bg-white text-gray-800 font-sans">
       <BlogHero blog={blog} />
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-4 gap-8 mt-8">
-        <div className="lg:col-span-1 hidden lg:block">
-          <BlogSocialMeta blog={blog} />
-        </div>
+      <div className="max-w-7xl mx-auto  grid lg:grid-cols-4 gap-8 mt-8">
+        {/* Main Blog Body */}
         <div className="lg:col-span-3">
           <BlogBody blog={blog} />
         </div>
+
+        {/* Sidebar */}
+        <div className="lg:col-span-1 hidden lg:block">
+          <SidebarBlogList blogs={blogs} activeBlogId={blog.id} />
+        </div>
       </div>
+
       <LatestBlogCarousel blogs={blogs.filter((b) => b.id !== blog.id)} />
       <NewsletterCTA />
     </div>

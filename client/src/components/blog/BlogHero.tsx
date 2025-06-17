@@ -1,51 +1,77 @@
 import { Blog } from "../../types/blog";
-import { FaCalendarAlt, FaClock, FaUser } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import bg_image from "../../assets/hero_bg_sf-scaled.webp"; // Adjust the path as necessary
 
 const BlogHero = ({ blog }: { blog: Blog }) => (
-  <div className="relative w-full min-h-[600px] overflow-hidden">
-    {/* Background Image with Overlay */}
-    <div className="absolute inset-0">
-      <img 
-        src={blog.coverImage} 
-        alt={blog.title} 
-        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+  <div className="relative w-full min-h-[600px] overflow-hidden text-whit">
+    {/* Animated Wavy Background */}
+    <div className="absolute inset-0 overflow-hidden z-0">
+ 
+     <img
+        src={bg_image}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover "
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
     </div>
-
+ 
     {/* Content */}
-    <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center py-20">
+    <div className="relative z-10 max-w-7xl mx-auto px-12 py-20 h-full flex flex-col justify-center">
       <div className="max-w-4xl">
-        {/* Meta Information */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 text-white/90">
-          <div className="flex items-center gap-2">
-            <FaCalendarAlt className="text-blue-400" />
-            <span>{blog.publishedAt}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaClock className="text-blue-400" />
-            <span>{blog.readTime}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaUser className="text-blue-400" />
-            <span>{blog.author}</span>
-          </div>
-        </div>
+        {/* Tags */}
+        {/* <div className="flex gap-4 mb-6">
+          <span className="bg-white/10 px-4 py-1 rounded-full text-sm">Product Updates</span>
+          <span className="bg-white/10 px-4 py-1 rounded-full text-sm">Zero Trust Access</span>
+        </div> */}
 
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-          {blog.title}
+        {/* Title from Props */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          {blog.title.split(" ").map((word, index) =>
+            index % 2 === 0 ? (
+              <span key={index} className="text-blue-400">
+                {word + " "}
+              </span>
+            ) : (
+              <span key={index} className="text-white">
+                {word + " "}
+              </span>
+            )
+          )}
         </h1>
 
-        {/* Introduction */}
-        <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
-          {blog.introduction}
-        </p>
+        {/* Author & Date */}
+        <div className="text-white/80 text-sm mb-10 space-y-1">
+          <p>Written by <span className="text-white font-medium">{blog.author}</span></p>
+          <p>{blog.publishedAt}</p>
+        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2" />
+        {/* Share Icons */}
+        <div className="flex flex-col md:flex-row md:items-center gap-3">
+          <span className="text-white/80 text-sm">Share On</span>
+          <div className="flex gap-4">
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white/10 hover:bg-blue-500 transition-all"
+            >
+              <FaLinkedinIn className="text-white text-lg" />
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white/10 hover:bg-blue-500 transition-all"
+            >
+              <FaFacebookF className="text-white text-lg" />
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(blog.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white/10 hover:bg-blue-500 transition-all"
+            >
+              <FaXTwitter className="text-white text-lg" />
+            </a>
           </div>
         </div>
       </div>

@@ -3,6 +3,11 @@ import blog1 from "../../assets/BlogImages/blog1.png"
 import blog2 from "../../assets/BlogImages/blog2.png"
 import blog3 from "../../assets/BlogImages/blog3.png"
 import blog4 from "../../assets/BlogImages/blog4.png"
+import blog5 from "../../assets/BlogImages/blog5.jpg"
+import blog6 from "../../assets/BlogImages/blog6.webp"
+import blog7 from "../../assets/BlogImages/blog7.png"
+import blog8 from "../../assets/BlogImages/blog8.png"
+import blog9 from "../../assets/BlogImages/blog9.png"
 
 export const blogs: Blog[] = [
   {
@@ -492,8 +497,8 @@ export const blogs: Blog[] = [
   "title": "Securing IoT Devices in Healthcare: Challenges and MDM Solutions",
   "publishedAt": "June 11, 2025",
   "readTime": "N/A",
-  "coverImage": "Blog 5.docx",
-  "featureImage": "Blog 5.docx",
+  "coverImage": blog5,
+  "featureImage": blog5,
   "author": "N/A",
   "introduction": "The healthcare industry has witnessed a surge in IoT adoption, with connected devices like patient monitors, infusion pumps, and telemedicine tools revolutionizing care delivery. However, this innovation comes with significant security risks. 68% of healthcare organizations reported IoT-related security incidents in 2024 , highlighting the urgent need for robust Mobile Device Management (MDM) strategies. In this article, we explore the unique challenges of securing IoT devices in healthcare and how MDM solutions like MobiHeal MDM mitigate these risks while ensuring compliance and patient safety.",
   "sections": [
@@ -619,8 +624,8 @@ export const blogs: Blog[] = [
   "title": "Enhancing Retail Customer Experience with Secure Mobile Kiosks",
   "publishedAt": "June 11, 2025",
   "readTime": "N/A",
-  "coverImage": "Blog 6.docx",
-  "featureImage": "Blog 6.docx",
+  "coverImage": blog6,
+  "featureImage": blog6,
   "author": "N/A",
   "introduction": "Retailers are increasingly adopting mobile kiosks and tablets to modernize in-store experiences—from self-checkout stations to interactive product catalogues. However, 42% of retailers cite security concerns as the top barrier to kiosk adoption. Balancing seamless customer engagement with robust security is critical. This article explores how MobiHeal MDM enables retailers to deploy secure mobile kiosks while enhancing customer satisfaction and operational efficiency.",
   "sections": [
@@ -754,8 +759,8 @@ export const blogs: Blog[] = [
   "title": "Endpoint Security for Distributed Workforces: Best Practices for Remote Device Management",
   "publishedAt": "June 11, 2025",
   "readTime": "N/A",
-  "coverImage": "Blog 7.docx",
-  "featureImage": "Blog 7.docx",
+  "coverImage": blog7,
+  "featureImage": blog7,
   "author": "N/A",
   "introduction": "The shift to remote and hybrid work models has made endpoint security a top priority for enterprises. With employees accessing corporate resources from diverse locations and devices, organizations face heightened risks of data breaches, phishing attacks, and compliance violations. This article explores best practices for securing distributed workforces using MobiHeal MDM, ensuring productivity without compromising security.",
   "sections": [
@@ -866,8 +871,8 @@ export const blogs: Blog[] = [
   "title": "Zero-Touch Enrollment for Android Enterprise: Streamline Device Setup at Scale",
   "publishedAt": "June 11, 2025",
   "readTime": "N/A",
-  "coverImage": "Blog 8.docx",
-  "featureImage": "Blog 8.docx",
+  "coverImage": blog8,
+  "featureImage": blog8,
   "author": "N/A",
   "introduction": "Managing hundreds or thousands of Android devices across distributed teams is a logistical nightmare for IT departments. Manual configuration, inconsistent policies, and human errors can delay deployments and expose organizations to security risks. Zero-Touch Enrollment (ZTE) for Android Enterprise solves these challenges by automating device provisioning, ensuring uniformity, and enforcing security from the first boot. This guide explores how enterprises can leverage ZTE with MobiHeal MDM to streamline device setup, reduce IT overhead, and maintain compliance.",
   "sections": [
@@ -967,8 +972,8 @@ export const blogs: Blog[] = [
   "title": "GDPR Compliance Made Simple: How MDM Solutions Protect Customer Data",
   "publishedAt": "June 11, 2025",
   "readTime": "N/A",
-  "coverImage": "Blog 9.docx",
-  "featureImage": "Blog 9.docx",
+  "coverImage": blog9,
+  "featureImage": blog9,
   "author": "N/A",
   "introduction": "The General Data Protection Regulation (GDPR) mandates strict controls over how organizations collect, store, and process EU citizens' data. Non-compliance can result in fines of up to 4% of global revenue or €20 million. For enterprises managing distributed devices, achieving GDPR compliance is complex but critical. This guide explores how MobiHeal MDM streamlines GDPR adherence through automated data governance, secure device management, and audit-ready reporting.",
   "sections": [
