@@ -50,15 +50,25 @@ const Blog = () => {
             <h2 className="text-2xl font-bold mb-6 text-neutral-800">Featured Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(0, 3).map((post, index) => (
+                // <BlogPostCard
+                //   key={index}
+                //   title={post.title}
+                //   excerpt={post.excerpt}
+                //   date={post.date}
+                //   imageSrc={post.imageSrc}
+                //   imageAlt={post.imageAlt}
+                //   href={post.href}
+                // />
                 <BlogPostCard
                   key={index}
                   title={post.title}
                   excerpt={post.excerpt}
                   date={post.date}
                   imageSrc={post.imageSrc}
-                  imageAlt={post.imageAlt}
+                  imageAlt={post.imageAlt}    
                   href={post.href}
-                />
+                /> 
+
               ))}
             </div>
           </div>

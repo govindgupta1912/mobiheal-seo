@@ -17,6 +17,8 @@ import client7 from "../assets/ClinetImages/saktek.jpeg";
 import client8 from "../assets/ClinetImages/sd.png";
 import client9 from "../assets/ClinetImages/tabscl (1).webp";
 
+import cs1 from "../assets/caseStudies/Preventing Mobile Fraud in Banking.png"
+
 
 
 // Blog posts data
@@ -147,7 +149,7 @@ export const blogPosts = [
     date: "June 11, 2025",
     imageSrc: "Blog 8.docx",
     imageAlt: "Zero-Touch Enrollment Android Enterprise",
-    href: "/blog/zero-touch-enrollment-android-enterprise",
+    href: "/blog/zero-touch-enrollment-android",
     category: "mdm-best-practices"
   },
   {
@@ -204,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Preventing Mobile Fraud in Banking: How MDM Reduced Unauthorized Transactions by 60%",
     summary: "A multinational bank faced escalating mobile fraud incidents, including phishing scams, account takeovers, and unauthorized transactions. After deploying MobiHeal MDM, the bank reduced fraudulent activities by 60%, achieved 100% PCI-DSS compliance, and enhanced customer trust.",
-    imageSrc: "/images/case-studies/banking-fraud.jpg",
+    imageSrc:cs1,
     tags: ["Banking & Financial Services", "Security", "Fraud Prevention"],
     results: [
       { stat: "60%", label: "Reduction in fraudulent activities" },
@@ -216,14 +218,14 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Securing Customer Data in Digital Wallets: MDM Implementation for a Leading Fintech Firm",
     summary: "A leading fintech firm specializing in digital wallet solutions faced escalating security risks, including phishing attacks and unauthorized transactions. By deploying MobiHeal MDM, the company achieved 100% PCI-DSS compliance, zero data breaches over 18 months, and a 40% increase in customer trust scores.",
-    imageSrc: "/images/case-studies/fintech-security.jpg",
+    imageSrc: "",
     tags: ["Fintech", "Data Encryption", "PCI-DSS Compliance", "Mobile Payments", "MDM"],
     results: [
       { stat: "100%", label: "PCI-DSS compliance" },
       { stat: "Zero", label: "Data breaches over 18 months" },
       { stat: "40%", label: "Increase in customer trust scores" }
     ],
-    slug: "securing-customer-data-in-digital-wallets"
+    slug: "securing-customer-data-digital-wallets"
   },
   {
     title: "HIPAA Compliance Achieved: Protecting Patient Data on Tablets in a Multi-Hospital Network",
@@ -235,7 +237,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "90%", label: "Reduced data breach risks" },
       { stat: "Improved", label: "Patient trust" }
     ],
-    slug: "hipaa-compliance-achieved-protecting-patient-data-on-tablets-in-a-multi-hospital-network"
+    slug: "hipaa-compliance-healthcare-tablets"
   },
   {
     title: "Securing Telemedicine Devices: How MDM Enabled Remote Consultations Without Compromising Privacy",
@@ -247,7 +249,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "HIPAA compliance" },
       { stat: "30%", label: "Improved patient satisfaction scores" }
     ],
-    slug: "securing-telemedicine-devices-how-mdm-enabled-remote-consultations-without-compromising-privacy"
+    slug: "telemedicine-device-security"
   },
   {
     title: "Securing IoT-Powered Stores: MDM for Smart Shelves and Mobile POS Systems",
@@ -259,7 +261,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "PCI-DSS compliance achieved" },
       { stat: "70%", label: "Reduced operational downtime" }
     ],
-    slug: "securing-iot-powered-stores-mdm-for-smart-shelves-and-mobile-pos-systems"
+    slug: "iot-retail-security"
   },
   {
     title: "Boosting Customer Engagement: Secure Tablet Deployment for In-Store Product Demos",
@@ -271,7 +273,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "90%", label: "Customer satisfaction" },
       { stat: "Zero", label: "Data breaches over 12 months" }
     ],
-    slug: "boosting-customer-engagement-secure-tablet-deployment-for-in-store-product-demos"
+    slug: "retail-tablet-demos"
   },
   {
     title: "Securing Student Data in Hybrid Classrooms: How MDM Enabled Safe BYOD for 10,000+ Learners",
@@ -283,7 +285,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "FERPA compliance achieved" },
       { stat: "40%", label: "Reduced IT management costs" }
     ],
-    slug: "securing-student-data-in-hybrid-classrooms-how-mdm-enabled-safe-byod-for-10000-learners"
+    slug: "education-byod-security"
   },
   {
     title: "Streamlining Tablet Deployment Across 50 Schools: A Case Study in Kiosk Mode for Digital Learning",

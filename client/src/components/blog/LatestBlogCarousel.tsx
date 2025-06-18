@@ -87,9 +87,9 @@ const LatestBlogCarousel = ({ blogs }: { blogs: Blog[] }) => {
                 <h4 className="font-bold text-xl mb-3 text-gray-900 line-clamp-2">
                   {blog.title}
                 </h4>
-                <p className="text-gray-600 line-clamp-2 mb-4 flex-grow">
+                {/* <p className="text-gray-600 line-clamp-2 mb-4 flex-grow">
                   {blog.introduction}
-                </p>
+                </p> */}
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                   <p className="text-sm text-gray-500">
                     By {blog.author}

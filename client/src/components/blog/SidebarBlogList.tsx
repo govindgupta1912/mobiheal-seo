@@ -20,12 +20,12 @@ const SidebarBlogList = ({ blogs, activeBlogId }: SidebarBlogListProps) => {
             <Link
               key={b.id}
               href={`/blog/${b.id}`}
-              className="block bg-white  shadow-sm hover:shadow-md border border-gray-100 hover:border-blue-300 transition-all duration-200 overflow-hidden"
+              className="block bg-white  shadow-sm hover:shadow-lg border border-gray-100  transition-all duration-200 overflow-hidden"
             >
               <img
                 src={b.featureImage}
                 alt={b.title}
-                className="w-full h-36 "
+                className=" w-full h-36 "
               />
               <div className="p-4">
                 <h4 className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 line-clamp-2">
