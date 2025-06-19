@@ -12,13 +12,14 @@ import Resources from "@/pages/Resources";
 import Blog from "@/pages/Blog";
 import CaseStudies from "@/pages/CaseStudies";
 import CaseStudyDetail from "@/pages/CaseStudyDetail";
-import Whitepapers from "@/pages/Whitepapers";
+import Whitepapers from "@/pages/whitepapers/Whitepapers";
 import OwaspMobile from "@/pages/OwaspMobile";
 import FAQ from "@/pages/FAQ";
 import Partners from "@/pages/Partners";
 import Testimonials from "@/pages/Testimonials";
 import Contact from "@/pages/Contact";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import WhitepaperDetailPage from "./pages/whitepapers/[slug]";
 
 function Router() {
   return (
@@ -39,6 +40,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       {/* <Route path="/blog-deatails" component={BlogDetailPage}/> */}
       <Route path="/blog/:slug" component={BlogDetailPage} />
+        <Route path="/whitepapers/:slug" component={WhitepaperDetailPage} />
       
 
       <Route component={NotFound} />

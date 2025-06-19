@@ -18,6 +18,17 @@ import client8 from "../assets/ClinetImages/sd.png";
 import client9 from "../assets/ClinetImages/tabscl (1).webp";
 
 import cs1 from "../assets/caseStudies/Preventing Mobile Fraud in Banking.png"
+import cs2 from "../assets/caseStudies/cs2.jpg"
+import cs3 from "../assets/caseStudies/cs3.jpg"
+import cs4 from "../assets/caseStudies/cs4.jpg"
+import cs5 from "../assets/caseStudies/cs5.jpg"   
+
+import cs7 from "../assets/caseStudies/cs7.jpg" 
+import cs8 from "../assets/caseStudies/cs8.jpg" 
+import cs9 from "../assets/caseStudies/cs9.jpg"
+import cs10 from "../assets/caseStudies/cs10.jpg"
+import cs11 from "../assets/caseStudies/cs11.jpg"
+import cs12 from "../assets/caseStudies/cs12.jpg"
 
 
 
@@ -218,7 +229,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Securing Customer Data in Digital Wallets: MDM Implementation for a Leading Fintech Firm",
     summary: "A leading fintech firm specializing in digital wallet solutions faced escalating security risks, including phishing attacks and unauthorized transactions. By deploying MobiHeal MDM, the company achieved 100% PCI-DSS compliance, zero data breaches over 18 months, and a 40% increase in customer trust scores.",
-    imageSrc: "",
+    imageSrc: cs2,
     tags: ["Fintech", "Data Encryption", "PCI-DSS Compliance", "Mobile Payments", "MDM"],
     results: [
       { stat: "100%", label: "PCI-DSS compliance" },
@@ -230,7 +241,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "HIPAA Compliance Achieved: Protecting Patient Data on Tablets in a Multi-Hospital Network",
     summary: "A multi-hospital network with 15,000+ tablets across 50+ facilities faced recurring HIPAA violations due to unsecured devices. After deploying MobiHeal MDM, the organization achieved 100% HIPAA compliance, reduced data breach risks by 90%, and improved patient trust.",
-    imageSrc: "/images/case-studies/healthcare-data.jpg",
+    imageSrc: cs3,
     tags: ["Healthcare", "Patient Data Security", "HIPAA Compliance", "MDM"],
     results: [
       { stat: "100%", label: "HIPAA compliance achieved" },
@@ -242,7 +253,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Securing Telemedicine Devices: How MDM Enabled Remote Consultations Without Compromising Privacy",
     summary: "A regional healthcare provider offering telemedicine services faced risks of data breaches and HIPAA violations due to unsecured tablets used by remote clinicians. By deploying MobiHeal MDM, the organization eliminated breaches, achieved 100% HIPAA compliance, and improved patient satisfaction scores by 30%.",
-    imageSrc: "/images/case-studies/telemedicine-security.jpg",
+    imageSrc: cs4,
     tags: ["Healthcare", "Telemedicine Security", "HIPAA Compliance", "Privacy"],
     results: [
       { stat: "Zero", label: "Data breaches" },
@@ -254,7 +265,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Securing IoT-Powered Stores: MDM for Smart Shelves and Mobile POS Systems",
     summary: "A leading retail chain with 200+ IoT-powered stores faced escalating cyber threats targeting smart shelves and mobile POS systems. By deploying MobiHeal MDM, the retailer eliminated data breaches, achieved 100% PCI-DSS compliance, and reduced operational downtime by 70%.",
-    imageSrc: "/images/case-studies/retail-iot.jpg",
+    imageSrc: cs5,
     tags: ["Retail", "IoT Security", "POS Systems", "Compliance"],
     results: [
       { stat: "Eliminated", label: "Data breaches" },
@@ -278,7 +289,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Securing Student Data in Hybrid Classrooms: How MDM Enabled Safe BYOD for 10,000+ Learners",
     summary: "A large school district with 50+ schools transitioned to hybrid learning, allowing students to use personal devices (BYOD) for remote classes. However, unmanaged devices led to data leaks and FERPA violations. By deploying MobiHeal MDM, the district secured 10,000+ BYOD devices, achieved 100% FERPA compliance, and reduced IT management costs by 40%.",
-    imageSrc: "/images/case-studies/education-byod.jpg",
+    imageSrc: cs7,
     tags: ["Education", "Student Data Privacy", "BYOD Security", "FERPA Compliance"],
     results: [
       { stat: "10,000+", label: "BYOD devices secured" },
@@ -290,66 +301,76 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Streamlining Tablet Deployment Across 50 Schools: A Case Study in Kiosk Mode for Digital Learning",
     summary: "A regional education authority managing 50 schools struggled with inconsistent tablet deployments, unauthorized app usage, and frequent device malfunctions. By implementing MobiHeal MDM’s Kiosk Mode, the district achieved 90% faster deployment, 80% fewer IT tickets, and 100% compliance with student data privacy laws.",
-    imageSrc: "/images/case-studies/education-tablet-deployment.jpg",
+    imageSrc: cs8,
     tags: ["Education", "Tablet Deployment", "Kiosk Mode", "Digital Learning"],
     results: [
       { stat: "90%", label: "Faster deployment" },
       { stat: "80%", label: "Fewer IT tickets" },
       { stat: "100%", label: "Compliance with student data privacy laws" }
     ],
-    slug: "streamlining-tablet-deployment-across-50-schools-a-case-study-in-kiosk-mode-for-digital-learning"
+    slug: "education-kiosk-mode"
   },
   {
     title: "Protecting Clinical Trial Data: MDM Implementation for a Global Pharma Research Team",
     summary: "A global pharmaceutical company conducting 100+ clinical trials faced recurring data breaches and HIPAA violations due to unsecured mobile devices. By deploying MobiHeal MDM, the team secured 2,000+ devices, achieved 100% HIPAA compliance, and reduced breach risks by 90%, ensuring patient privacy and regulatory adherence.",
-    imageSrc: "/images/case-studies/pharma-clinical-trials.jpg",
+    imageSrc: cs9,
     tags: ["Pharmaceuticals", "Clinical Research", "Data Security", "HIPAA Compliance"],
     results: [
       { stat: "2,000+", label: "Devices secured" },
       { stat: "100%", label: "HIPAA compliance achieved" },
       { stat: "90%", label: "Reduced breach risks" }
     ],
-    slug: "protecting-clinical-trial-data-mdm-implementation-for-a-global-pharma-research-team"
+    slug: "clinical-trial-mdm"
   },
   {
     title: "Securing Drug Manufacturing Facilities: Geo-Fencing and Access Control for Pharma IoT Devices",
     summary: "A leading pharmaceutical manufacturer faced unauthorized access and compliance risks across 20+ global drug production sites. By deploying MobiHeal MDM with geo-fencing and role-based access controls, the company achieved 100% compliance with FDA 21 CFR Part 11, reduced unauthorized entry incidents by 95%, and secured 5,000+ IoT devices.",
-    imageSrc: "/images/case-studies/pharma-manufacturing.jpg",
+    imageSrc: cs10,
     tags: ["Pharmaceuticals", "IoT Security", "Manufacturing", "Compliance"],
     results: [
       { stat: "100%", label: "Compliance with FDA 21 CFR Part 11" },
       { stat: "95%", label: "Reduced unauthorized entry incidents" },
       { stat: "5,000+", label: "IoT devices secured" }
     ],
-    slug: "securing-drug-manufacturing-facilities-geo-fencing-and-access-control-for-pharma-iot-devices"
+    slug: "pharma-iot-geo-fencing"
   },
   {
     title: "Preventing Cargo Theft: How MDM Secured 2,000+ Driver Tablets for a Logistics Giant",
     summary: "A global logistics company managing 10,000+ shipments monthly faced rampant cargo theft, losing $5M annually. By deploying MobiHeal MDM across 2,000+ driver tablets, the firm reduced theft incidents by 95%, recovered $4.2M yearly, and ensured real-time fleet visibility.",
-    imageSrc: "/images/case-studies/logistics-cargo-theft.jpg",
+    imageSrc: cs11,
     tags: ["Logistics", "Cargo Theft Prevention", "Fleet Management", "Security"],
     results: [
       { stat: "95%", label: "Reduced theft incidents" },
       { stat: "$4.2M", label: "Recovered yearly" },
       { stat: "2,000+", label: "Driver tablets secured" }
     ],
-    slug: "preventing-cargo-theft-how-mdm-secured-2000-driver-tablets-for-a-logistics-giant"
+    slug: "cargo-theft-mdm-logistics"
   },
   {
     title: "Optimizing Warehouse Operations: MDM for IoT-Powered Inventory Management",
     summary: "A global logistics company managing 50+ warehouses faced 15% inventory discrepancies and frequent IoT device failures. By deploying MobiHeal MDM, the firm achieved 99.9% inventory accuracy, reduced downtime by 70%, and secured 10,000+ IoT sensors, transforming warehouse operations.",
-    imageSrc: "/images/case-studies/logistics-warehouse.jpg",
+    imageSrc: cs12,
     tags: ["Logistics", "Warehouse Operations", "IoT Inventory Management", "Efficiency"],
     results: [
       { stat: "99.9%", label: "Inventory accuracy" },
       { stat: "70%", label: "Reduced downtime" },
       { stat: "10,000+", label: "IoT sensors secured" }
     ],
-    slug: "optimizing-warehouse-operations-mdm-for-iot-powered-inventory-management"
+    slug: "warehouse-iot-mdm-logistics"
   }
 ];
 // Whitepapers data
 export const whitepapers = [
+  {
+    slug: "unlocking-business-potential",
+    title: "Unlocking Business Potential",
+    type: "Whitepaper",
+    pages: 18,
+    description: "How MDM transforms business operations and security.",
+    tags: ["MDM", "Security", "Cost Reduction"],
+    previewHref: "/whitepapers/unlocking-business-potential", // <- dynamic route
+    downloadHref: "/downloads/mdm-whitepaper.pdf"
+  },
   {
     title: "Comprehensive Guide to Mobile Device Security",
     description: "A complete framework for securing mobile devices in enterprise environments, including technical controls, policies, and best practices.",

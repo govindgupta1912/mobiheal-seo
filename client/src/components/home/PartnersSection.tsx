@@ -1,23 +1,23 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
-import slide1  from "../../assets/ClinetImages/Defence_Research_and_Development_Organisation.svg.png";
-import slide2  from "../../assets/ClinetImages/adi.png";
-import slide3  from "../../assets/ClinetImages/chims.jpeg";
-import slide4  from "../../assets/ClinetImages/ekal.png";
-import slide5  from "../../assets/ClinetImages/iaf.png";
-import slide6  from "../../assets/ClinetImages/in.png";
-import slide7  from "../../assets/ClinetImages/saktek.jpeg";
-import slide8 from "../../assets/ClinetImages/sd.png";
-import slide9 from "../../assets/ClinetImages/tabscl (1).webp";
-import slide10 from "../../assets/partnerImages/Cybermantra Logo.png";
-import slide11 from "../../assets/partnerImages/Cybernet.png"
-import slide12 from "../../assets/partnerImages/FruxLogo.png";
-import slide13 from "../../assets/partnerImages/IKall.jpg";
-import slide14 from "../../assets/partnerImages/ITI_Limited_logo.svg.png";
-import slide15 from "../../assets/partnerImages/Ira.jpg"
-import slide16 from "../../assets/partnerImages/Logo_Invia.png"
-import slide17 from "../../assets/partnerImages/TCIL.png"
+import slide1  from "../../assets/ClinetImages/clients-3.png";
+import slide2  from "../../assets/ClinetImages/clients-1.png";
+import slide3  from "../../assets/ClinetImages/clients-10.png";
+import slide4  from "../../assets/ClinetImages/clients-2.png";
+import slide5  from "../../assets/ClinetImages/clients-4.png";
+import slide6  from "../../assets/ClinetImages/clients-5.png";
+import slide7  from "../../assets/ClinetImages/clients-6.png";
+import slide8 from "../../assets/ClinetImages/clients-7.png";
+import slide9 from "../../assets/ClinetImages/clients-8.png";
+import slide10 from "../../assets/partnerImages/partner1.png";
+import slide11 from "../../assets/partnerImages/partner2.png"
+import slide12 from "../../assets/partnerImages/partner3.png";
+import slide13 from "../../assets/partnerImages/partner4.png";
+import slide14 from "../../assets/partnerImages/partner5.png";
+import slide15 from "../../assets/partnerImages/partner6.png"
+// import slide16 from "../../assets/partnerImages/partner7.png"
+import slide17 from "../../assets/partnerImages/partner8.png"
 const PartnersSection = () => {
   const clients = [
     { id: 1, name: "Air India", logo: slide1 },
@@ -26,7 +26,7 @@ const PartnersSection = () => {
     { id: 4, name: "Invia", logo: slide4 },
     { id: 5, name: "ITI", logo: slide5 },
     { id: 6, name: "Navitus", logo: slide6 },
-    // { id: 7, name: "Sakham", logo: slide7 },
+     { id: 7, name: "Sakham", logo: slide7 },
     { id: 8, name: "Adriod", logo: slide8 },
     { id: 9, name: "Sapours", logo: slide9 },
     { id: 10, name: "TabSchool", logo: slide10 },
@@ -36,7 +36,7 @@ const PartnersSection = () => {
     { id: 14, name: "Mrotek", logo: slide14 },
     { id: 15, name: "NCAT", logo: slide15 },
     // { id: 16, name: "Ira", logo: slide16 },
-    { id: 16, name: "Cybermantra", logo: slide16 },
+    // { id: 16, name: "Cybermantra", logo: slide16 },
     { id: 17, name: "Cybernet", logo: slide17 },
   ];
 
@@ -64,7 +64,7 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section id="partners" className="py-16 md:py-24 bg-neutral-50">
+    <section id="partners" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-neutral-800">Our Partners & Clients</h2>
@@ -81,7 +81,7 @@ const PartnersSection = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-12 object-contain border border-none"
+                  className=" object-contain border border-none"
                 />
               ) : (
                 <span className="text-neutral-500">{client.name}</span>

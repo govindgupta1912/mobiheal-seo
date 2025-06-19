@@ -6,14 +6,15 @@ import { whitepapers } from "@/lib/data";
 const Whitepapers = () => {
   return (
     <>
-      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16 md:py-20">
+      <section className="bg-gradient text-white py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Whitepapers & Technical Resources
             </h1>
             <p className="text-lg md:text-xl mb-8 text-blue-100">
-              In-depth technical resources and research on mobile security topics.
+              In-depth technical resources and research on mobile security
+              topics.
             </p>
           </div>
         </div>
@@ -53,22 +54,31 @@ const Whitepapers = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {whitepapers.map((whitepaper, index) => (
-              <div key={index} className="bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={index}
+                className="bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-primary-dark/10 rounded-full p-3">
                       <FileTextIcon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <span className="text-sm text-neutral-500">{whitepaper.type} • {whitepaper.pages} pages</span>
+                      <span className="text-sm text-neutral-500">
+                        {whitepaper.type} • {whitepaper.pages} pages
+                      </span>
                     </div>
                   </div>
-                  <h2 className="text-xl font-bold mb-3 text-neutral-800">{whitepaper.title}</h2>
-                  <p className="text-neutral-600 mb-6">{whitepaper.description}</p>
+                  <h2 className="text-xl font-bold mb-3 text-neutral-800">
+                    {whitepaper.title}
+                  </h2>
+                  <p className="text-neutral-600 mb-6">
+                    {whitepaper.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {whitepaper.tags.map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex} 
+                      <span
+                        key={tagIndex}
                         className="inline-block px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
                       >
                         {tag}
@@ -76,9 +86,13 @@ const Whitepapers = () => {
                     ))}
                   </div>
                   <div className="flex justify-between items-center">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-                      <Link href={whitepaper.previewHref}>
-                        Preview
+                    <Button
+                      variant="outline"
+                      className="border-primary text-primary hover:bg-primary/5"
+                      asChild
+                    >
+                      <Link href={`/whitepapers/${whitepaper.slug}`}>
+                        <a>Preview</a>
                       </Link>
                     </Button>
                     <Button asChild>
@@ -104,31 +118,86 @@ const Whitepapers = () => {
                   Request Custom Research
                 </h2>
                 <p className="text-neutral-600">
-                  Need specialized research or technical information for your specific use case? Our team can help.
+                  Need specialized research or technical information for your
+                  specific use case? Our team can help.
                 </p>
               </div>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">Name*</label>
-                    <input type="text" id="name" name="name" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary" required />
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
+                    >
+                      Name*
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                      required
+                    />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">Email Address*</label>
-                    <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary" required />
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
+                    >
+                      Email Address*
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                      required
+                    />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-1">Company Name*</label>
-                  <input type="text" id="company" name="company" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary" required />
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-neutral-700 mb-1"
+                  >
+                    Company Name*
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    required
+                  />
                 </div>
                 <div>
-                  <label htmlFor="topic" className="block text-sm font-medium text-neutral-700 mb-1">Research Topic*</label>
-                  <input type="text" id="topic" name="topic" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary" required />
+                  <label
+                    htmlFor="topic"
+                    className="block text-sm font-medium text-neutral-700 mb-1"
+                  >
+                    Research Topic*
+                  </label>
+                  <input
+                    type="text"
+                    id="topic"
+                    name="topic"
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    required
+                  />
                 </div>
                 <div>
-                  <label htmlFor="details" className="block text-sm font-medium text-neutral-700 mb-1">Additional Details</label>
-                  <textarea id="details" name="details" rows={4} className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                  <label
+                    htmlFor="details"
+                    className="block text-sm font-medium text-neutral-700 mb-1"
+                  >
+                    Additional Details
+                  </label>
+                  <textarea
+                    id="details"
+                    name="details"
+                    rows={4}
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                  ></textarea>
                 </div>
                 <Button type="submit" className="w-full">
                   Submit Request

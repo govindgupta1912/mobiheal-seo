@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon } from "lucide-react";
+import  byod from "@/assets/useCases/byod_720.jpg";
+import corporate from "@/assets/useCases/corporate_owned_720.jpg";
+import kisok from "@/assets/useCases/kiosk_mode_720.jpg";
 
 const UseCasesSection = () => {
   const [activeTab, setActiveTab] = useState("kiosk");
@@ -16,7 +19,7 @@ const UseCasesSection = () => {
         "Remote troubleshooting and device maintenance",
         "Scheduled content updates and device reboots"
       ],
-      image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
+      image: kisok,
       link: "/use-cases#kiosk"
     },
     corporate: {
@@ -28,7 +31,7 @@ const UseCasesSection = () => {
         "Advanced security controls and monitoring",
         "Complete device lifecycle management"
       ],
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
+      image: corporate,
       link: "/use-cases#corporate"
     },
     byod: {
@@ -40,7 +43,7 @@ const UseCasesSection = () => {
         "Selective remote wipe options for work data only",
         "Simple enrollment process via QR code or email"
       ],
-      image: "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=450&q=80",
+      image: byod,
       link: "/use-cases#byod"
     }
   };

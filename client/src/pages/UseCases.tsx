@@ -3,9 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import byod from "../assets/byod.avif";
-import corporate from "../assets/corporate.avif";
-import kiosk from "../assets/kiosk.avif";
+import byod from "../assets/useCases/byod_720.jpg";
+import corporate from "../assets/useCases/corporate_owned_720.jpg";
+import kiosk from "../assets/useCases/kiosk_mode_720.jpg";
 
 const UseCases = () => {
   const [activeTab, setActiveTab] = useState("kiosk");
