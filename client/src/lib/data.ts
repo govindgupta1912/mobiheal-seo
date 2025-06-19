@@ -398,15 +398,7 @@ export const whitepapers = [
     previewHref: "/whitepapers/preview/mobile-compliance",
     downloadHref: "/whitepapers/download/mobile-compliance"
   },
-  {
-    title: "The Evolution of Mobile Threat Defense",
-    description: "An in-depth analysis of modern mobile threats and comprehensive strategies for defense, detection, and remediation.",
-    type: "Research Report",
-    pages: 36,
-    tags: ["Threat Defense", "Security", "Research"],
-    previewHref: "/whitepapers/preview/mobile-threat-defense",
-    downloadHref: "/whitepapers/download/mobile-threat-defense"
-  }
+ 
 ];
 
 // OWASP Mobile Top 10 risks data

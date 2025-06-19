@@ -66,7 +66,7 @@ const BlogBody = ({ blog }: { blog: Blog }) => (
         {sec.subsections?.map((sub, sIdx) => (
           <div
             key={sIdx}
-            className="bg-gradient-to-tr from-gray-50 to-white border-l-4 border-blue-400 rounded-xl p-5 mt-6 shadow-sm"
+            className="bg-gradient-to-tr from-gray-50 to-white  rounded-xl p-5 mt-6 shadow-sm"
           >
             <h3 className="text-xl font-semibold text-blue-900 mb-3">
               {sub.subheading}

@@ -3,15 +3,15 @@ import { FaLinkedinIn, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import bg_image from "../../assets/hero_bg_sf-scaled.webp"; // Adjust the path as necessary
 
 const BlogHero = ({ blog }: { blog: Blog }) => (
-  <div className="relative w-full min-h-[600px] overflow-hidden text-whit">
+  <div className="relative w-full min-h-[600px] overflow-hidden text-whit bg-gradient">
     {/* Animated Wavy Background */}
     <div className="absolute inset-0 overflow-hidden z-0">
  
-     <img
+     {/* <img
         src={bg_image}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover "
-      />
+      /> */}
     </div>
  
     {/* Content */}
@@ -27,7 +27,7 @@ const BlogHero = ({ blog }: { blog: Blog }) => (
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           {blog.title.split(" ").map((word, index) =>
             index % 2 === 0 ? (
-              <span key={index} className="text-blue-400">
+              <span key={index} className="text-white">
                 {word + " "}
               </span>
             ) : (
