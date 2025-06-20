@@ -56,7 +56,7 @@ const UseCasesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-neutral-800">Tailored for Your Business Needs</h2>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-            Our MDM solution adapts to multiple deployment scenarios across various industries.
+MobiHeal MDM solution adapts to multiple deployment scenarios across various industries.
           </p>
         </div>
 

@@ -64,7 +64,7 @@ const WhitepaperDetails = ({
                 key={idx}
                 className="flex flex-col items-center text-center gap-4 bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:scale-105 transition-transform duration-200"
               >
-                <CheckCircle2 className="text-blue-600 w-8 h-8 mb-2" />
+                <CheckCircle2 className="text-primary w-8 h-8 mb-2" />
                 <p className="text-neutral-800 text-lg leading-snug font-medium">
                   {item}
                 </p>
@@ -123,7 +123,7 @@ const WhitepaperDetails = ({
                   placeholder="No. of Users"
                   className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
                 />
-                <Button type="submit" className="w-full text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-colors duration-200 shadow-md rounded-lg">
+                <Button type="submit" className="w-full text-lg font-semibold bg-gradient transition-colors duration-200 shadow-md rounded-lg">
                   Download Now
                 </Button>
               </form>

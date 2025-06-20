@@ -68,7 +68,7 @@ const BlogBody = ({ blog }: { blog: Blog }) => (
             key={sIdx}
             className="bg-gradient-to-tr from-gray-50 to-white  rounded-xl p-5 mt-6 shadow-sm"
           >
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-semibold text-primary mb-3">
               {sub.subheading}
             </h3>
 
@@ -127,7 +127,7 @@ const BlogBody = ({ blog }: { blog: Blog }) => (
               href={blog.conclusion.cta.buttonLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-md hover:bg-blue-100 transition"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-semibold rounded-md hover:bg-blue-100 transition"
             >
               {blog.conclusion.cta.buttonText}
               <FaArrowRight />

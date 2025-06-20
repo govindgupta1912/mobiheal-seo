@@ -215,7 +215,7 @@ const UseCases = () => {
           <h3 className="text-xl font-semibold mb-4 text-neutral-800">Target Industries</h3>
           <div className="space-y-4 mb-8">
             {useCase.industries.map((industry, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg border border-neutral-100">
+              <div key={index} className="bg-white rounded-lg border border-neutral-100">
                 <h4 className="font-medium text-neutral-800">{industry.name}</h4>
                 <p className="text-neutral-600 text-sm">{industry.description}</p>
               </div>

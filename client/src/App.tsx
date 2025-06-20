@@ -31,6 +31,7 @@ function Router() {
       <Route path="/resources" component={Resources} />
       <Route path="/blog" component={Blog} />
       <Route path="/case-studies" component={CaseStudies} />
+      <Route path="/case-studies/:category" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
       <Route path="/whitepapers" component={Whitepapers} />
       <Route path="/owasp-mobile" component={OwaspMobile} />
@@ -40,8 +41,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       {/* <Route path="/blog-deatails" component={BlogDetailPage}/> */}
       <Route path="/blog/:slug" component={BlogDetailPage} />
-        <Route path="/whitepapers/:slug" component={WhitepaperDetailPage} />
-      
+      <Route path="/whitepapers/:slug" component={WhitepaperDetailPage} />
 
       <Route component={NotFound} />
     </Switch>

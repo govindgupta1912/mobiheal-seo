@@ -1,21 +1,24 @@
-import partner1 from "../assets/partnerImages/Cybermantra Logo.png";
-import partner2 from "../assets/partnerImages/Cybernet.png"; 
-import partner3 from "../assets/partnerImages/IKall.jpg";
-import partner4 from "../assets/partnerImages/ITI_Limited_logo.svg.png";
-import partner5 from "../assets/partnerImages/Ira.jpg";
-import partner6 from "../assets/partnerImages/TCIL.png";
-import partner7 from "../assets/partnerImages/FruxLogo.png";
-import partner8 from "../assets/partnerImages/Logo_Invia.png";
+import partner1 from "../assets/partnerImages/partner1.png";
+import partner2 from "../assets/partnerImages/partner2.png"; 
+import partner3 from "../assets/partnerImages/partner3.png";
+import partner4 from "../assets/partnerImages/partner4.png";
+import partner5 from "../assets/partnerImages/partner5.png";
+import partner6 from "../assets/partnerImages/partner6.png";
+import partner7 from "../assets/partnerImages/partner7.jpg";
+import partner8 from "../assets/partnerImages/partner8.png";
 
-import client1 from "../assets/ClinetImages/Defence_Research_and_Development_Organisation.svg.png";
-import client2 from "../assets/ClinetImages/chims.jpeg";
-import client3 from "../assets/ClinetImages/ekal.png";
-import client4 from "../assets/ClinetImages/iaf.png";
-import client5 from "../assets/ClinetImages/adi.png";
-import client6 from "../assets/ClinetImages/in.png";
-import client7 from "../assets/ClinetImages/saktek.jpeg";
-import client8 from "../assets/ClinetImages/sd.png";
-import client9 from "../assets/ClinetImages/tabscl (1).webp";
+import client1 from "../assets/ClinetImages/clients.png";
+import client2 from "../assets/ClinetImages/clients-1.png";
+import client3 from "../assets/ClinetImages/clients-2.png";
+import client4 from "../assets/ClinetImages/clients-3.png";
+import client5 from "../assets/ClinetImages/clients-4.png";
+import client6 from "../assets/ClinetImages/clients-5.png";
+import client7 from "../assets/ClinetImages/clients-6.png";
+import client8 from "../assets/ClinetImages/clients-7.png";
+import client9 from "../assets/ClinetImages/clients-8.png";
+import client10 from "../assets/ClinetImages/clients-9.png"
+import client11 from "../assets/ClinetImages/clients-10.png"
+import client12 from "../assets/ClinetImages/clients-11.png" 
 
 import cs1 from "../assets/caseStudies/Preventing Mobile Fraud in Banking.png"
 import cs2 from "../assets/caseStudies/cs2.jpg"
@@ -184,6 +187,7 @@ export interface CaseStudy {
     label: string;
   }[];
   slug: string;
+  category:string;
 }
 
 // export const caseStudies: CaseStudy[] = [
@@ -224,7 +228,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "PCI-DSS compliance achieved" },
       { stat: "Enhanced", label: "Customer trust" }
     ],
-    slug: "preventing-mobile-fraud-banking"
+    slug: "preventing-mobile-fraud-banking",
+    category:"Finance"
   },
   {
     title: "Securing Customer Data in Digital Wallets: MDM Implementation for a Leading Fintech Firm",
@@ -236,7 +241,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "Zero", label: "Data breaches over 18 months" },
       { stat: "40%", label: "Increase in customer trust scores" }
     ],
-    slug: "securing-customer-data-digital-wallets"
+    slug: "securing-customer-data-digital-wallets",
+    category:"Enterprise"
   },
   {
     title: "HIPAA Compliance Achieved: Protecting Patient Data on Tablets in a Multi-Hospital Network",
@@ -248,7 +254,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "90%", label: "Reduced data breach risks" },
       { stat: "Improved", label: "Patient trust" }
     ],
-    slug: "hipaa-compliance-healthcare-tablets"
+    slug: "hipaa-compliance-healthcare-tablets",
+    category:"healthcare"
   },
   {
     title: "Securing Telemedicine Devices: How MDM Enabled Remote Consultations Without Compromising Privacy",
@@ -260,7 +267,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "HIPAA compliance" },
       { stat: "30%", label: "Improved patient satisfaction scores" }
     ],
-    slug: "telemedicine-device-security"
+    slug: "telemedicine-device-security",
+    category: "healthcare"
   },
   {
     title: "Securing IoT-Powered Stores: MDM for Smart Shelves and Mobile POS Systems",
@@ -272,7 +280,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "PCI-DSS compliance achieved" },
       { stat: "70%", label: "Reduced operational downtime" }
     ],
-    slug: "iot-retail-security"
+    slug: "iot-retail-security",
+    category:"retail"
   },
   {
     title: "Boosting Customer Engagement: Secure Tablet Deployment for In-Store Product Demos",
@@ -284,7 +293,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "90%", label: "Customer satisfaction" },
       { stat: "Zero", label: "Data breaches over 12 months" }
     ],
-    slug: "retail-tablet-demos"
+    slug: "retail-tablet-demos",
+    category:"retail"
   },
   {
     title: "Securing Student Data in Hybrid Classrooms: How MDM Enabled Safe BYOD for 10,000+ Learners",
@@ -296,7 +306,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "FERPA compliance achieved" },
       { stat: "40%", label: "Reduced IT management costs" }
     ],
-    slug: "education-byod-security"
+    slug: "education-byod-security",
+    category:"education"
   },
   {
     title: "Streamlining Tablet Deployment Across 50 Schools: A Case Study in Kiosk Mode for Digital Learning",
@@ -308,7 +319,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "80%", label: "Fewer IT tickets" },
       { stat: "100%", label: "Compliance with student data privacy laws" }
     ],
-    slug: "education-kiosk-mode"
+    slug: "education-kiosk-mode",
+    category:"education"
   },
   {
     title: "Protecting Clinical Trial Data: MDM Implementation for a Global Pharma Research Team",
@@ -320,7 +332,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "100%", label: "HIPAA compliance achieved" },
       { stat: "90%", label: "Reduced breach risks" }
     ],
-    slug: "clinical-trial-mdm"
+    slug: "clinical-trial-mdm",
+    category:"healthcare"
   },
   {
     title: "Securing Drug Manufacturing Facilities: Geo-Fencing and Access Control for Pharma IoT Devices",
@@ -332,8 +345,10 @@ export const caseStudies: CaseStudy[] = [
       { stat: "95%", label: "Reduced unauthorized entry incidents" },
       { stat: "5,000+", label: "IoT devices secured" }
     ],
-    slug: "pharma-iot-geo-fencing"
+    slug: "pharma-iot-geo-fencing",
+    category:"healthcare"
   },
+
   {
     title: "Preventing Cargo Theft: How MDM Secured 2,000+ Driver Tablets for a Logistics Giant",
     summary: "A global logistics company managing 10,000+ shipments monthly faced rampant cargo theft, losing $5M annually. By deploying MobiHeal MDM across 2,000+ driver tablets, the firm reduced theft incidents by 95%, recovered $4.2M yearly, and ensured real-time fleet visibility.",
@@ -344,7 +359,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "$4.2M", label: "Recovered yearly" },
       { stat: "2,000+", label: "Driver tablets secured" }
     ],
-    slug: "cargo-theft-mdm-logistics"
+    slug: "cargo-theft-mdm-logistics",
+    category:"enterprise"
   },
   {
     title: "Optimizing Warehouse Operations: MDM for IoT-Powered Inventory Management",
@@ -356,8 +372,10 @@ export const caseStudies: CaseStudy[] = [
       { stat: "70%", label: "Reduced downtime" },
       { stat: "10,000+", label: "IoT sensors secured" }
     ],
-    slug: "warehouse-iot-mdm-logistics"
-  }
+    slug: "warehouse-iot-mdm-logistics",
+    category:"healthcare"
+  },
+
 ];
 // Whitepapers data
 export const whitepapers = [
@@ -389,15 +407,17 @@ export const whitepapers = [
     previewHref: "/whitepapers/preview/byod-implementation",
     downloadHref: "/whitepapers/download/byod-implementation"
   },
-  {
-    title: "Mobile Compliance Framework for Regulated Industries",
-    description: "A comprehensive guide to meeting compliance requirements for mobile devices in financial services, healthcare, and government sectors.",
-    type: "Technical Guide",
-    pages: 45,
-    tags: ["Compliance", "Regulated Industries", "Technical"],
-    previewHref: "/whitepapers/preview/mobile-compliance",
-    downloadHref: "/whitepapers/download/mobile-compliance"
-  },
+ {
+  "slug": "advanced-mdm-for-enterprise-growth",
+  "title": "Empowering Modern Enterprises: MobiHeal’s Advanced MDM for Security, Efficiency & Growth",
+  "type": "Whitepaper",
+  "pages": 20,
+  "description": "How MobiHeal’s next-gen MDM secures mobile endpoints, boosts productivity, and ensures compliance at scale.",
+  "tags": ["MDM", "Enterprise Mobility", "Zero Trust", "Compliance", "Productivity"],
+  "previewHref": "/whitepapers/advanced-mdm-for-enterprise-growth",
+  "downloadHref": "/downloads/advanced-mdm-whitepaper.pdf"
+}
+
  
 ];
 
@@ -1075,32 +1095,32 @@ export const testimonials = [
       "name": "I-KALL",
       "description": "Hardware bundling and co-branding for end-user devices",
       "partnerType": "OEM Partner",
-      "imageSrc": partner3
+      "imageSrc": partner7
     },
     {
       "name": "Ira-Wishtel",
       "description": "Hardware bundling and co-branding for end-user devices",
       "partnerType": "OEM Partner",
-      "imageSrc": partner5
+      "imageSrc": partner6
     },
     {
       "name": "Frux Technologies",
       "description": "Pan‐India delivery through affiliated MSPs",
       "partnerType": "Distributor",
-      "imageSrc": partner7
+      "imageSrc": partner8
     },
     {
       "name": "INVIA",
       "description": "Implementation, managed services, custom integrations, and training",
       "partnerType": "Value‐Added Reseller",
-      "imageSrc": partner8
+      "imageSrc": partner1
 
     },
     {
       "name": "Cybernet Security",
       "description": "Implementation, managed services, custom integrations, and training",
       "partnerType": "Value‐Added Reseller",
-      "imageSrc": partner1
+      "imageSrc": partner3
     },
     {
       "name": "Cybermantra",
@@ -1112,7 +1132,7 @@ export const testimonials = [
       "name": "TCIL",
       "description": "Govt. liaison, compliance clearances, and tender facilitation, Large‐scale enterprise rollouts",
       "partnerType": "Consortium Partner",
-      "imageSrc": partner6
+      "imageSrc": partner5
 
     },
     {
@@ -1132,7 +1152,7 @@ export const testimonials = [
     {
       "name": "Indian Navy (IN)",
       "sector": "Defence & Aerospace",
-      "imageSrc": client6
+      "imageSrc": client5
     },
     {
       "name": "DRDO",
@@ -1147,7 +1167,7 @@ export const testimonials = [
     {
       "name": "NCAHT-AIIMS",
       "sector": "NGOs & Social Impact",
-      "imageSrc": client3
+      "imageSrc": client12
     },
     {
       "name": "Saksham Disability",
@@ -1169,14 +1189,19 @@ export const testimonials = [
       "sector": "Education/ Ed Tech",
       "imageSrc": client9
     },
-    // {
-    //   "name": "Bioleen Pharma",
-    //   "sector": "Healthcare & Pharma",
-    //   "imageSrc": client9
-    // },
+    {
+      "name": "Bioleen Pharma",
+      "sector": "Healthcare & Pharma",
+      "imageSrc": client10
+    },
     {
       "name": "ADI Insulations",
       "sector": "Industrial",
-      "imageSrc": client5
+      "imageSrc": client6
+    },
+    {
+      "name": "Frux",
+      "sector": "Industrial",
+      "imageSrc": partner8
     }
   ]

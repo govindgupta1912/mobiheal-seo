@@ -46,7 +46,7 @@ const FeaturesSection = () => {
       id: 6,
       icon: <LayoutDashboard />,
       title: "Unified Dashboard",
-      description: "Manage all devices from a single, intuitive dashboard with real-time compliance monitoring."
+      description: "Manage all devices from a single, intuitive dashboard with real-time monitoring and reporting."
     }
   ];
 

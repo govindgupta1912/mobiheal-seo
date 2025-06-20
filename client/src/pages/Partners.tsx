@@ -48,7 +48,7 @@ const Partners = () => {
               <img
                 src={partner.imageSrc}
                 alt={partner.name}
-                className="max-h-16 object-contain"
+                className="max-h-28 object-contain"
               />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-neutral-800">{partner.name}</h3>
@@ -77,7 +77,7 @@ const Partners = () => {
                     <img
                       src={client.imageSrc}
                       alt={client.name}
-                      className="max-h-24 object-contain"
+                      className=" object-contain"
                     />
                   </div>
                 ))}

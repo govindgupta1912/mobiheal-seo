@@ -69,7 +69,7 @@ const Whitepapers = () => {
                       </span>
                     </div>
                   </div>
-                  <h2 className="text-xl font-bold mb-3 text-neutral-800">
+                  <h2 className="text-xl font-bold mb-3 text-neutral-800 hover:text-primary">
                     {whitepaper.title}
                   </h2>
                   <p className="text-neutral-600 mb-6">

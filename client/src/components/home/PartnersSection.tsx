@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
 import slide1  from "../../assets/ClinetImages/clients-3.png";
 import slide2  from "../../assets/ClinetImages/clients-1.png";
-import slide3  from "../../assets/ClinetImages/clients-10.png";
+// import slide3  from "../../assets/ClinetImages/clients-10.png";
 import slide4  from "../../assets/ClinetImages/clients-2.png";
 import slide5  from "../../assets/ClinetImages/clients-4.png";
 import slide6  from "../../assets/ClinetImages/clients-5.png";
@@ -16,13 +16,13 @@ import slide12 from "../../assets/partnerImages/partner3.png";
 import slide13 from "../../assets/partnerImages/partner4.png";
 import slide14 from "../../assets/partnerImages/partner5.png";
 import slide15 from "../../assets/partnerImages/partner6.png"
-// import slide16 from "../../assets/partnerImages/partner7.png"
+import slide16 from "../../assets/partnerImages/partner7.jpg"
 import slide17 from "../../assets/partnerImages/partner8.png"
 const PartnersSection = () => {
   const clients = [
     { id: 1, name: "Air India", logo: slide1 },
     { id: 2, name: "Chemtronics", logo: slide2 },
-    { id: 3, name: "Frux", logo: slide3 },
+   // { id: 3, name: "Frux", logo: slide3 },
     { id: 4, name: "Invia", logo: slide4 },
     { id: 5, name: "ITI", logo: slide5 },
     { id: 6, name: "Navitus", logo: slide6 },
@@ -35,7 +35,7 @@ const PartnersSection = () => {
     { id: 13, name: "WeSee", logo: slide13 },
     { id: 14, name: "Mrotek", logo: slide14 },
     { id: 15, name: "NCAT", logo: slide15 },
-    // { id: 16, name: "Ira", logo: slide16 },
+     { id: 16, name: "IKALL", logo: slide16 },
     // { id: 16, name: "Cybermantra", logo: slide16 },
     { id: 17, name: "Cybernet", logo: slide17 },
   ];
@@ -81,10 +81,10 @@ const PartnersSection = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className=" object-contain border border-none"
+                  className=" object-contain border border-none h-32"
                 />
               ) : (
-                <span className="text-neutral-500">{client.name}</span>
+                <span className="text-neutral-500 ">{client.name}</span>
               )}
             
             </div>

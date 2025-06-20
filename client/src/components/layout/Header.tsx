@@ -85,27 +85,27 @@ const DesktopNavigation = ({ currentPath }: NavigationProps) => {
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/features#data-encryption" className="w-full hover:text-primary">
               Data Encryption
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/features#work-profile" className="w-full hover:text-primary">
               Work Profile Container
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}> 
             <Link href="/features#remote-lock" className="w-full hover:text-primary">
               Remote Lock & Wipe
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/features#app-management" className="w-full hover:text-primary">
               App Management
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/features" className="w-full hover:text-primary">
               View All Features
             </Link>
@@ -119,17 +119,17 @@ const DesktopNavigation = ({ currentPath }: NavigationProps) => {
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/use-cases#kiosk" className="w-full hover:text-primary">
               Kiosk Mode Management
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/use-cases#corporate" className="w-full hover:text-primary">
               Corporate-Owned Devices
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/use-cases#byod" className="w-full hover:text-primary">
               BYOD Management
             </Link>
@@ -147,22 +147,22 @@ const DesktopNavigation = ({ currentPath }: NavigationProps) => {
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/blog" className="w-full hover:text-primary">
               Blog
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/case-studies" className="w-full hover:text-primary">
               Case Studies
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/whitepapers" className="w-full hover:text-primary">
               Whitepapers
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/owasp-mobile" className="w-full hover:text-primary">
               OWASP Mobile Top 10
             </Link>
@@ -180,12 +180,12 @@ const DesktopNavigation = ({ currentPath }: NavigationProps) => {
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/partners" className="w-full hover:text-primary">
               Partners & Clients
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
             <Link href="/testimonials" className="w-full hover:text-primary">
               Testimonials
             </Link>

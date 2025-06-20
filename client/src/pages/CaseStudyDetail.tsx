@@ -57,7 +57,7 @@ const CaseStudyDetail = () => {
             <rect width="100%" height="100%" fill="url(#cs-bg-grad)" />
           </svg>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container flex mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto lg:mx-0 text-left">
             <Link href="/case-studies">
               <Button variant="ghost" className="text-white hover:text-white/90 mb-4">
@@ -75,6 +75,14 @@ const CaseStudyDetail = () => {
                 </span>
               ))}
             </div>
+            
+          </div>
+          <div className="flex justify-center">
+            <img
+              src={study.imageSrc}
+              alt="Whitepaper Hero"
+              className="rounded-3xl shadow-2xl max-h-[420px] w-full object-cover border-4 border-white/30"
+            />
           </div>
         </div>
       </section>
@@ -82,14 +90,14 @@ const CaseStudyDetail = () => {
       {/* Executive Summary with Image Side-by-Side */}
       <section className="py-20 bg-white">
         <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-neutral-50/80 rounded-2xl shadow-lg p-8">
+          <div className="items-center bg-neutral-50/80 rounded-2xl shadow-lg p-8">
             {/* Summary Text */}
             <div>
               <h2 className="text-3xl font-bold mb-6 text-neutral-800 text-left">Executive Summary</h2>
               <p className="text-lg text-neutral-600 leading-relaxed text-left">{study.summary}</p>
             </div>
             {/* Image (if present) */}
-            {study.imageSrc && (
+            {/* {study.imageSrc && (
               <div className="flex justify-center lg:justify-end items-center">
                 <img
                   src={study.imageSrc}
@@ -98,7 +106,7 @@ const CaseStudyDetail = () => {
                   style={{ maxHeight: '320px' }}
                 />
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>
@@ -287,7 +295,7 @@ const CaseStudyDetail = () => {
           <h2 className="text-4xl font-extrabold mb-4 drop-shadow-lg">Ready to Secure Your Mobile Infrastructure?</h2>
           <p className="text-lg mb-8">Explore how MobiHeal MDM can protect your organization against evolving mobile threats.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-100 shadow" asChild>
+            <Button size="lg" className="bg-primary text-white hover:bg-blue-100 shadow" asChild>
               <Link href="/contact">Schedule a Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white/10 font-bold" asChild>
