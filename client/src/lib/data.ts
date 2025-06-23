@@ -101,7 +101,7 @@ export const blogPosts = [
     imageSrc: "blog1",
     imageAlt: "Mobile Device Management Benefits",
     href: "/blog/mdm-benefits",
-    category: "mdm-solutions"
+    category: "byod"
   },
   {
     title: "How Geo-Fencing Enhances Security and Productivity in BFSI Sector",
@@ -146,7 +146,7 @@ export const blogPosts = [
     imageSrc: "Blog 6.docx",
     imageAlt: "Secure Mobile Kiosks in Retail",
     href: "/blog/enhancing-retail-customer-experience-secure-mobile-kiosks",
-    category: "mdm-solutions"
+    category: "industry-trends"
   },
   {
     title: "Endpoint Security for Distributed Workforces: Best Practices for Remote Device Management",
@@ -387,7 +387,8 @@ export const whitepapers = [
     description: "How MDM transforms business operations and security.",
     tags: ["MDM", "Security", "Cost Reduction"],
     previewHref: "/whitepapers/unlocking-business-potential", // <- dynamic route
-    downloadHref: "/downloads/mdm-whitepaper.pdf"
+    downloadHref: "/downloads/mdm-whitepaper.pdf",
+     category:"security"
   },
   {
     title: "Comprehensive Guide to Mobile Device Security",
@@ -396,7 +397,8 @@ export const whitepapers = [
     pages: 32,
     tags: ["Security", "Best Practices", "Technical Guide"],
     previewHref: "/whitepapers/preview/mobile-security-guide",
-    downloadHref: "/whitepapers/download/mobile-security-guide"
+    downloadHref: "/whitepapers/download/mobile-security-guide",
+     category:"security"
   },
   {
     title: "Best Practices for BYOD Implementation in Enterprises",
@@ -405,7 +407,8 @@ export const whitepapers = [
     pages: 28,
     tags: ["BYOD", "Implementation", "Strategy"],
     previewHref: "/whitepapers/preview/byod-implementation",
-    downloadHref: "/whitepapers/download/byod-implementation"
+    downloadHref: "/whitepapers/download/byod-implementation",
+     category:"byod"
   },
  {
   "slug": "advanced-mdm-for-enterprise-growth",
@@ -415,7 +418,8 @@ export const whitepapers = [
   "description": "How MobiHeal’s next-gen MDM secures mobile endpoints, boosts productivity, and ensures compliance at scale.",
   "tags": ["MDM", "Enterprise Mobility", "Zero Trust", "Compliance", "Productivity"],
   "previewHref": "/whitepapers/advanced-mdm-for-enterprise-growth",
-  "downloadHref": "/downloads/advanced-mdm-whitepaper.pdf"
+  "downloadHref": "/downloads/advanced-mdm-whitepaper.pdf",
+  category:"compliance"
 }
 
  

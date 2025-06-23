@@ -269,17 +269,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <a href="#" className="hover:text-white">
+            <Link to="/privacy-policy" className="hover:text-white">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+           
+            <Link href="terms-services" className="hover:text-white">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/cookies-policy" className="hover:text-white">
               Cookie Policy
-            </a>
-            <a href="#" className="hover:text-white">
-              GDPR Compliance
+            </Link>
+            <a href="/acceptable-policy" className="hover:text-white">
+             Acceptable Use Policy
             </a>
           </div>
         </div>

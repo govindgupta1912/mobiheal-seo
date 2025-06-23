@@ -20,7 +20,7 @@ const CaseStudies = () => {
 
   // Sync tabValue from URL
   useEffect(() => {
-    const fromURL = location.split("/")[2]?.toLowerCase() || "all";
+    const fromURL = location.split("/")[3]?.toLowerCase() || "all";
     setTabValue(fromURL);
   }, [location]);
 
@@ -29,7 +29,7 @@ const CaseStudies = () => {
     if (value === "all") {
       setLocation("/case-studies");
     } else {
-      setLocation(`/case-studies/${value}`);
+      setLocation(`/case-studies/category/${value}`);
     }
   };
 
