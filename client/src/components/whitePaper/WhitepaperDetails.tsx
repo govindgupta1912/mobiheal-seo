@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { pdf } from "@react-pdf/renderer";
+import { saveAs } from "file-saver";
+import WhitepaperPDF from "@/components/whitePaper/WhitepaperPDF";
+import {whitepaperData} from "@/lib/data"; 
 
 interface WhitepaperProps {
+  id : string;
   title: string;
   heroSubtitle: string;
   heroImage: string;
@@ -12,12 +17,24 @@ interface WhitepaperProps {
 }
 
 const WhitepaperDetails = ({
+  id,
   title,
   heroSubtitle,
   heroImage,
   highlights,
   downloadForm,
 }: WhitepaperProps) => {
+
+  const handleDownload = async (selectedId: string, userInfo: any) => {
+  const content = whitepaperData.find((w) => w.id === selectedId);
+  if (!content) return;
+
+  const blob = await pdf(
+    <WhitepaperPDF data={{ ...content, submittedBy: userInfo }} />
+  ).toBlob();
+
+  saveAs(blob, `${content.title}.pdf`);
+};
   return (
     <>
       {/* Hero Section */}
@@ -123,7 +140,9 @@ const WhitepaperDetails = ({
                   placeholder="No. of Users"
                   className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
                 />
-                <Button type="submit" className="w-full text-lg font-semibold bg-gradient transition-colors duration-200 shadow-md rounded-lg">
+                <Button type="submit" className="w-full text-lg font-semibold bg-gradient transition-colors duration-200 shadow-md rounded-lg"
+                onClick={()=>handleDownload(id,"govind")}
+                >
                   Download Now
                 </Button>
               </form>

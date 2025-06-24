@@ -69,7 +69,7 @@ MobiHeal MDM solution adapts to multiple deployment scenarios across various ind
             </TabsList>
           </div>
 
-          <TabsContent value={activeTab} className="mt-0">
+          <TabsContent value={activeTab} className="mt-0 animate-fade-in transition-opacity duration-500">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
                 <h3 className="text-2xl font-bold mb-4 text-neutral-800">{activeCase.title}</h3>

@@ -425,6 +425,51 @@ export const whitepapers = [
  
 ];
 
+// /lib/data/whitepapers.ts
+export const whitepaperData = [
+  {
+    id: "mdm-operations",
+    title: "Unlocking Business Potential: How MDM Solutions Transform Operations",
+    authorInfo: "Mobisec Technologies",
+    sections: [
+      {
+        heading: "Introduction",
+        paragraphs: [
+          "Mobile Device Management (MDM) solutions represent a pivotal advancement in managing devices...",
+          "They cater to Android, iOS, Windows, and IoT use cases.",
+        ],
+      },
+      {
+        heading: "Security Enhancements",
+        paragraphs: [
+          "MDM enforces encryption, remote lock, and geofencing.",
+          "It also helps organizations comply with regulations like GDPR and HIPAA.",
+        ],
+      },
+      // more sections...
+    ],
+  },
+  {
+    id: "digital-classrooms",
+    title: "Empowering Education with Apple Devices & MDM",
+    authorInfo: "Mobisec Research Lab",
+    sections: [
+      {
+        heading: "iPads in Classrooms",
+        paragraphs: [
+          "iPads boost engagement, improve test scores, and support inclusive education.",
+        ],
+      },
+      {
+        heading: "Managing iOS Devices with MDM",
+        paragraphs: [
+          "MDM simplifies provisioning, app distribution, and lost device recovery.",
+        ],
+      },
+    ],
+  },
+];
+
 // OWASP Mobile Top 10 risks data
 // export const owaspRisks = [
 //   {

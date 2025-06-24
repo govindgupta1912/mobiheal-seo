@@ -114,7 +114,7 @@ const CaseStudyDetail = () => {
       {/* Client Overview + Challenges */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  ">
             {/* Client Overview */}
             <div className="bg-white/80 rounded-2xl shadow p-8">
               <h2 className="text-3xl font-bold mb-6 text-neutral-800">Client Overview</h2>
@@ -200,16 +200,15 @@ const CaseStudyDetail = () => {
       {/* Results Section */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          <h2 className="text-3xl font-bold mb-10 text-neutral-800 text-center">Key Results</h2>
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${study.results.length < 3 ? 'justify-center' : ''}`}
-            style={study.results.length < 3 ? { display: 'flex', justifyContent: 'center' } : {}}
+          
+           <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-centers "
           >
             {study.results.map((result, index) => (
               <div key={index} className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border border-blue-100 shadow hover:shadow-lg transition-all duration-200 w-full max-w-sm">
                 <div className="flex items-center mb-3">
                   <BarChart3 className="h-6 w-6 text-primary mr-2" />
-                  <h3 className="text-lg font-semibold text-neutral-800">{result.label}</h3>
+                  <h3 className="text-lg font-semibold text-neutral-800 trunvc">{result.label}</h3>
                 </div>
                 <p className="text-2xl font-bold text-primary">{result.stat}</p>
               </div>
@@ -281,9 +280,9 @@ const CaseStudyDetail = () => {
 
       {/* Conclusion */}
       <section className="py-10 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl border-t border-b border-neutral-200">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 max-w-6xl shadow border-neutral-200">
           <h2 className="text-3xl font-bold mb-4 text-neutral-800">Conclusion</h2>
-          <p className="text-lg text-neutral-700 leading-relaxed">
+          <p className=" text-neutral-700 leading-relaxed">
             {study.conclusion}
           </p>
         </div>
