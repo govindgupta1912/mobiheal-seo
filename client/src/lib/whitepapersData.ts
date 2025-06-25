@@ -2,7 +2,7 @@
 import wp1 from "@/assets/whitepaper/wp1.png";
 export const whitepapers = [
   {
-    id: "mdm-operations",
+    id: "mobile-security",
     slug: "unlocking-business-potential",
     title: "Unlocking Business Potential: How Mobile Device Management Solutions Transform Operations",
     heroSubtitle: "Discover how Mobile Device Management solutions optimize operations, enhance security, and drive cost-efficiency.",

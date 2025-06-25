@@ -30,7 +30,8 @@ const WhitepaperDetails = ({
   if (!content) return;
 
   const blob = await pdf(
-    <WhitepaperPDF data={{ ...content, submittedBy: userInfo }} />
+    // <WhitepaperPDF data={{ ...content, submittedBy: userInfo }} />
+    <WhitepaperPDF/>
   ).toBlob();
 
   saveAs(blob, `${content.title}.pdf`);

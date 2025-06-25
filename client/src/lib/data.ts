@@ -427,6 +427,109 @@ export const whitepapers = [
 
 // /lib/data/whitepapers.ts
 export const whitepaperData = [
+   {
+    id: "mobile-security",
+    title: "Comprehensive Guide to Mobile Device Security",
+    author: "Mobisec Technologies",
+    coverImage: "/images/whitepapers/security-cover.png", // Ensure this is available in `public/`
+    sections: [
+      {
+        heading: "Executive Summary",
+        paragraphs: [
+          "Mobile devices have become indispensable tools for enterprises across industries. However, their widespread adoption introduces unique security challenges that require robust solutions.",
+          "This whitepaper explores the importance of mobile device security, outlines key components of an effective MDM strategy, and provides insights tailored for BFSI, defence, and education sectors.",
+        ],
+      },
+      {
+        heading: "1. Introduction",
+        paragraphs: [
+          "In today's digital-first world, mobile devices are integral to enterprise operations...",
+          "The growing reliance on mobile tech comes with risks like cyber threats and regulatory challenges.",
+        ],
+      },
+      {
+        heading: "2. The Importance of Mobile Device Security",
+        paragraphs: [],
+        subSections: [
+          {
+            subHeading: "Growing Cybersecurity Threats",
+            paragraphs: [
+              "Cyber threats targeting mobile devices have surged by 35% over the past three years.",
+              "Phishing, malware, and theft remain top concerns.",
+            ],
+          },
+          {
+            subHeading: "Regulatory Compliance Requirements",
+            paragraphs: ["BFSI and healthcare sectors must comply with GDPR, HIPAA, etc."],
+          },
+          {
+            subHeading: "Remote Work Challenges",
+            paragraphs: ["Remote work expands the threat surface, increasing breach risks without MDM."],
+          },
+        ],
+      },
+      {
+        heading: "3. Core Components of an Effective MDM Strategy",
+        paragraphs: [],
+        subSections: [
+          {
+            subHeading: "Secure Device Enrollment Methods",
+            paragraphs: [
+              "QR code enrollment and zero-touch provisioning enhance secure onboarding.",
+            ],
+          },
+          {
+            subHeading: "Robust Security Policy Enforcement",
+            paragraphs: [
+              "Policies enforce password complexity, encryption, remote wipe, etc.",
+            ],
+          },
+          {
+            subHeading: "Application Management & Control",
+            paragraphs: [
+              "Whitelisting, blacklisting, and containerization protect sensitive data.",
+            ],
+          },
+          {
+            subHeading: "Continuous Compliance Monitoring & Reporting",
+            paragraphs: [
+              "Dashboards and alerts ensure real-time monitoring of device posture.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Industry-Specific Use Cases",
+        paragraphs: [],
+        subSections: [
+          {
+            subHeading: "BFSI Sector",
+            paragraphs: ["Geo-fencing, encryption, and compliance reporting for customer data protection."],
+          },
+          {
+            subHeading: "Defence Forces",
+            paragraphs: ["Remote wipe, geo-restrictions ensure operational confidentiality."],
+          },
+          {
+            subHeading: "Educational Institutions",
+            paragraphs: ["Kiosk mode and centralized app deployment for safe digital classrooms."],
+          },
+        ],
+      },
+      {
+        heading: "5. Best Practices for Implementing MDM",
+        paragraphs: [
+          "Define goals, educate users, review policies, and leverage MDM dashboards for insights.",
+        ],
+      },
+      {
+        heading: "6. Conclusion",
+        paragraphs: [
+          "A robust MDM strategy enables secure, compliant, and efficient mobile operations. Solutions like MobiHeal MDM empower businesses to manage their device fleets confidently.",
+        ],
+      },
+    ],
+  },
   {
     id: "mdm-operations",
     title: "Unlocking Business Potential: How MDM Solutions Transform Operations",
