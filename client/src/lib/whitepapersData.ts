@@ -1,5 +1,8 @@
 // lib/whitepapersData.ts
 import wp1 from "@/assets/whitepaper/wp1.png";
+import wp2 from "@/assets/whitepaper/wp2.png";
+import wp3 from "@/assets/whitepaper/wp3.png";
+import wp4 from "@/assets/whitepaper/wp4.jpg";
 export const whitepapers = [
   {
     id: "mobile-security",
@@ -16,26 +19,71 @@ export const whitepapers = [
       "Seamlessly integrate with IT infrastructure",
       "Future-proof your mobile security posture"
     ],
-    sections: [
-      {
-        title: "The Significance of MDM in Enhancing Corporate Security",
-        content: `Mobile Device Management (MDM) is pivotal in fortifying corporate security...`
-      },
-      {
-        title: "Cost-Effectiveness and Efficiency Gains Through MDM",
-        content: `MDM helps reduce IT overhead, prevent data breaches, and optimize device use...`
-      },
-      {
-        title: "MDM's Role in Compliance and Regulatory Adherence",
-        content: `MDM ensures compliance with GDPR, HIPAA, PCI DSS through centralized policy control...`
-      },
-      {
-        title: "Improving Employee Productivity and Work Flexibility",
-        content: `MDM simplifies access to tools, streamlines collaboration, and supports hybrid work...`
-      }
-    ],
+   
     downloadForm: {
       enabled: true
     }
+  },
+  {
+  id: "mobile-device-security-guide",
+  slug: "comprehensive-guide-mobile-device-security",
+  title: "Comprehensive Guide to Mobile Device Security",
+  heroSubtitle: "A deep dive into securing enterprise mobility across BFSI, defence, and education through advanced MDM strategies.",
+  heroImage: wp2, // Replace with the actual imported image reference
+  type: "Whitepaper",
+  highlights: [
+    "Combat phishing, malware, and device theft threats",
+    "Ensure GDPR, HIPAA, and industry-specific compliance",
+    "Deploy secure MDM with Zero-Touch and QR enrollment",
+    "Implement Kiosk Mode and geo-fencing for control",
+    "Secure BYOD with containerization and policy enforcement",
+    "Empower IT with real-time compliance monitoring"
+  ],
+  
+  downloadForm: {
+    enabled: true
   }
+},
+{
+  id: "byod-best-practices",
+  slug: "best-practices-byod-enterprises",
+  title: "Best Practices for BYOD Implementation in Enterprises",
+  heroSubtitle: "Learn how to securely manage personal devices at work while boosting employee productivity and ensuring compliance.",
+  heroImage: wp3, // Replace with actual import or image reference
+  type: "Whitepaper",
+  highlights: [
+    "Mitigate BYOD security risks like data leakage and malware",
+    "Achieve compliance with GDPR, HIPAA, and PCI-DSS",
+    "Leverage Work Profile containerization for data separation",
+    "Enforce MFA and biometric authentication for access control",
+    "Educate users through phishing simulations and awareness programs",
+    "Streamline audits with automated MDM reporting"
+  ],
+  downloadForm: {
+    enabled: true
+  }
+},
+{
+  id: "advanced-mdm-enterprise",
+  slug: "mobiheal-advanced-mdm-enterprise",
+  title: "Empowering Modern Enterprises: MobiHeal’s Advanced MDM for Security, Efficiency & Growth",
+  heroSubtitle: "Discover how MobiHeal’s unified MDM solution fortifies enterprise mobility, reduces costs, and future-proofs your digital ecosystem.",
+  heroImage: wp4, // Replace with the actual image reference
+  type: "Whitepaper",
+  highlights: [
+    "Combat zero-day threats with Zero-Trust enforcement",
+    "Automate device provisioning and reduce IT workload",
+    "Achieve 200% ROI by streamlining device operations",
+    "Ensure GDPR, HIPAA, and CCPA compliance with real-time auditing",
+    "Boost employee productivity through self-service and insights",
+    "Scale effortlessly with cloud-native, edge-ready infrastructure"
+  ],
+  
+  downloadForm: {
+    enabled: true
+  }
+}
+
+
+
 ];

@@ -82,7 +82,7 @@ const ClientsBanner = () => {
     //   </div>
     // </section>
     <section className="py-8 bg-neutral-50 border-y border-neutral-100">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className=" ">
     <p className="text-center text-neutral-500 mb-6 text-sm font-medium">
       TRUSTED BY LEADING COMPANIES
     </p>

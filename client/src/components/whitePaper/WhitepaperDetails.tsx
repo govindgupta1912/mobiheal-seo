@@ -25,15 +25,11 @@ const WhitepaperDetails = ({
   downloadForm,
 }: WhitepaperProps) => {
 
-  const handleDownload = async (selectedId: string, userInfo: any) => {
+ const handleDownload = async (selectedId: string, userInfo: any) => {
   const content = whitepaperData.find((w) => w.id === selectedId);
   if (!content) return;
 
-  const blob = await pdf(
-    // <WhitepaperPDF data={{ ...content, submittedBy: userInfo }} />
-    <WhitepaperPDF/>
-  ).toBlob();
-
+  const blob = await pdf(<WhitepaperPDF data={content} />).toBlob();
   saveAs(blob, `${content.title}.pdf`);
 };
   return (

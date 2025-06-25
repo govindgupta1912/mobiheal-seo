@@ -24,6 +24,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import CookiesPolicy from "./pages/CookiesPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy.tsx";
+import AboutUs from "./pages/AboutUs.tsx";
 
 function Router() {
   return (
@@ -34,14 +35,14 @@ function Router() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/resources" component={Resources} />
       <Route path="/blog" component={Blog} />
-      <Route path="/blogs/category/:category" component={Blog}/>
-        <Route path="/blog/:slug" component={BlogDetailPage} />
+      <Route path="/blogs/category/:category" component={Blog} />
+      <Route path="/blog/:slug" component={BlogDetailPage} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/case-studies/category/:category" component={CaseStudies} />
       <Route path="/case-studies/:slug" component={CaseStudyDetail} />
 
       <Route path="/whitepapers" component={Whitepapers} />
-      <Route path="/whitepapers/category/:category" component={Whitepapers}/>
+      <Route path="/whitepapers/category/:category" component={Whitepapers} />
       <Route path="/whitepapers/:slug" component={WhitepaperDetailPage} />
 
       <Route path="/owasp-mobile" component={OwaspMobile} />
@@ -50,12 +51,13 @@ function Router() {
       <Route path="/testimonials" component={Testimonials} />
       <Route path="/contact" component={Contact} />
       {/* <Route path="/blog-deatails" component={BlogDetailPage}/> */}
-    
+
       {/* <Route path="/whitepapers/:slug" component={WhitepaperDetailPage} /> */}
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/cookies-policy" component={CookiesPolicy} />
       <Route path="/terms-services" component={TermsOfService} />
       <Route path="/acceptable-policy" component={AcceptableUsePolicy} />
+      <Route path="/about-us" component={AboutUs}/>
 
       <Route component={NotFound} />
     </Switch>
