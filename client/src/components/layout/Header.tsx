@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Menu, ChevronDown } from "lucide-react";
 import mobihealLogo from "../../assets/mobiheal_logo.svg"
+import { navigate } from "wouter/use-browser-location";
 
 const Header = () => {
   const [location] = useLocation();
@@ -77,133 +78,176 @@ interface NavigationProps {
 }
 
 const DesktopNavigation = ({ currentPath }: NavigationProps) => {
-  return (
+    return (
     <>
+      {/* Features */}
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center space-x-1 text-neutral-700 hover:text-primary bg-transparent border-0 cursor-pointer">
           <span>Features</span>
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/features#data-encryption" className="w-full hover:text-primary">
-              Data Encryption
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/features#data-encryption")}>
+            Data Encryption
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/features#work-profile" className="w-full hover:text-primary">
-              Work Profile Container
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/features#work-profile")}>
+            Work Profile Container
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}> 
-            <Link href="/features#remote-lock" className="w-full hover:text-primary">
-              Remote Lock & Wipe
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/features#remote-lock")}>
+            Remote Lock & Wipe
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/features#app-management" className="w-full hover:text-primary">
-              App Management
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/features#app-management")}>
+            App Management
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/features" className="w-full hover:text-primary">
-              View All Features
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/features")}>
+            View All Features
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
+      {/* Use Cases */}
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center space-x-1 text-neutral-700 hover:text-primary bg-transparent border-0 cursor-pointer">
           <span>Use Cases</span>
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/use-cases#kiosk" className="w-full hover:text-primary">
-              Kiosk Mode Management
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/use-cases#kiosk")}>
+            Kiosk Mode Management
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/use-cases#corporate" className="w-full hover:text-primary">
-              Corporate-Owned Devices
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/use-cases#corporate")}>
+            Corporate-Owned Devices
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/use-cases#byod" className="w-full hover:text-primary">
-              BYOD Management
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/use-cases#byod")}>
+            BYOD Management
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Link href="/pricing" className={`text-neutral-700 hover:text-primary ${currentPath === "/pricing" ? "text-primary" : ""}`}>
+      {/* Pricing */}
+      <Link
+        href="/pricing"
+        className={`text-neutral-700 hover:text-primary ${currentPath === "/pricing" ? "text-primary" : ""}`}
+      >
         Pricing
       </Link>
 
+      {/* Resources */}
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center space-x-1 text-neutral-700 hover:text-primary bg-transparent border-0 cursor-pointer">
           <span>Resources</span>
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/blog" className="w-full hover:text-primary">
-              Blog
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/blog")}>
+            Blog
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/case-studies" className="w-full hover:text-primary">
-              Case Studies
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/case-studies")}>
+            Case Studies
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/whitepapers" className="w-full hover:text-primary">
-              Whitepapers
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/whitepapers")}>
+            Whitepapers
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/owasp-mobile" className="w-full hover:text-primary">
-              OWASP Mobile Top 10
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/owasp-mobile")}>
+            OWASP Mobile Top 10
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Link href="/faq" className={`text-neutral-700 hover:text-primary ${currentPath === "/faq" ? "text-primary" : ""}`}>
+      {/* FAQs */}
+      <Link
+        href="/faq"
+        className={`text-neutral-700 hover:text-primary ${currentPath === "/faq" ? "text-primary" : ""}`}
+      >
         FAQs
       </Link>
 
+      {/* Partners */}
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center space-x-1 text-neutral-700 hover:text-primary bg-transparent border-0 cursor-pointer">
           <span>Partners</span>
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/partners" className="w-full hover:text-primary">
-              Partners & Clients
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/partners")}>
+            Partners & Clients
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            <Link href="/testimonials" className="w-full hover:text-primary">
-              Testimonials
-            </Link>
+          <DropdownMenuItem onSelect={() => navigate("/testimonials")}>
+            Testimonials
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Link href="/contact" className={`text-neutral-700 hover:text-primary ${currentPath === "/contact" ? "text-primary" : ""}`}>
+      {/* Contact */}
+      <Link
+        href="/contact"
+        className={`text-neutral-700 hover:text-primary ${currentPath === "/contact" ? "text-primary" : ""}`}
+      >
         Contact
       </Link>
     </>
   );
 };
 
+// const MobileNavigation = ({ currentPath }: NavigationProps) => {
+//   return (
+//     <div className="md:hidden">
+//       <Sheet>
+//         <SheetTrigger asChild>
+//           <Button variant="ghost" size="icon">
+//             <Menu className="h-6 w-6" />
+//             <span className="sr-only">Open menu</span>
+//           </Button>
+//         </SheetTrigger>
+//         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+//           <nav className="flex flex-col gap-4 mt-6">
+//             <Link href="/features" className={`py-2 hover:text-primary ${currentPath.includes("/features") ? "text-primary" : ""}`}>
+//               Features
+//             </Link>
+//             <Link href="/use-cases" className={`py-2 hover:text-primary ${currentPath.includes("/use-cases") ? "text-primary" : ""}`}>
+//               Use Cases
+//             </Link>
+//             <Link href="/pricing" className={`py-2 hover:text-primary ${currentPath === "/pricing" ? "text-primary" : ""}`}>
+//               Pricing
+//             </Link>
+//             <Link href="/resources" className={`py-2 hover:text-primary ${currentPath.includes("/resources") ? "text-primary" : ""}`}>
+//               Resources
+//             </Link>
+//             <Link href="/faq" className={`py-2 hover:text-primary ${currentPath === "/faq" ? "text-primary" : ""}`}>
+//               FAQs
+//             </Link>
+//             <Link href="/partners" className={`py-2 hover:text-primary ${currentPath.includes("/partners") ? "text-primary" : ""}`}>
+//               Partners
+//             </Link>
+//             <Link href="/contact" className={`py-2 hover:text-primary ${currentPath === "/contact" ? "text-primary" : ""}`}>
+//               Contact
+//             </Link>
+//             <div className="flex flex-col gap-3 mt-4">
+//               <Button variant="outline" className="w-full">
+//                 Sign In
+//               </Button>
+//               <Button className="w-full">
+//                 Request Demo
+//               </Button>
+//             </div>
+//           </nav>
+//         </SheetContent>
+//       </Sheet>
+//     </div>
+//   );
+// };
 const MobileNavigation = ({ currentPath }: NavigationProps) => {
+  const [, navigate] = useLocation();
+  const [open, setOpen] = useState(false);
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    setOpen(false); // Close the sheet
+  };
+
   return (
     <div className="md:hidden">
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon">
             <Menu className="h-6 w-6" />
@@ -212,27 +256,28 @@ const MobileNavigation = ({ currentPath }: NavigationProps) => {
         </SheetTrigger>
         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
           <nav className="flex flex-col gap-4 mt-6">
-            <Link href="/features" className={`py-2 hover:text-primary ${currentPath.includes("/features") ? "text-primary" : ""}`}>
+            <button onClick={() => handleNavigate("/features")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/features") ? "text-primary" : ""}`}>
               Features
-            </Link>
-            <Link href="/use-cases" className={`py-2 hover:text-primary ${currentPath.includes("/use-cases") ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/use-cases")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/use-cases") ? "text-primary" : ""}`}>
               Use Cases
-            </Link>
-            <Link href="/pricing" className={`py-2 hover:text-primary ${currentPath === "/pricing" ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/pricing")} className={`text-left py-2 hover:text-primary ${currentPath === "/pricing" ? "text-primary" : ""}`}>
               Pricing
-            </Link>
-            <Link href="/resources" className={`py-2 hover:text-primary ${currentPath.includes("/resources") ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/resources")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/resources") ? "text-primary" : ""}`}>
               Resources
-            </Link>
-            <Link href="/faq" className={`py-2 hover:text-primary ${currentPath === "/faq" ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/faq")} className={`text-left py-2 hover:text-primary ${currentPath === "/faq" ? "text-primary" : ""}`}>
               FAQs
-            </Link>
-            <Link href="/partners" className={`py-2 hover:text-primary ${currentPath.includes("/partners") ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/partners")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/partners") ? "text-primary" : ""}`}>
               Partners
-            </Link>
-            <Link href="/contact" className={`py-2 hover:text-primary ${currentPath === "/contact" ? "text-primary" : ""}`}>
+            </button>
+            <button onClick={() => handleNavigate("/contact")} className={`text-left py-2 hover:text-primary ${currentPath === "/contact" ? "text-primary" : ""}`}>
               Contact
-            </Link>
+            </button>
+
             <div className="flex flex-col gap-3 mt-4">
               <Button variant="outline" className="w-full">
                 Sign In
@@ -247,5 +292,4 @@ const MobileNavigation = ({ currentPath }: NavigationProps) => {
     </div>
   );
 };
-
 export default Header;

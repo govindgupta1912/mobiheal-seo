@@ -26,7 +26,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   features,
 }) => {
   return (
-    <div className={`bg-white h-full border  border-neutral-200 hover:border-primary rounded-xl ${popular ? 'shadow-md hover:shadow-lg' : 'shadow-sm hover:shadow-md'} transition-shadow relative`}>
+    <div className={`bg-white h-full border  border-neutral-200 rounded-xl ${popular ? 'shadow-md hover:shadow-lg border-primary scale-105' : 'shadow-sm hover:shadow-md scale-95'} transition-shadow relative`}>
       {popular && (
         <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
           <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium inline-block">

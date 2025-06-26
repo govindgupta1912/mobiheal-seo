@@ -64,7 +64,7 @@ export default {
         },
       },
       animation: {
-        'fade-in': 'fadeIn 0.6s ease-in-out',
+        'fade-in': 'fadeIn 0.50s ease-in-out',
       },
       keyframes: {
         fadeIn: {

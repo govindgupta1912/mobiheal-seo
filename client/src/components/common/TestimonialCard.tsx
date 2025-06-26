@@ -12,15 +12,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   rating,
 }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-neutral-200">
+    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-neutral-200 flex flex-col justify-between h-full">
+      {/* Rating */}
       <div className="flex items-center mb-4">
-        <div className="text-amber-500">
+        <div className="text-amber-500 flex space-x-1">
           {[...Array(5)].map((_, i) => (
             <svg
               key={i}
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill={i < rating ? "currentColor" : "none"}
               stroke="currentColor"
@@ -34,24 +35,28 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           ))}
         </div>
       </div>
-      <blockquote className="mb-10">
-        <p className="text-neutral-600 italic h-32">
-          "{quote}"
+
+      {/* Quote */}
+      <blockquote className="mb-6 flex-1">
+        <p className="text-neutral-600 italic text-base leading-relaxed">
+          “{quote}”
         </p>
       </blockquote>
-      <div className="flex items-center">
+
+      {/* Author */}
+      <div className="flex items-center  mt-auto">
         <div className="rounded-full bg-neutral-200 w-10 h-10 flex items-center justify-center mr-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-neutral-600 w-5 h-5"
+            className="text-neutral-600"
           >
             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
             <circle cx="12" cy="7" r="4" />

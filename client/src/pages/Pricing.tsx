@@ -212,7 +212,7 @@ const Pricing = () => {
             {pricingPlans.map((plan, index) => (
               <div key={index} className="lg:w-1/3 relative">
                 {/* <div className={`h-full bg-white border ${plan.popular ? 'border-primary' : 'border-neutral-200'} rounded-xl ${plan.popular ? 'shadow-md hover:shadow-lg' : 'shadow-sm hover:shadow-md'} transition-shadow`}> */}
-                 <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md'}`}>
+                 <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg scale-105' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md '}`}>
 
                   {plan.popular && (
                     <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">

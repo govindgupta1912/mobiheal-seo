@@ -12,7 +12,7 @@ import ContactSection from "@/components/home/ContactSection";
 const Home = () => {
   return (
     <>
-      <Hero />
+      <Hero  className="my-8 py-12 px-4 md:px-8 bg-white shadow-sm rounded-2xl border border-gray-100"/>
       <ClientsBanner />
       <FeaturesSection />
       <UseCasesSection />
