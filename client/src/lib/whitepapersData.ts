@@ -19,7 +19,7 @@ export const whitepapers = [
       "Seamlessly integrate with IT infrastructure",
       "Future-proof your mobile security posture"
     ],
-   
+   pdfUrl: "/assets/whitepapers/pdf/Unlocking_business_potential.pdf",
     downloadForm: {
       enabled: true
     }
@@ -39,7 +39,7 @@ export const whitepapers = [
     "Secure BYOD with containerization and policy enforcement",
     "Empower IT with real-time compliance monitoring"
   ],
-  
+   pdfUrl: "/assets/whitepapers/pdf/Comprehensive Guide to Mobile Device Security.pdf",
   downloadForm: {
     enabled: true
   }
@@ -59,6 +59,7 @@ export const whitepapers = [
     "Educate users through phishing simulations and awareness programs",
     "Streamline audits with automated MDM reporting"
   ],
+   pdfUrl: "/assets/whitepapers/pdf/byod.pdf",
   downloadForm: {
     enabled: true
   }
@@ -78,7 +79,7 @@ export const whitepapers = [
     "Boost employee productivity through self-service and insights",
     "Scale effortlessly with cloud-native, edge-ready infrastructure"
   ],
-  
+  pdfUrl: "/assets/whitepapers/pdf/Empowering_modern_enterprises.pdf",
   downloadForm: {
     enabled: true
   }

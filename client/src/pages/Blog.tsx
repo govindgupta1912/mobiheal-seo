@@ -56,90 +56,84 @@ const Blog = () => {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* <div className="mb-12 overflow-x-auto">
-            <div className="flex space-x-2 min-w-max pb-2">
-              {BlogCategories.map((category) => (
-                <Link key={category.slug} href={`/blog/category/${category.slug}`}>
-                  <a className={`px-4 py-2 rounded-full ${
-                    category.slug === "all" 
-                      ? "bg-primary text-white" 
-                      : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-                  }`}>
-                    {category.name}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div> */}
-
           <Tabs value={tabValue} onValueChange={handleTabChange}>
-            <TabsList className="flex flex-wrap gap-2 mb-10">
-              {BlogCategories.map((cat) => (
-                <TabsTrigger
-                  key={cat.value}
-                  value={cat.value}
-                  className="px-4 py-2 rounded-full data-[state=active]:bg-primary data-[state=active]:text-white bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-                >
-                  {cat.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+<TabsList className="flex flex-wrap gap-3 mb-12">
+  {BlogCategories.map((cat) => (
+    <TabsTrigger
+      key={cat.value}
+      value={cat.value}
+      className="px-4 py-2 rounded-full text-sm md:text-base 
+        bg-neutral-100 text-neutral-700 
+        hover:bg-neutral-200 
+        data-[state=active]:bg-primary 
+        data-[state=active]:text-white 
+        transition-colors duration-200"
+    >
+      {cat.name}
+    </TabsTrigger>
+  ))}
+</TabsList>
+
+
+
+
+
+
             {BlogCategories.map(({ value }) => (
               <TabsContent key={value} value={value}>
-               <div className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-neutral-800">
-              Featured Articles
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {getblogs(value).slice(0, 3).map((post, index) => (
-                // <BlogPostCard
-                //   key={index}
-                //   title={post.title}
-                //   excerpt={post.excerpt}
-                //   date={post.date}
-                //   imageSrc={post.imageSrc}
-                //   imageAlt={post.imageAlt}
-                //   href={post.href}
-                // />
-                <BlogPostCard
-                  key={index}
-                  title={post.title}
-                  excerpt={post.excerpt}
-                  date={post.date}
-                  imageSrc={post.imageSrc}
-                  imageAlt={post.imageAlt}
-                  href={post.href}
-                />
-              ))}
-            </div>
-          </div>
+                <div className="mb-16 mt-28 sm:mt-6">
+                  <h2 className="text-2xl font-bold mb-6 text-neutral-800">
+                    Featured Articles
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {getblogs(value)
+                      .slice(0, 3)
+                      .map((post, index) => (
+                        // <BlogPostCard
+                        //   key={index}
+                        //   title={post.title}
+                        //   excerpt={post.excerpt}
+                        //   date={post.date}
+                        //   imageSrc={post.imageSrc}
+                        //   imageAlt={post.imageAlt}
+                        //   href={post.href}
+                        // />
+                        <BlogPostCard
+                          key={index}
+                          title={post.title}
+                          excerpt={post.excerpt}
+                          date={post.date}
+                          imageSrc={post.imageSrc}
+                          imageAlt={post.imageAlt}
+                          href={post.href}
+                        />
+                      ))}
+                  </div>
+                </div>
 
-          <div>
-            <h2 className="text-2xl font-bold mb-6 text-neutral-800">
-              Latest Articles
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {getblogs(value).slice(3).map((post, index) => (
-                <BlogPostCard
-                  key={index}
-                  title={post.title}
-                  excerpt={post.excerpt}
-                  date={post.date}
-                  imageSrc={post.imageSrc}
-                  imageAlt={post.imageAlt}
-                  href={post.href}
-                />
-              ))}
-            </div>
-          </div>
-
+                <div>
+                  <h2 className="text-2xl font-bold mb-6 text-neutral-800">
+                    Latest Articles
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {getblogs(value)
+                      .slice(3)
+                      .map((post, index) => (
+                        <BlogPostCard
+                          key={index}
+                          title={post.title}
+                          excerpt={post.excerpt}
+                          date={post.date}
+                          imageSrc={post.imageSrc}
+                          imageAlt={post.imageAlt}
+                          href={post.href}
+                        />
+                      ))}
+                  </div>
+                </div>
               </TabsContent>
             ))}
-
-          
           </Tabs>
-
-          
         </div>
       </section>
 

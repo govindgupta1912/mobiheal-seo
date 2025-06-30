@@ -57,7 +57,7 @@ const CaseStudies = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs value={tabValue} onValueChange={handleTabChange}>
-            <TabsList className="flex flex-wrap gap-2 mb-10">
+            <TabsList className="flex flex-wrap gap-2 mb-16 sm:mb-14 md:mb-10">
               {categories.map((cat) => (
                 <TabsTrigger
                   key={cat.value}

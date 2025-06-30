@@ -1,20 +1,40 @@
+
+
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
-import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
-import WhitepaperPDF from "@/components/whitePaper/WhitepaperPDF";
-import {whitepaperData} from "@/lib/data"; 
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Form, FormField, FormLabel, FormControl, FormMessage, FormItem } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { whitepaperData } from "@/lib/data";
+import { useLocation, useRouter } from "wouter";
+import { useEffect } from "react";
 
 interface WhitepaperProps {
-  id : string;
+  id: string;
   title: string;
   heroSubtitle: string;
   heroImage: string;
   highlights: string[];
+  pdfUrl:string;
   downloadForm?: {
     enabled: boolean;
+     
   };
 }
+
+const formSchema = z.object({
+  firstName: z.string().min(1, "Required"),
+  lastName: z.string().min(1, "Required"),
+  email: z.string().email("Invalid email"),
+  phone: z.string().optional(),
+  company: z.string().min(1, "Required"),
+  users: z.string().optional(),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const WhitepaperDetails = ({
   id,
@@ -23,18 +43,72 @@ const WhitepaperDetails = ({
   heroImage,
   highlights,
   downloadForm,
+  pdfUrl,
 }: WhitepaperProps) => {
+  const content = whitepaperData.find((w) => w.id === id);
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      company: "",
+      users: "",
+    },
+  });
 
- const handleDownload = async (selectedId: string, userInfo: any) => {
-  const content = whitepaperData.find((w) => w.id === selectedId);
-  if (!content) return;
+  // const handleDownload = async (pdfUrl: string, data: FormValues) => {
+  //   try {
+  //     const response = await fetch(pdfUrl);
+  //     const blob = await response.blob();
+  //     saveAs(blob, "Whitepaper.pdf");
+  //   } catch (err) {
+  //     console.error("Download failed", err);
+  //   }
+  // };
+ 
 
-  const blob = await pdf(<WhitepaperPDF data={content} />).toBlob();
-  saveAs(blob, `${content.title}.pdf`);
+const [location] = useLocation();
+
+useEffect(() => {
+  const queryString = location.split("?")[1];
+  const params = new URLSearchParams(queryString);
+  const scrollToForm = params.get("scrollToForm");
+
+  if (scrollToForm === "true") {
+    const scroll = () => {
+      const el = document.getElementById("download-form");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    // Delay scroll until after the DOM is painted
+    const raf = requestAnimationFrame(() => {
+      setTimeout(scroll, 300);
+    });
+
+    return () => cancelAnimationFrame(raf);
+  }
+}, [location]);
+
+
+
+  const handleDownload = (fileUrl: string, title: string) => {
+  const a = document.createElement("a");
+  a.href = fileUrl;
+  a.setAttribute("download", title);
+  a.setAttribute("target", "_blank");
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
+
   return (
     <>
-      {/* Hero Section */}
+     
+        {/* Hero Section */}
       <section className="relative bg-gradient text-white py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <svg width="100%" height="100%" className="opacity-30" xmlns="http://www.w3.org/2000/svg">
@@ -89,8 +163,8 @@ const WhitepaperDetails = ({
       </section>
 
       {/* Download Form Section */}
-      {downloadForm?.enabled && (
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      {downloadForm?.enabled && pdfUrl && (
+        <section id="download-form" className="py-20 bg-gradient-to-br from-blue-50 to-white">
           <div className="container max-w-3xl mx-auto px-4">
             <aside className="relative bg-white/60 backdrop-blur-lg border border-blue-200 shadow-2xl rounded-3xl p-10 mx-auto max-w-lg flex flex-col items-center">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-blue-200/40 to-blue-100/10 blur-xl -z-10" />
@@ -100,49 +174,99 @@ const WhitepaperDetails = ({
               <p className="text-neutral-700 mb-8 text-base text-center">
                 Fill out this form to instantly download the whitepaper.
               </p>
-              <form className="space-y-5 w-full">
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="First Name*"
-                    className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                    required
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name*"
-                    className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                    required
-                  />
-                </div>
-                <input
-                  type="email"
-                  placeholder="Email Address*"
-                  className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                  required
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                />
-                <input
-                  type="text"
-                  placeholder="Company Name*"
-                  className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="No. of Users"
-                  className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none bg-white/80 placeholder:text-blue-400 text-blue-900 shadow-sm transition-all duration-200"
-                />
-                <Button type="submit" className="w-full text-lg font-semibold bg-gradient transition-colors duration-200 shadow-md rounded-lg"
-                onClick={()=>handleDownload(id,"govind")}
+
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit((data) =>
+                    handleDownload(pdfUrl,title)
+                  )}
+                  className="space-y-5 w-full"
                 >
-                  Download Now
-                </Button>
-              </form>
+                  <div className="grid grid-cols-2 gap-4">
+                    <FormField
+                      name="firstName"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>First Name*</FormLabel>
+                          <FormControl>
+                            <Input {...field} placeholder="First Name" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="lastName"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Last Name*</FormLabel>
+                          <FormControl>
+                            <Input {...field} placeholder="Last Name" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  <FormField
+                    name="email"
+                    control={form.control}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email*</FormLabel>
+                        <FormControl>
+                          <Input {...field} placeholder="Email Address" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    name="phone"
+                    control={form.control}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone</FormLabel>
+                        <FormControl>
+                          <Input {...field} placeholder="Phone Number" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    name="company"
+                    control={form.control}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Company Name*</FormLabel>
+                        <FormControl>
+                          <Input {...field} placeholder="Company Name" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    name="users"
+                    control={form.control}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>No. of Users</FormLabel>
+                        <FormControl>
+                          <Input {...field} placeholder="Number of Users" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="w-full text-lg font-semibold bg-gradient transition-colors duration-200 shadow-md rounded-lg">
+                    Download Now
+                  </Button>
+                </form>
+              </Form>
             </aside>
           </div>
         </section>
