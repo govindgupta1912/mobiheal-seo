@@ -62,7 +62,7 @@ const Blog = () => {
     <TabsTrigger
       key={cat.value}
       value={cat.value}
-      className="px-4 py-2 rounded-full text-sm md:text-base 
+      className="px-4 py-2 rounded-full text-sm 
         bg-neutral-100 text-neutral-700 
         hover:bg-neutral-200 
         data-[state=active]:bg-primary 

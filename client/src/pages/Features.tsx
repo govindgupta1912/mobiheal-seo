@@ -110,15 +110,18 @@ const Features = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => (
-              <div id={feature.id} key={feature.id}>
-                <FeatureCard
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              </div>
-            ))}
+           {features.map((feature) => (
+  <Link href={`/features#${feature.id}`} key={feature.id}>
+    <div id={feature.id} className="cursor-pointer hover:shadow-lg transition-shadow duration-300">
+      <FeatureCard
+        icon={feature.icon}
+        title={feature.title}
+        description={feature.description}
+      />
+    </div>
+  </Link>
+))}
+
           </div>
 
           <div className="mt-16 text-center">
@@ -126,9 +129,11 @@ const Features = () => {
               Want to see how our MDM solution can help your organization?
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
-                <Link href="/contact">Request a Demo</Link>
+              <a href="https://calendly.com/mobiheal-demo/booking" target="_blank" rel="noopener noreferrer">
+              <Button size="lg">
+                Request a Demo
               </Button>
+              </a>
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
                 <Link href="/pricing">View Pricing Plans</Link>
               </Button>

@@ -109,36 +109,52 @@ useEffect(() => {
     <>
      
         {/* Hero Section */}
-      <section className="relative bg-gradient text-white py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <svg width="100%" height="100%" className="opacity-30" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="bg-grad" cx="50%" cy="50%" r="80%">
-                <stop offset="0%" stopColor="#fff" stopOpacity="0.15" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#bg-grad)" />
-          </svg>
-        </div>
-        <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          <div>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg text-white">
-              {title}
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed mb-8 max-w-xl">
-              {heroSubtitle}
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <img
-              src={heroImage}
-              alt="Whitepaper Hero"
-              className="rounded-3xl shadow-2xl max-h-[420px] w-full object-cover border-4 border-white/30"
-            />
-          </div>
-        </div>
-      </section>
+ <section className="relative bg-gradient text-white py-12 px-4 sm:py-10 sm:px-6 overflow-hidden">
+  {/* Background SVG */}
+  <div className="absolute inset-0 pointer-events-none">
+    <svg width="100%" height="100%" className="opacity-20" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg-grad" cx="50%" cy="50%" r="80%">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.1" />
+          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bg-grad)" />
+    </svg>
+  </div>
+
+  {/* Content */}
+  <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 relative z-10">
+    {/* Text */}
+    <div className="text-center md:text-left max-w-xl w-full">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6 break-words">
+        {title}
+      </h1>
+      <p className="text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed mb-6">
+        {heroSubtitle}
+      </p>
+      <Button
+        onClick={() =>
+          document.getElementById("download-form")?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="mt-4 sm:mt-6 px-6 py-3 text-lg font-semibold bg-white text-primary hover:bg-blue-100 shadow-lg rounded-lg transition"
+      >
+        Download Whitepaper
+      </Button>
+    </div>
+
+    {/* Image */}
+    <div className="w-full max-w-sm sm:max-w-md flex justify-center">
+      <img
+        src={heroImage}
+        alt="Whitepaper Hero"
+        className="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full border-4 border-white/20 max-h-[300px] sm:max-h-[420px]"
+      />
+    </div>
+  </div>
+</section>
+
+
 
       {/* Highlights Section */}
       <section className="py-20 bg-white">

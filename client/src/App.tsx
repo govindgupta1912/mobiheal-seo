@@ -25,6 +25,7 @@ import CookiesPolicy from "./pages/CookiesPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import ScrollToTop from "./components/common/ScrollToTop.tsx";
 
 function Router() {
   return (
@@ -67,6 +68,7 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollToTop />
       <Layout>
         <Router />
       </Layout>

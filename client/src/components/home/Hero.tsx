@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
 import heroAnimation from "../../assets/Animation .json"; // Your downloaded Lottie JSON
+import { navigate } from "wouter/use-browser-location";
 
 const Hero = () => {
   return (
@@ -21,12 +22,16 @@ const Hero = () => {
              Secure, manage, and monitor your corporate and BYO devices to protect enterprise data while enhancing productivity.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-neutral-100">
+              <Button   size="lg" className="bg-white text-primary hover:bg-neutral-100"
+              onClick={()=>navigate("/contact")}
+              >
                 Get Started
               </Button>
+              <a href="https://calendly.com/mobiheal-demo/booking" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                Watch Demo
+                Book Demo
               </Button>
+              </a>
             </div>
           </div>
 

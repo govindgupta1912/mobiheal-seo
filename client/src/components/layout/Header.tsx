@@ -62,7 +62,12 @@ const Header = () => {
             <Button variant="ghost" className="font-medium">
               Sign In
             </Button>
-            <Button className="font-medium">Request Demo</Button>
+<a href="https://calendly.com/mobiheal-demo/booking" target="_blank" rel="noopener noreferrer">
+  <Button className="font-medium">
+    Request Demo
+  </Button>
+</a>
+
           </div>
 
           {/* Mobile Menu */}
@@ -256,6 +261,9 @@ const MobileNavigation = ({ currentPath }: NavigationProps) => {
         </SheetTrigger>
         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
           <nav className="flex flex-col gap-4 mt-6">
+              <button onClick={() => handleNavigate("/")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/") ? "text-primary" : ""}`}>
+              Home
+            </button>
             <button onClick={() => handleNavigate("/features")} className={`text-left py-2 hover:text-primary ${currentPath.includes("/features") ? "text-primary" : ""}`}>
               Features
             </button>

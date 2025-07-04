@@ -19,7 +19,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
 }) => {
   return (
     <Link href={href}>
-      <a className="group block bg-white rounded-lg overflow-hidden   shadow-lg hover:shadow-xl transition-shadow ease-in-out">
+      <a className="group block bg-white rounded-lg overflow-hidden h-52   shadow-lg hover:shadow-xl transition-shadow ease-in-out">
         <div className="aspect-w-16 aspect-h-9 bg-neutral-200">
           <div className="w-full h-full" style={{ 
             backgroundImage: `url(${imageSrc})`,

@@ -196,7 +196,7 @@ const UseCases = () => {
             {["kiosk", "corporate", "byod"].map((tab) => {
   const useCase = useCases[tab as keyof typeof useCases];
   return (
-    <TabsContent key={tab} value={tab} className="mt-0 animation-fade-in">
+    <TabsContent key={tab} value={tab} className="mt-0 animate-fade-in transition-opacity duration-500">
       <div className="flex flex-col md:flex-row items-start gap-12">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-6 text-neutral-800">{useCase.title}</h2>
@@ -213,9 +213,9 @@ const UseCases = () => {
           </div>
 
           <h3 className="text-xl font-semibold mb-4 text-neutral-800">Target Industries</h3>
-          <div className="space-y-4 mb-8">
+          <div className="space-y-4 mb-8 ">
             {useCase.industries.map((industry, index) => (
-              <div key={index} className="bg-white rounded-lg border border-neutral-100">
+              <div key={index} className="bg-white rounded-lg p-2 border border-neutral-100">
                 <h4 className="font-medium text-neutral-800">{industry.name}</h4>
                 <p className="text-neutral-600 text-sm">{industry.description}</p>
               </div>

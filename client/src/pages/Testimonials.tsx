@@ -92,29 +92,34 @@ const Testimonials = () => {
              
         </div>
       </section>
-
-      <section className="py-16 bg-neutral-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-200">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-neutral-800">
-                Share Your Story
-              </h2>
-              <p className="text-lg text-neutral-600 mb-8">
-                Are you a satisfied SecureMDM customer? We'd love to hear about your experience.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" asChild>
-                  <Link href="/contact?type=testimonial">Submit Your Testimonial</Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-                  <Link href="/case-studies">View Case Studies</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
+  <section className="py-16 bg-neutral-50">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto text-center">
+      <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-200">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-neutral-800">
+          Explore Our Resources
+        </h2>
+        <p className="text-lg text-neutral-600 mb-8">
+          Discover in-depth guides, whitepapers, and tools to help you make the most of SecureMDM.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Button size="lg" asChild>
+            <Link href="/resources">Explore Resources</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary/5"
+            asChild
+          >
+            <Link href="/case-studies">View Case Studies</Link>
+          </Button>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">

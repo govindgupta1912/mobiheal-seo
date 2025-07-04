@@ -33,6 +33,9 @@ import cs10 from "../assets/caseStudies/cs10.jpg";
 import cs11 from "../assets/caseStudies/cs11.jpg";
 import cs12 from "../assets/caseStudies/cs12.jpg";
 
+import blog1 from "@/assets/BlogImages/blog1.png"
+import blog2 from "@/assets/BlogImages/blog2.png";
+import blog3 from "@/assets/BlogImages/blog3.png";    
 // Blog posts data
 // export const blogPosts = [
 //   {
@@ -97,7 +100,7 @@ export const blogPosts = [
     excerpt:
       "Discover the essential benefits of Mobile Device Management (MDM) for enterprises, including enhanced security, improved productivity, and simplified compliance with MobiHeal MDM.",
     date: "June 10, 2025",
-    imageSrc: "blog1",
+    imageSrc: blog1,
     imageAlt: "Mobile Device Management Benefits",
     href: "/blog/mdm-benefits",
     category: "byod",
@@ -107,7 +110,7 @@ export const blogPosts = [
     excerpt:
       "Explore how Geo-Fencing technology strengthens security and boosts productivity in the BFSI sector. Learn its key benefits and implementation strategies with MobiHeal MDM.",
     date: "June 11, 2025",
-    imageSrc: "Blog 2.docx",
+    imageSrc: blog2,
     imageAlt: "Geo-Fencing in BFSI",
     href: "/blog/geo-fencing-bfsi",
     category: "mdm-best-practices",
@@ -117,7 +120,7 @@ export const blogPosts = [
     excerpt:
       "Learn how QR Code Enrollment streamlines mobile device setup for enterprises. Discover key benefits, best practices, and implementation tips with MobiHeal MDM.",
     date: "June 11, 2025",
-    imageSrc: "Blog 3.docx",
+    imageSrc: blog3,
     imageAlt: "QR Code Enrollment",
     href: "/blog/qr-code-enrollment",
     category: "mdm-best-practices",
@@ -177,7 +180,7 @@ export const blogPosts = [
   },
   {
     title:
-      "GDPR Compliance Made Simple: How MDM Solutions Protect Customer Data",
+      "GDPR Compliance Made Simple: How MDM Solutions Protect Our Customer Data",
     excerpt:
       "Learn how MobiHeal MDM simplifies GDPR compliance with secure data management, automated audit trails, and encrypted data erasure. Avoid fines and build trust.",
     date: "June 11, 2025",

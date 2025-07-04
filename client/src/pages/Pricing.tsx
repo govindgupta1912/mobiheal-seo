@@ -193,14 +193,14 @@ const Pricing = () => {
               >
                 Monthly Billing
               </button>
-              <button
+              {/* <button
                 className={`px-4 py-2 rounded-md text-sm ${
                   billingCycle === "annually" ? "bg-white text-primary" : "text-white"
                 }`}
                 onClick={() => setBillingCycle("annually")}
               >
                 Annual Billing <span className="text-xs opacity-75">(Save ~15%)</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@ const Pricing = () => {
             {pricingPlans.map((plan, index) => (
               <div key={index} className="lg:w-1/3 relative">
                 {/* <div className={`h-full bg-white border ${plan.popular ? 'border-primary' : 'border-neutral-200'} rounded-xl ${plan.popular ? 'shadow-md hover:shadow-lg' : 'shadow-sm hover:shadow-md'} transition-shadow`}> */}
-                 <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg scale-105' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md '}`}>
+                 <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg scale-105' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md  scale-95'}`}>
 
                   {plan.popular && (
                     <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
@@ -227,12 +227,28 @@ const Pricing = () => {
                     {plan.subDescription && (
                       <p className="text-sm text-neutral-500 mb-4">{plan.subDescription}</p>
                     )}
-                    <div className="flex items-baseline mb-4">
-                      <span className="text-3xl font-bold text-neutral-800">
-                        {billingCycle === "monthly" ? plan.monthlyPrice : plan.annualPrice}
-                      </span>
-                      <span className="text-neutral-500 ml-1">{plan.title==='Basic'?'  for 14 days':" / device / month"}</span>
+                  <div className="mb-4">
+                    <div className="flex items-baseline gap-2">
+                       <div className="text-2xl font-bold text-neutral-800">
+    {plan.title === "Basic" ? "Free" : plan.monthlyPrice}
+  </div>
+  <div className="text-md font-bold text-neutral-700 mt-1">
+    / Device / Month
+  </div>
                     </div>
+ 
+  {plan.title !== "Basic" ? (
+    <div className="text-md text-neutral-500 font-bold mt-1">
+      Billed Annually + 18% GST
+    </div>
+  ) : (
+    <div className="text-md text-neutral-500 font-bold mt-1">
+      For 14 Days
+    </div>
+  )}
+</div>
+
+
                     <Button 
                       variant={plan.popular ? "default" : "outline"} 
                       className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary-dark text-white' : 'text-primary hover:bg-primary hover:text-white'}  hover:scale-95 transition-transform duration-300 ease-in-out`}

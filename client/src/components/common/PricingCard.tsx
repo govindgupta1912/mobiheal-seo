@@ -26,7 +26,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   features,
 }) => {
   return (
-    <div className={`bg-white h-full border  border-neutral-200 rounded-xl ${popular ? 'shadow-md hover:shadow-lg border-primary scale-105' : 'shadow-sm hover:shadow-md scale-95'} transition-shadow relative`}>
+    <div className={`bg-white h-full border  border-neutral-200 rounded-xl ${popular ? 'shadow-md hover:shadow-lg border-primary scale-105' : 'shadow-sm hover:shadow-md hover:border-primary scale-95'} transition-shadow relative`}>
       {popular && (
         <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
           <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium inline-block">
@@ -37,11 +37,28 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <div className="p-6 border-b border-neutral-100">
         <h3 className="text-xl font-bold text-neutral-800 mb-2">{title}</h3>
         <p className="text-neutral-600 mb-4">{description}</p>
-        <div className="flex items-baseline mb-4">
-          <span className="text-3xl font-bold text-neutral-800">{price}</span>
-          {/* <span className="text-neutral-500 ml-1">/ device / month</span> */}
-            <span className="text-neutral-500 ml-1">{title==='Basic'?'  for 14 days':" / device / month"}</span>
-        </div>
+       
+        <div className="mb-4">
+                    <div className="flex items-baseline gap-2">
+                       <div className="text-2xl font-bold text-neutral-800">
+    {title === "Basic" ? "Free" : price}
+  </div>
+  <div className="text-md font-bold text-neutral-700 mt-1">
+    / Device / Month
+  </div>
+                    </div>
+ 
+  {title !== "Basic" ? (
+    <div className="text-md text-neutral-500 font-bold mt-1">
+      Billed Annually + 18% GST
+    </div>
+  ) : (
+    <div className="text-md text-neutral-500 font-bold mt-1">
+      For 14 Days
+    </div>
+  )}
+</div>
+        
         <Button 
           variant={popular ? "default" : "outline"} 
           className={`w-full ${popular ? 'bg-primary hover:bg-primary-dark hover:scale-95 transition-transform duration-200 text-white' : 'text-primary hover:bg-primary hover:text-white hover:scale-95 transition-transform duration-200'}`}

@@ -274,6 +274,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { Link } from "wouter";
 
 const formSchema = z.object({
   firstName: z.string().min(2),
@@ -352,7 +353,7 @@ const ContactForm = () => {
   }, [form.formState.isValid]);
 
   return (
-    <div className="bg-neutral-50 px-8 rounded-lg shadow-md">
+    <div className="bg-neutral-50 px-8 py-6 rounded-lg shadow-md">
       <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
       <Form {...form}>
         <form
@@ -471,7 +472,7 @@ const ContactForm = () => {
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel className="text-sm text-neutral-600">
-                    I agree to the <a href="#" className="text-primary hover:underline">Privacy Policy</a> and consent to be contacted regarding my inquiry.
+                    I agree to the <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link> and consent to be contacted regarding my inquiry.
                   </FormLabel>
                   <FormMessage />
                 </div>
