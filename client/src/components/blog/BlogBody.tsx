@@ -124,7 +124,7 @@ const BlogBody = ({ blog }: { blog: Blog }) => (
               {blog.conclusion.cta.description}
             </p>
             <a
-              href={blog.conclusion.cta.buttonLink}
+              href="https://calendly.com/mobiheal-demo/booking/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-semibold rounded-md hover:bg-blue-100 transition"
