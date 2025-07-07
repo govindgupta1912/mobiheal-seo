@@ -178,7 +178,7 @@ export const blogs: Blog[] = [
       "title": "Discover how MobiHeal MDM can simplify your enterprise mobility management",
       "description": "Request a personalized demo and experience its powerful features.",
       "buttonText": "Book a Demo",
-      "buttonLink": "/request-demo"
+      "buttonLink": "https://calendly.com/mobiheal-demo/booking/"
     }
   },
   "seoRecommendations": {
