@@ -26,6 +26,7 @@ import TermsOfService from "./pages/TermsOfService.tsx";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
 import ScrollToTop from "./components/common/ScrollToTop.tsx";
+import { HelmetProvider } from "react-helmet-async";
 
 function Router() {
   return (
@@ -67,6 +68,7 @@ function Router() {
 
 function App() {
   return (
+    <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <ScrollToTop />
       <Layout>
@@ -74,6 +76,7 @@ function App() {
       </Layout>
       <Toaster />
     </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 

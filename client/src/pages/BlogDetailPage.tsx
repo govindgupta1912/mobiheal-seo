@@ -5,6 +5,7 @@ import BlogBody from "../components/blog/BlogBody";
 import LatestBlogCarousel from "../components/blog/LatestBlogCarousel";
 import NewsletterCTA from "../components/blog/NewsletterCTA";
 import SidebarBlogList from "../components/blog/SidebarBlogList";
+import BlogSEO from "@/components/common/BlogSEO";
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
@@ -20,6 +21,11 @@ const BlogDetailPage = () => {
 
   return (
     <div className="bg-white text-gray-800 font-sans">
+       <BlogSEO
+      title={`${blog.title} | MobiHeal MDM`}
+      description={blog.introduction}
+      internalLinks={blog.seoRecommendations?.internalLinks}
+    />
       <BlogHero blog={blog} />
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 mt-8 px-4 lg:px-0">
         {/* Main Blog Body */}
