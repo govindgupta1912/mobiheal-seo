@@ -13,6 +13,8 @@ import cs11 from "../assets/caseStudies/cs11.jpg"
 import cs12 from "../assets/caseStudies/cs12.jpg"
 
 export interface CaseStudyDetail extends CaseStudy {
+  seoTitle?: string;
+  seoDescription?: string;
   challenges: {
     title: string;
     description: string;
@@ -43,6 +45,10 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   imageSrc: cs1,
   tags: ["Banking & Financial Services", "Security", "Fraud Prevention"],
   slug: "preventing-mobile-fraud-banking",
+
+   // ✅ SEO Fields
+  seoTitle: "Preventing Mobile Fraud in Banking: How MDM Reduced Unauthorized Transactions by 60% | MobiHeal MDM",
+  seoDescription: "Discover how a leading bank reduced mobile fraud by 60% using MobiHeal MDM. Learn strategies for securing transactions, ensuring compliance, and enhancing customer trust.",
   results: [
     { stat: "60%", label: "Reduction in fraudulent activities" },
     { stat: "100%", label: "PCI-DSS compliance achieved" },
@@ -151,6 +157,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs2,
   "tags": ["Fintech", "Security", "Compliance", "Mobile Payments"],
   "slug": "securing-customer-data-digital-wallets",
+  // ✅ SEO Fields
+  seoTitle:" Securing Customer Data in Digital Wallets: MDM Implementation for a Leading Fintech Firm | MobiHeal MDM ",
+  seoDescription:": Discover how a top fintech firm achieved 100% PCI-DSS compliance and zero data breaches using MobiHeal MDM. Learn strategies to secure digital wallets and mobile payments.",
   "results": [
     { "stat": "90%", "label": "Reduction in phishing attempts" },
     { "stat": "100%", "label": "PCI-DSS compliance score" },
@@ -252,6 +261,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs3,
   "tags": ["Healthcare", "Compliance", "HIPAA", "Tablet Security"],
   "slug": "hipaa-compliance-healthcare-tablets",
+  // ✅ SEO Fields
+  seoTitle:"HIPAA Compliance Achieved: Protecting Patient Data on Tablets in a Multi-Hospital Network | MobiHeal MDM ",
+  seoDescription:"Discover how a multi-hospital network achieved 100% HIPAA compliance using MobiHeal MDM. Learn strategies to secure patient data on tablets and prevent breaches.",
   "results": [
     { "stat": "100%", "label": "HIPAA compliance achieved" },
     { "stat": "89%", "label": "Reduction in PHI exposure incidents" },
@@ -355,6 +367,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs4,
   "tags": ["Telemedicine", "Healthcare", "HIPAA", "MDM", "Remote Workforce"],
   "slug": "telemedicine-device-security",
+  // ✅ SEO Fields
+  seoTitle:"Securing Telemedicine Devices: How MDM Enabled Remote Consultations Without Compromising Privacy | MobiHeal MDM",
+  seoDescription:": Discover how a healthcare provider achieved HIPAA compliance and zero data breaches with MobiHeal MDM. Learn strategies to secure telemedicine devices and protect patient privacy.",
   "results": [
     { "stat": "100%", "label": "HIPAA Audit Pass Rate" },
     { "stat": "87%", "label": "Reduction in Device Loss-Related Risks" },
@@ -457,6 +472,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs5,
   "tags": ["Retail", "IoT Security", "POS", "PCI-DSS", "Smart Devices"],
   "slug": "iot-retail-security",
+  // ✅ SEO Fields
+  seoTitle:"Securing IoT-Powered Stores: MDM for Smart Shelves and Mobile POS Systems | MobiHeal MDM ",
+  seoDescription:"Discover how a retail chain secured IoT-powered stores using MobiHeal MDM. Learn strategies to protect smart shelves, POS systems, and enhance customer trust",
   "results": [
     { "stat": "100%", "label": "PCI-DSS Compliance Score" },
     { "stat": "92%", "label": "Reduction in Inventory Data Leaks" },
@@ -558,6 +576,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": "cs6",
   "tags": ["Retail", "Tablets", "Customer Engagement", "Kiosk Mode", "PCI-DSS"],
   "slug": "retail-tablet-demos",
+  // ✅ SEO Fields
+  seoTitle:"Boosting Customer Engagement: Secure Tablet Deployment for In-Store Product Demos | MobiHeal MDM",
+  seoDescription:"Discover how a retail brand increased sales conversions by 25% using secure tablets for in-store demos. Learn MDM strategies to enhance engagement and prevent cyber threats.",
   "results": [
     { "stat": "40%", "label": "Sales Conversions After MDM" },
     { "stat": "90%", "label": "Customer Satisfaction Score" },
@@ -658,6 +679,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs7,
   "tags": ["Education", "BYOD", "FERPA", "K-12", "Hybrid Learning"],
   "slug": "education-byod-security",
+  // ✅ SEO Fields
+  seoTitle:"Securing Student Data in Hybrid Classrooms: MDM for Safe BYOD | MobiHeal MDM ",
+  seoDescription:"Discover how MobiHeal MDM secured 10,000+ student devices with BYOD policies, ensuring FERPA compliance and data privacy in hybrid learning environments.",
   "results": [
     { "stat": "100%", "label": "FERPA Compliance Rate" },
     { "stat": "0", "label": "Data Leak Incidents After MDM" },
@@ -757,6 +781,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs8,
   "tags": ["Education", "Kiosk Mode", "Compliance", "EdTech", "Tablet Deployment"],
   "slug": "education-kiosk-mode",
+  // ✅ SEO Fields
+  seoTitle:"Streamlining Tablet Deployment Across 50 Schools: Kiosk Mode for Digital Learning | MobiHeal MDM",
+  seoDescription:"Discover how MobiHeal MDM’s Kiosk Mode streamlined tablet deployment across 50 schools, ensuring secure, distraction-free digital learning environments.",
   "results": [
     { "stat": "90%", "label": "Faster School-Wide Tablet Deployment" },
     { "stat": "80%", "label": "Fewer IT Support Tickets" },
@@ -857,6 +884,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs9,
   "tags": ["Pharmaceuticals", "Clinical Research", "HIPAA Compliance", "Data Security"],
   "slug": "clinical-trial-mdm",
+  // ✅ SEO Fields
+  seoTitle:"Protecting Clinical Trial Data: MDM for Global Pharma Research | MobiHeal MDM",
+  seoDescription:"Discover how a global pharma team achieved HIPAA compliance and zero data breaches with MobiHeal MDM. Learn strategies for securing clinical trial data on mobile devices.",
   "results": [
     { "stat": "100%", "label": "HIPAA Compliance Achieved" },
     { "stat": "90%", "label": "Reduction in PHI Breach Risk" },
@@ -956,6 +986,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs10,
   "tags": ["Pharmaceuticals", "IoT Security", "Geo-Fencing", "Compliance"],
   "slug": "pharma-iot-geo-fencing",
+  // ✅ SEO Fields
+  seoTitle:"Securing Drug Manufacturing Facilities: Geo-Fencing & Access Control for Pharma IoT | MobiHeal MDM",
+  seoDescription:"Discover how a pharma giant secured IoT devices in drug manufacturing using MobiHeal MDM. Achieve 100% compliance and prevent unauthorized access with geo-fencing.",
   "results": [
     { "stat": "100%", "label": "FDA 21 CFR Part 11 Compliance" },
     { "stat": "95%", "label": "Reduction in Unauthorized Access" },
@@ -1055,6 +1088,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs11,
   "tags": ["Logistics", "Fleet Management", "GPS Tracking", "Security"],
   "slug": "cargo-theft-mdm-logistics",
+  // ✅ SEO Fields
+  seoTitle:"Preventing Cargo Theft: MDM Secures 2,000+ Driver Tablets for Logistics Giant | MobiHeal MDM",
+  seoDescription:"Discover how MobiHeal MDM reduced cargo theft risks by 95% for a logistics giant using GPS tracking, geo-fencing, and remote lock/wipe. Learn fleet security strategies.",
   "results": [
     { "stat": "95%", "label": "Reduction in Cargo Theft Incidents" },
     { "stat": "$4.2M", "label": "Annual Theft Losses Recovered" },
@@ -1154,6 +1190,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "imageSrc": cs12,
   "tags": ["Logistics", "IoT Security", "Inventory Management", "Warehouse Automation"],
   "slug": "warehouse-iot-mdm-logistics",
+  // ✅ SEO Fields
+  seoTitle:"Optimizing Warehouse Operations: MDM for IoT-Powered Inventory Management | MobiHeal MDM",
+  seoDescription:"Discover how MobiHeal MDM streamlined IoT-powered inventory management for a logistics firm, reducing errors by 90% and boosting operational efficiency.",
   "results": [
     { "stat": "90%", "label": "Reduction in Inventory Discrepancies" },
     { "stat": "70%", "label": "Decrease in IoT Downtime" },

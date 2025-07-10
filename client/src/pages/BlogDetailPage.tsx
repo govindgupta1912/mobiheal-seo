@@ -24,7 +24,7 @@ const BlogDetailPage = () => {
        <BlogSEO
       title={`${blog.title} | MobiHeal MDM`}
       description={blog.introduction}
-      internalLinks={blog.seoRecommendations?.internalLinks}
+      // internalLinks={blog.seoRecommendations?.internalLinks}
     />
       <BlogHero blog={blog} />
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 mt-8 px-4 lg:px-0">

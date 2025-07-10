@@ -15,6 +15,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { caseStudyDetails } from "@/lib/caseStudyDetails";
+import BlogSEO from "@/components/common/BlogSEO";
 
 const iconMap = {
   "map-pin": MapPin,
@@ -44,6 +45,11 @@ const CaseStudyDetail = () => {
 
   return (
     <>
+      {/* SEO Metadata */}
+       <BlogSEO
+      title={`${study.seoTitle}`}
+      description={study.seoDescription}
+    />
       {/* Hero Section */}
       <section className="relative bg-gradient text-white py-24 px-4 overflow-hidden shadow-lg">
         <div className="absolute inset-0 pointer-events-none">
@@ -200,7 +206,8 @@ const CaseStudyDetail = () => {
       {/* Results Section */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          
+                    <h2 className="text-3xl font-bold mb-6 text-neutral-800 text-center">Results</h2>
+
            <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-centers "
           >

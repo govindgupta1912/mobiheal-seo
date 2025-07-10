@@ -11,12 +11,15 @@ import { Input } from "@/components/ui/input";
 import { whitepaperData } from "@/lib/data";
 import { useLocation, useRouter } from "wouter";
 import { useEffect } from "react";
+import BlogSEO from "../common/BlogSEO";
 
 interface WhitepaperProps {
   id: string;
   title: string;
   heroSubtitle: string;
   heroImage: string;
+  seoTitle: string;
+  seoDescription: string;
   highlights: string[];
   pdfUrl:string;
   downloadForm?: {
@@ -39,6 +42,8 @@ type FormValues = z.infer<typeof formSchema>;
 const WhitepaperDetails = ({
   id,
   title,
+  seoTitle,
+  seoDescription,
   heroSubtitle,
   heroImage,
   highlights,
@@ -107,7 +112,10 @@ useEffect(() => {
 
   return (
     <>
-     
+       <BlogSEO
+      title={`${seoTitle}`}
+      description={seoDescription}
+    />
         {/* Hero Section */}
  <section className="relative bg-gradient text-white py-12 px-4 sm:py-10 sm:px-6 overflow-hidden">
   {/* Background SVG */}
