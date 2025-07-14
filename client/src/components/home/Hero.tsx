@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
 import heroAnimation from "../../assets/Animation .json"; // Your downloaded Lottie JSON
 import { navigate } from "wouter/use-browser-location";
+import hero from "@/assets/hero.png"
 
 const Hero = () => {
   return (
@@ -37,7 +38,8 @@ const Hero = () => {
 
           {/* Lottie Animation */}
           <div className="md:w-1/2 flex justify-center items-center">
-            <Lottie animationData={heroAnimation} loop={true} className="w-full max-w-md md:max-w-lg h-auto" />
+            {/* <Lottie animationData={heroAnimation} loop={true} className="w-full max-w-md md:max-w-lg h-auto" /> */}
+            <img src={hero} alt="Hero" className="w-full max-w-md md:max-w-lg " />
           </div>
         </div>
       </div>
