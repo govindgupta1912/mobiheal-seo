@@ -104,7 +104,9 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, 'dist/public'),
     emptyOutDir: true,
-    ssr:true,
+        ssr: 'client/src/entry-server.tsx', // or wherever your SSR entry file is
+
+
   },
   server: {
     host: '0.0.0.0',

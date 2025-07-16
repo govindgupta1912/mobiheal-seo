@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite-ssg build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "vercel-build": "vite-ssg build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "vite build --ssr src/entry-server.tsx",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview",
     "analyze": "npx vite-bundle-visualizer",
