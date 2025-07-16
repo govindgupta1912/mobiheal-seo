@@ -4,8 +4,7 @@
     { "src": "api/ssr.ts", "use": "@vercel/node" },
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist/public" } }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/api/ssr" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/ssr" }
   ]
 }
