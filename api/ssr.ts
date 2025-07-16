@@ -2,7 +2,14 @@
 import { render } from "../dist/public/entry-server.js";
 
 export default function handler(req, res) {
-  const url = req.url;
+  // Extract the original URL from the query or headers
+  // On Vercel, the original path is usually in req.url after /api/ssr
+  // e.g., /api/ssr/about -> /about
+
+  let url = req.url || "/";
+  // Remove the /api/ssr prefix
+  url = url.replace(/^\/api\/ssr/, "") || "/";
+
   const { html, head } = render(url);
 
   res.setHeader("Content-Type", "text/html");
