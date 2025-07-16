@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { render } from "../dist/public/entry-server.js";
 
 export default function handler(req, res) {
