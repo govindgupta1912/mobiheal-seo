@@ -56,7 +56,7 @@ const ContactSection = () => {
                   <p className="text-neutral-600">
                     {/* Sales: +91 11 6926 8029
                     <br /> */}
-                    Support: +91 11 6926 8029
+                     +91 11 6926 8029
                   </p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const ContactSection = () => {
                   <p className="text-neutral-600">
                     {/* Sales: support@mobiheal.in
                     <br /> */}
-                    Support: support@mobiheal.in
+                    support@mobiheal.in
                   </p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
                     Business Hours
                   </h3>
                   <p className="text-neutral-600">
-                    Monday - Friday: 9:00 AM - 6:00 PM EST
+                    Monday - Friday: 9:00 AM - 6:00 PM IST
                     <br />
                     Support: 24/7 for Professional Plan customers
                   </p>

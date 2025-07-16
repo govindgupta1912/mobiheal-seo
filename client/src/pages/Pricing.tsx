@@ -215,11 +215,12 @@ const Pricing = () => {
                  <div className={`group h-full bg-white border rounded-xl transition-shadow ${plan.popular ? 'border-primary shadow-md hover:shadow-lg scale-105' : 'border-neutral-200 hover:border-primary shadow-sm hover:shadow-md  scale-95'}`}>
 
                   {plan.popular && (
-                    <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
-                      <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium inline-block">
-                        Most Popular
-                      </span>
-                    </div>
+                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+  <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+    Most Popular
+  </span>
+</div>
+
                   )}
                   <div className="p-6 border-b border-neutral-100">
                     <h3 className="text-xl font-bold text-neutral-800 mb-2">{plan.title}</h3>

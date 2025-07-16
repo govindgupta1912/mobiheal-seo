@@ -3,10 +3,13 @@
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
 import heroAnimation from "../../assets/Animation .json"; // Your downloaded Lottie JSON
-import { navigate } from "wouter/use-browser-location";
+//import { navigate } from "wouter/use-browser-location";
+import { useNavigate } from "react-router-dom";
+
 import hero from "@/assets/hero.png"
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative overflow-hidden text-white py-16 md:py-24 bg-gradient">
       {/* Optional dark overlay for contrast */}

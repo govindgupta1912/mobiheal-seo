@@ -78,7 +78,7 @@ const Contact = () => {
                     <h3 className="font-medium text-neutral-800 mb-1">Phone</h3>
                     <p className="text-neutral-600">
                       {/* Sales: +1 (888) 555-1234<br /> */}
-                      Support: +91 11 6926 8029
+                       +91 11 6926 8029
                     </p>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                     <h3 className="font-medium text-neutral-800 mb-1">Email</h3>
                     <p className="text-neutral-600">
                       {/* Sales: sales@securemdm.com<br /> */}
-                      Support: support@mobiheal.in
+                       support@mobiheal.in
                     </p>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                       Business Hours
                     </h3>
                     <p className="text-neutral-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM EST
+                      Monday - Friday: 9:00 AM - 6:00 PM IST
                       <br />
                       Support: 24/7 for Professional Plan customers
                     </p>

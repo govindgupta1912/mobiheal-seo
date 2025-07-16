@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+//import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
 import slide1  from "../../assets/ClinetImages/clients-3.png";
@@ -107,7 +108,7 @@ const PartnersSection = () => {
 
         <div className="text-center mt-12">
           <Button variant="outline" className="border-primary text-primary hover:bg-primary/5 hover:scale-95 transition-transform duration-200" asChild>
-            <Link href="/testimonials">View all Testimonials</Link>
+            <Link to="/testimonials">View all Testimonials</Link>
           </Button>
         </div>
       </div>

@@ -4,9 +4,18 @@ import about from "@/assets/about/Cover-Cyber-Security-1-1600x600.jpg"
 import about_animation1 from "@/assets/about/Animation - 1750941799599.json"
 import about_animation2 from "@/assets/about/Animation - 1750942525054.json"
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet-async";
 export default function AboutUsPage() {
   return (
-    <main className="bg-gradient-to-b from-white via-blue-50 to-white text-gray-800 font-sans overflow-x-hidden">
+  
+    <>
+    <Helmet>
+            <title>MobiHeal - About Us</title>
+            <meta name="description" content="Secure and scalable MDM solution for enterprises." />
+            <meta property="og:title" content="MobiHeal - About Us" />
+            <meta property="og:description" content="Protect and manage your mobile workforce." />
+          </Helmet>
+      <main className="bg-gradient-to-b from-white via-blue-50 to-white text-gray-800 font-sans overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-950 to-blue-800 text-white py-24 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-10" />
@@ -124,5 +133,7 @@ export default function AboutUsPage() {
         </div>
       </section>
     </main>
+    </>
+  
   );
 }

@@ -8,3 +8,17 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </ThemeProvider>
 );
+
+// import { ViteSSG } from 'vite-ssg-react';
+// import App from './App';
+// import { blogs } from './data/blogs';
+
+// export const createApp = ViteSSG(
+//   App,
+//   { routes: [] },
+//   (ctx) => {
+//     blogs.forEach(blog => {
+//       ctx.routes.push(`/blog/${blog.slug}`);
+//     });
+//   }
+// );

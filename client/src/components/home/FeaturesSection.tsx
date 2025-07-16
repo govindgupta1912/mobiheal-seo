@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+// import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import FeatureCard from "@/components/common/FeatureCard";
 import { 
@@ -73,7 +74,7 @@ const FeaturesSection = () => {
 
         <div className="text-center mt-12">
           <Button asChild>
-            <Link href="/features">
+            <Link to="/features">
               <span>View All Features</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

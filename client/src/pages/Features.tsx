@@ -15,6 +15,7 @@ import {
   FlaskConical,
   BarChart3
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Features = () => {
   const features = [
@@ -94,6 +95,12 @@ const Features = () => {
 
   return (
     <>
+     <Helmet>
+            <title>MobiHeal - Home-feature</title>
+            <meta name="description" content="Feature:-Secure and scalable MDM solution for enterprises." />
+            <meta property="og:title" content="MobiHeal - Home" />
+            <meta property="og:description" content="Protect and manage your mobile workforce." />
+          </Helmet>
       <section className="bg-gradient text-white py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

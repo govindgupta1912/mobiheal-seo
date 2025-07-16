@@ -1,4 +1,6 @@
-import { Link, useLocation } from "wouter";
+//import { Link, useLocation } from "wouter";
+import { Link, useLocation ,useNavigate} from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { DownloadIcon, FileTextIcon } from "lucide-react";
 import { whitepapers } from "@/lib/data";
@@ -14,23 +16,27 @@ const categories = [
 ];
 
 const Whitepapers = () => {
-  const [location, setLocation] = useLocation();
-  const [tabValue, setTabValue] = useState("all");
+ // import { useLocation, useNavigate } from "react-router-dom";
 
-  // Sync tabValue from URL
-  useEffect(() => {
-    const fromURL = location.split("/")[3]?.toLowerCase() || "all";
-    setTabValue(fromURL);
-  }, [location]);
+const location = useLocation();
+const navigate = useNavigate();
+const [tabValue, setTabValue] = useState("all");
 
-  const handleTabChange = (value: string) => {
-    setTabValue(value);
-    if (value === "all") {
-      setLocation("/whitepapers");
-    } else {
-      setLocation(`/whitepapers/category/${value}`);
-    }
-  };
+// Sync tabValue from URL
+useEffect(() => {
+  const fromURL = location.pathname.split("/")[3]?.toLowerCase() || "all";
+  setTabValue(fromURL);
+}, [location.pathname]);
+
+const handleTabChange = (value: string) => {
+  setTabValue(value);
+  if (value === "all") {
+    navigate("/whitepapers");
+  } else {
+    navigate(`/whitepapers/category/${value}`);
+  }
+};
+
 
   const getWhitePaper = (category: string) => {
     return category === "all"
@@ -200,13 +206,13 @@ const Whitepapers = () => {
                             className="border-primary text-primary hover:bg-primary/5"
                             asChild
                           >
-                            <Link href={`/whitepapers/${whitepaper.slug}`}>
+                            <Link to={`/whitepapers/${whitepaper.slug}`}>
                               <a>Preview</a>
                             </Link>
                           </Button>
                           <Button asChild>
                             <Link
-                              href={`/whitepapers/${whitepaper.slug}?scrollToForm=true`}
+                              to={`/whitepapers/${whitepaper.slug}?scrollToForm=true`}
                             >
                               <DownloadIcon className="mr-2 h-4 w-4" />
                               Download

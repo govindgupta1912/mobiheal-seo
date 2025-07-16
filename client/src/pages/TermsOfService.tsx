@@ -1,8 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TermsOfService = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 font-sans min-h-screen py-16 px-4 sm:px-8 md:px-12 lg:px-20 max-w-6xl mx-auto shadow-lg rounded-xl my-8">
+    <>
+
+     <Helmet>
+            <title>MobiHeal - Terms of Service</title>
+            <meta name="description" content="Secure and scalable MDM solution for enterprises." />
+            <meta property="og:title" content="MobiHeal - Terms of Service" />
+            <meta property="og:description" content="Protect and manage your mobile workforcte:- terms of services." />
+          </Helmet>
+     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 font-sans min-h-screen py-16 px-4 sm:px-8 md:px-12 lg:px-20 max-w-6xl mx-auto shadow-lg rounded-xl my-8">
       <style>{`
         .text-primary {
           color: #03a9fc; /* Your primary color */
@@ -410,6 +419,8 @@ const TermsOfService = () => {
         </section>
       </article>
     </div>
+    </>
+   
   );
 };
 

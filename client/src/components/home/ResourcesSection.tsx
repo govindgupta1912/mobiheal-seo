@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+//import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ResourceCard from "@/components/common/ResourceCard";
 import BlogPostCard from "@/components/common/BlogPostCard";
@@ -113,7 +114,7 @@ const ResourcesSection = () => {
 
         <div className="text-center mt-12">
           <Button variant="outline" className="border-primary text-primary hover:bg-primary/5 hover:scale-95 transition-transform duration-200" asChild>
-            <Link href="/resources">View all Resources</Link>
+            <Link to="/resources">View all Resources</Link>
           </Button>
         </div>
       </div>

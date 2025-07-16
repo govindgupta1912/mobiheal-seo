@@ -1,4 +1,6 @@
-import { Link } from "wouter";
+// import { Link } from "wouter";
+import { Link } from "react-router-dom";
+
 import {
   Accordion,
   AccordionContent,
@@ -73,7 +75,7 @@ const FAQSection = () => {
           </Accordion>
 
           <div className="text-center mt-12">
-            <Link href="/faq" className="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+            <Link to="/faq" className="inline-flex items-center text-primary hover:text-primary-dark font-medium">
               View all FAQs
               <svg
                 xmlns="http://www.w3.org/2000/svg"

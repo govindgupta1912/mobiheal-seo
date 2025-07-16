@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { navigate } from "wouter/use-browser-location";
+import { useNavigate } from "react-router-dom";
+
 
 const CTASection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-16 md:py-24 bg-gradient  text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
