@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build --ssr src/entry-server.tsx",
-    "vercel-build": "vite build && esbuild --ssr src/entry-server.tsx --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "vercel-build": "vite build --ssr src/entry-server.tsx && esbuild --ssr src/entry-server.tsx --platform=node --packages=external --bundle --format=esm --outdir=dist",
 
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview",
