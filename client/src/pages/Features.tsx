@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import FeatureCard from "@/components/common/FeatureCard";
 import { 
@@ -118,7 +118,7 @@ const Features = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            {features.map((feature) => (
-  <Link href={`/features#${feature.id}`} key={feature.id}>
+  <Link to={`/features#${feature.id}`} key={feature.id}>
     <div id={feature.id} className="cursor-pointer hover:shadow-lg transition-shadow duration-300">
       <FeatureCard
         icon={feature.icon}
@@ -142,7 +142,7 @@ const Features = () => {
               </Button>
               </a>
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-                <Link href="/pricing">View Pricing Plans</Link>
+                <Link to="/pricing">View Pricing Plans</Link>
               </Button>
             </div>
           </div>

@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { AlertTriangleIcon, CheckIcon, ExternalLinkIcon } from "lucide-react";
 import { owaspRisks } from "@/lib/data";
@@ -150,7 +151,7 @@ const OwaspMobile = () => {
           
             <div className="mt-8 text-center">
               <Button asChild>
-                <Link href="/features">
+                <Link to="/features">
                   Explore Our Security Features
                 </Link>
               </Button>
@@ -192,10 +193,10 @@ const OwaspMobile = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/contact">Schedule a Security Consultation</Link>
+              <Link to="/contact">Schedule a Security Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-              <Link href="/resources">View More Resources</Link>
+              <Link to="/resources">View More Resources</Link>
             </Button>
           </div>
         </div>

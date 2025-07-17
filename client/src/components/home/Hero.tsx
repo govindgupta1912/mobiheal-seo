@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
 import heroAnimation from "../../assets/Animation .json"; // Your downloaded Lottie JSON
-//import { navigate } from "wouter/use-browser-location";
 import { useNavigate } from "react-router-dom";
 
 import hero from "@/assets/hero.png"

@@ -1,4 +1,4 @@
-// import { Link } from "wouter";
+
 import { Link } from "react-router-dom";
 
 import {
@@ -58,15 +58,15 @@ const FAQSection = () => {
                 key={index} 
                 value={`item-${index}`}
                 className="border border-neutral-200 rounded-lg"
-                itemscope 
-                itemprop="mainEntity" 
-                itemtype="https://schema.org/Question"
+                itemScope 
+                itemProp="mainEntity" 
+                itemType="https://schema.org/Question"
               >
-                <AccordionTrigger className="px-5 py-4 text-left font-medium text-neutral-800 hover:no-underline hover:text-primary" itemprop="name">
+                <AccordionTrigger className="px-5 py-4 text-left font-medium text-neutral-800 hover:no-underline hover:text-primary" itemProp="name">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-5 pb-4 pt-0 text-neutral-600" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <div itemprop="text">
+                <AccordionContent className="px-5 pb-4 pt-0 text-neutral-600" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <div itemProp="text">
                     <p>{faq.answer}</p>
                   </div>
                 </AccordionContent>

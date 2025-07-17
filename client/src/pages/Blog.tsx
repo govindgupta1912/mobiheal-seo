@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import BlogPostCard from "@/components/common/BlogPostCard";
 import { blogPosts } from "@/lib/data";
@@ -15,21 +15,22 @@ const BlogCategories = [
 ];
 
 const Blog = () => {
-  const [location, setLocation] = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [tabValue, setTabValue] = useState("all");
 
   // Sync tabValue from URL
   useEffect(() => {
-    const fromURL = location.split("/")[3]?.toLowerCase() || "all";
+    const fromURL = location.pathname.split("/")[3]?.toLowerCase() || "all";
     setTabValue(fromURL);
-  }, [location]);
+  }, [location.pathname]);
 
   const handleTabChange = (value: string) => {
     setTabValue(value);
     if (value === "all") {
-      setLocation("/blog");
+      navigate("/blog");
     } else {
-      setLocation(`/blogs/category/${value}`);
+      navigate(`/blogs/category/${value}`);
     }
   };
 

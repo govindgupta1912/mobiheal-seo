@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import { caseStudies } from "@/lib/data";
 
 const categories = [
@@ -15,21 +14,22 @@ const categories = [
 ];
 
 const CaseStudies = () => {
-  const [location, setLocation] = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [tabValue, setTabValue] = useState("all");
 
   // Sync tabValue from URL
   useEffect(() => {
-    const fromURL = location.split("/")[3]?.toLowerCase() || "all";
+    const fromURL = location.pathname.split("/")[3]?.toLowerCase() || "all";
     setTabValue(fromURL);
-  }, [location]);
+  }, [location.pathname]);
 
   const handleTabChange = (value: string) => {
     setTabValue(value);
     if (value === "all") {
-      setLocation("/case-studies");
+      navigate("/case-studies");
     } else {
-      setLocation(`/case-studies/category/${value}`);
+      navigate(`/case-studies/category/${value}`);
     }
   };
 
@@ -116,7 +116,7 @@ const CaseStudies = () => {
                             ))}
                           </div>
                           <Button asChild>
-                            <Link href={`/case-studies/${study.slug}`}>
+                            <Link to={`/case-studies/${study.slug}`}>
                               Read Full Case Study
                             </Link>
                           </Button>
@@ -145,7 +145,7 @@ const CaseStudies = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/contact">Schedule a Consultation</Link>
+              <Link to="/contact">Schedule a Consultation</Link>
             </Button>
             <Button
               size="lg"
@@ -153,7 +153,7 @@ const CaseStudies = () => {
               className="border-primary text-primary hover:bg-primary/5"
               asChild
             >
-              <Link href="/pricing">View Pricing Plans</Link>
+              <Link to="/pricing">View Pricing Plans</Link>
             </Button>
           </div>
         </div>

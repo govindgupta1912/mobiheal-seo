@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { partners, clients } from "@/lib/data";
 import { ShieldCheck } from "lucide-react";
@@ -89,7 +89,7 @@ const Partners = () => {
 
               <div className="text-center mb-12">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-                  <Link href="/testimonials">
+                  <Link to="/testimonials">
                     View Client Testimonials
                   </Link>
                 </Button>
@@ -144,7 +144,7 @@ const Partners = () => {
               </div>
               <div className="text-center">
                 <Button size="lg" asChild>
-                  <Link href="/contact">Apply to Become a Partner</Link>
+                  <Link to="/contact">Apply to Become a Partner</Link>
                 </Button>
               </div>
             </div>

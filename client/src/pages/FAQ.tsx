@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -56,7 +57,7 @@ const FAQ = () => {
                   <h3 className="font-semibold text-neutral-800 mb-3">Can't find what you're looking for?</h3>
                   <p className="text-neutral-600 text-sm mb-4">Our support team is here to help with any questions you may have.</p>
                   <Button asChild className="w-full">
-                    <Link href="/contact">Contact Support</Link>
+                    <Link to="/contact">Contact Support</Link>
                   </Button>
                 </div>
               </div>
@@ -90,7 +91,7 @@ const FAQ = () => {
                               <p>{faq.answer}</p>
                               {faq.link && (
                                 <div className="mt-2">
-                                  <Link href={faq.link.url} className="text-primary hover:underline">
+                                  <Link to={faq.link.url} className="text-primary hover:underline">
                                     {faq.link.text}
                                   </Link>
                                 </div>
@@ -117,10 +118,10 @@ const FAQ = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/contact">Contact Our Team</Link>
+              <Link to="/contact">Contact Our Team</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5" asChild>
-              <Link href="/resources">Explore Resources</Link>
+              <Link to="/resources">Explore Resources</Link>
             </Button>
           </div>
         </div>

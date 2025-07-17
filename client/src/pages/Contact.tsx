@@ -1,10 +1,10 @@
-import { useLocation } from "wouter";
+import { useLocation } from "react-router-dom";
 import ContactForm from "@/components/contact/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
-  const [location] = useLocation();
-  const searchParams = new URLSearchParams(location.split("?")[1] || "");
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search || "");
   const inquiryType = searchParams.get("type") || "";
 
   return (

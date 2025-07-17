@@ -1,5 +1,5 @@
 import { Blog } from "../../types/blog";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 interface SidebarBlogListProps {
   blogs: Blog[];
@@ -19,7 +19,7 @@ const SidebarBlogList = ({ blogs, activeBlogId }: SidebarBlogListProps) => {
           .map((b) => (
             <Link
               key={b.id}
-              href={`/blog/${b.id}`}
+              to={`/blog/${b.id}`}
               className="block bg-white  shadow-sm hover:shadow-lg border border-gray-100  transition-all duration-200 overflow-hidden"
             >
               <img

@@ -1,5 +1,5 @@
 // pages/whitepapers/[slug].tsx
-import { useParams } from "wouter";
+import { useParams } from "react-router-dom";
 import { whitepapers } from "@/lib/whitepapersData";
 import WhitepaperDetails from "@/components/whitePaper/WhitepaperDetails";
 

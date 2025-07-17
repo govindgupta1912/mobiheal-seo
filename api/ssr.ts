@@ -9,7 +9,7 @@ export default function handler(req, res) {
   let url = req.url || "/";
   // Remove the /api/ssr prefix
   url = url.replace(/^\/api\/ssr/, "") || "/";
-
+  console.log("SSR rendering for URL:", url);
   const { html, head } = render(url);
 
   res.setHeader("Content-Type", "text/html");

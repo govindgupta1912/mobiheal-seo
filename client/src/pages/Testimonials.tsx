@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/common/TestimonialCard";
 import { testimonials } from "@/lib/data";
@@ -104,7 +104,7 @@ const Testimonials = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="/resources">Explore Resources</Link>
+            <Link to="/resources">Explore Resources</Link>
           </Button>
           <Button
             size="lg"
@@ -112,7 +112,7 @@ const Testimonials = () => {
             className="border-primary text-primary hover:bg-primary/5"
             asChild
           >
-            <Link href="/case-studies">View Case Studies</Link>
+            <Link to="/case-studies">View Case Studies</Link>
           </Button>
         </div>
       </div>
@@ -156,10 +156,10 @@ const Testimonials = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-primary hover:bg-neutral-100" asChild>
-                <Link href="/contact">Get Started</Link>
+                <Link to="/contact">Get Started</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10" asChild>
-                <Link href="/pricing">View Pricing</Link>
+                <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
@@ -82,7 +82,7 @@ const RelatedCaseStudies = ({ currentSlug, relatedSlugs }: RelatedCaseStudiesPro
                       {study.summary}
                     </p>
                     <Button asChild className="w-full">
-                      <Link href={`/case-studies/${study.slug}`}>
+                      <Link to={`/case-studies/${study.slug}`}>
                         Read Case Study
                       </Link>
                     </Button>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-//import { Link } from "wouter";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon } from "lucide-react";

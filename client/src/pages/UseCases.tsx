@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import byod from "../assets/useCases/byod_720.jpg";
 import corporate from "../assets/useCases/corporate_owned_720.jpg";
 import kiosk from "../assets/useCases/kiosk_mode_720.jpg";
 
 const UseCases = () => {
   const [activeTab, setActiveTab] = useState("kiosk");
+  const location = useLocation();
+  const navigate = useNavigate();
 
    useEffect(() => {
     function onHashChange() {
-      const hash = window.location.hash.replace("#", "");
+      const hash = location.hash.replace("#", "");
       if (["kiosk", "corporate", "byod"].includes(hash)) {
         setActiveTab(hash);
       }
@@ -20,10 +22,12 @@ const UseCases = () => {
 
     // Set initial tab on mount
     onHashChange();
+  }, [location.hash]);
 
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
-  }, []);
+  const handleTabChange = (val: string) => {
+    setActiveTab(val);
+    navigate(`#${val}`, { replace: true });
+  };
 
   const useCases = {
     kiosk: {
@@ -117,10 +121,7 @@ const UseCases = () => {
           {/* <Tabs defaultValue="kiosk" className="w-full" onValueChange={setActiveTab}> */}
            <Tabs
   value={activeTab}
-  onValueChange={(val) => {
-    setActiveTab(val);
-    window.location.hash = val;
-  }}
+  onValueChange={handleTabChange}
 >
 
 
@@ -161,7 +162,7 @@ const UseCases = () => {
                   </div>
                   
                   <Button className="mt-4" asChild>
-                    <Link href="/contact">Get Started with {activeCase.title}</Link>
+                    <Link to="/contact">Get Started with {activeCase.title}</Link>
                   </Button>
                 </div>
                 
@@ -223,7 +224,7 @@ const UseCases = () => {
           </div>
 
           <Button className="mt-4 hover:scale-95 transition-transform duration-300 ease-in-out" asChild>
-            <Link href="/contact">Get Started with {useCase.title}</Link>
+            <Link to="/contact">Get Started with {useCase.title}</Link>
           </Button>
         </div>
 
@@ -272,10 +273,10 @@ const UseCases = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="hover:scale-95 transition-transform duration-300 ease-in-out" asChild>
-              <Link href="/contact">Schedule a Consultation</Link>
+              <Link to="/contact">Schedule a Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 hover:scale-95 transition-transform duration-300 ease-in-out" asChild>
-              <Link href="/pricing">View Pricing Plans</Link>
+              <Link to="/pricing">View Pricing Plans</Link>
             </Button>
           </div>
         </div>

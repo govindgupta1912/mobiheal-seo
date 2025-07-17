@@ -1,4 +1,4 @@
-//import { Link } from "wouter";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import  mobisecLogo from "../../assets/MOBISEC_logo-footer.png";
 import registerLogo from "../../assets/registered.png";

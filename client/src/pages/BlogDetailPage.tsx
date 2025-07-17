@@ -1,4 +1,4 @@
-import { useParams } from "wouter";
+import { useParams } from "react-router-dom";
 import { blogs } from "../../src/components/data/blogs";
 import BlogHero from "../components/blog/BlogHero";
 import BlogBody from "../components/blog/BlogBody";

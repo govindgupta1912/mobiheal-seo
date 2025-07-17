@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import PricingCard from "@/components/common/PricingCard";
-//import { Link } from "wouter";
 import { Link } from "react-router-dom";
 
 const PricingSection = () => {

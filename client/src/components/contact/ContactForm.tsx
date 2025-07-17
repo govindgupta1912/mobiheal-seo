@@ -274,7 +274,8 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
+
 
 const formSchema = z.object({
   firstName: z.string().min(2),

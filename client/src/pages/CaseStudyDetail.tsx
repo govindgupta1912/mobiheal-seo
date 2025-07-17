@@ -1,5 +1,5 @@
-import { useParams } from "wouter";
-import { Link } from "wouter";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -36,7 +36,7 @@ const CaseStudyDetail = () => {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Case Study Not Found</h1>
           <Button asChild>
-            <Link href="/case-studies">Back to Case Studies</Link>
+            <Link to="/case-studies">Back to Case Studies</Link>
           </Button>
         </div>
       </div>
@@ -65,7 +65,7 @@ const CaseStudyDetail = () => {
         </div>
         <div className="container flex mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto lg:mx-0 text-left">
-            <Link href="/case-studies">
+            <Link to="/case-studies">
               <Button variant="ghost" className="text-white hover:text-white/90 mb-4">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Case Studies
@@ -302,10 +302,10 @@ const CaseStudyDetail = () => {
           <p className="text-lg mb-8">Explore how MobiHeal MDM can protect your organization against evolving mobile threats.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-primary text-white hover:bg-blue-100 shadow" asChild>
-              <Link href="/contact">Schedule a Demo</Link>
+              <Link to="/contact">Schedule a Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white/10 font-bold" asChild>
-              <Link href="/pricing">View Pricing</Link>
+              <Link to="/pricing">View Pricing</Link>
             </Button>
           </div>
         </div>
